@@ -37,15 +37,21 @@ const taskSchema = new Schema(
     dueDate: { type: String, match: DATE_RE, default: null },
     dueTime: { type: String, match: TIME_RE, default: null },
     reminder: { type: Boolean, default: false },
+    pinned: { type: Boolean, default: false }, // pinned tasks list first
+    background: { type: Boolean, default: false }, // hidden from task lists unless asked for
     // Optional link to the career plan: a phase, and optionally one topic inside it.
     phaseId: { type: Schema.Types.ObjectId, ref: 'Phase', default: null },
     topicId: { type: Schema.Types.ObjectId, default: null },
     completedAt: { type: Date, default: null },
+    // Set on an action that belongs to a main objective (another task). One level only:
+    // an objective is never itself an action. See syncObjective in routes.js.
+    parentId: { type: Schema.Types.ObjectId, ref: 'Task', default: null },
     mode,
   },
   { timestamps: true }
 );
 taskSchema.index({ status: 1, dueDate: 1 });
+taskSchema.index({ parentId: 1 });
 taskSchema.index({ title: 'text', notes: 'text' });
 
 const topicSchema = new Schema({

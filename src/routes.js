@@ -61,15 +61,54 @@ router.delete(
 
 /* ---------- Tasks ---------- */
 
-const TASK_FIELDS = ['title', 'notes', 'categoryId', 'priority', 'status', 'dueDate', 'dueTime', 'reminder', 'phaseId', 'topicId', 'mode'];
+const TASK_FIELDS = ['title', 'notes', 'categoryId', 'priority', 'status', 'dueDate', 'dueTime', 'reminder', 'pinned', 'background', 'phaseId', 'topicId', 'mode', 'parentId'];
 
 const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-// Filters: ?q=search&status=todo&categoryId=..&priority=high&phaseId=..&mode=office
+const badRequest = (res, error) => res.status(400).json({ error });
+
+// Checks a requested parentId for `task` (null when creating). Returns the objective, or an error message.
+async function resolveObjective(parentId, task) {
+  if (task && String(parentId) === String(task._id)) return 'A task cannot be its own objective';
+  const objective = await Task.findById(parentId).catch(() => null);
+  if (!objective) return 'Objective not found';
+  if (objective.parentId) return 'An action cannot have actions of its own';
+  if (task && (await Task.exists({ parentId: task._id }))) return 'This task already has actions, so it cannot become one';
+  return objective;
+}
+
+// An objective is done exactly when all of its actions are; it reopens when one is reopened.
+// Returns the objective if its status changed, so the client can update it too.
+async function syncObjective(parentId) {
+  if (!parentId) return null;
+  const objective = await Task.findById(parentId);
+  if (!objective) return null;
+  const actions = await Task.find({ parentId }, 'status');
+  if (!actions.length) return null;
+  const allDone = actions.every((a) => a.status === 'done');
+  if (allDone && objective.status !== 'done') {
+    objective.set({ status: 'done', completedAt: new Date() });
+  } else if (!allDone && objective.status === 'done') {
+    const started = actions.some((a) => a.status !== 'todo');
+    objective.set({ status: started ? 'in_progress' : 'todo', completedAt: null });
+  } else {
+    return null;
+  }
+  return objective.save();
+}
+
+// Task responses carry `objectives`: any objectives whose status changed as a side effect.
+const withObjectives = async (task, ...parentIds) => {
+  const ids = [...new Set(parentIds.filter(Boolean).map(String))];
+  const objectives = (await Promise.all(ids.map(syncObjective))).filter(Boolean);
+  return { ...task.toJSON(), objectives };
+};
+
+// Filters: ?q=search&status=todo&categoryId=..&priority=high&phaseId=..&mode=office&parentId=..
 router.get(
   '/tasks',
   ah(async (req, res) => {
-    const filter = pick(req.query, ['status', 'categoryId', 'priority', 'phaseId', 'mode']);
+    const filter = pick(req.query, ['status', 'categoryId', 'priority', 'phaseId', 'mode', 'parentId']);
     if (req.query.q) filter.title = { $regex: escapeRegex(req.query.q), $options: 'i' };
     res.json(await Task.find(filter).sort({ createdAt: -1 }));
   })
@@ -80,8 +119,14 @@ router.post(
   ah(async (req, res) => {
     const data = pick(req.body, TASK_FIELDS);
     if (!data.phaseId) data.topicId = null;
+    if (data.parentId) {
+      const objective = await resolveObjective(data.parentId, null);
+      if (typeof objective === 'string') return badRequest(res, objective);
+      data.mode = objective.mode; // actions live in their objective's workspace
+    }
     if (data.status === 'done') data.completedAt = new Date();
-    res.status(201).json(await Task.create(data));
+    const task = await Task.create(data);
+    res.status(201).json(await withObjectives(task, task.parentId));
   })
 );
 
@@ -93,18 +138,34 @@ router.put(
     const data = pick(req.body, TASK_FIELDS);
     if (data.phaseId === null) data.topicId = null;
     if (data.status && data.status !== task.status) data.completedAt = data.status === 'done' ? new Date() : null;
+    const oldParentId = task.parentId;
+    if (data.parentId) {
+      const objective = await resolveObjective(data.parentId, task);
+      if (typeof objective === 'string') return badRequest(res, objective);
+      data.mode = objective.mode;
+    } else if (task.parentId && data.mode) {
+      delete data.mode; // an action follows its objective's workspace
+    }
     task.set(data);
-    res.json(await task.save());
+    await task.save();
+    // Moving an objective to the other workspace takes its actions along.
+    if (data.mode && !task.parentId) await Task.updateMany({ parentId: task._id }, { mode: task.mode });
+    res.json(await withObjectives(task, oldParentId, task.parentId));
   })
 );
 
+// Deleting an objective deletes its actions too. Responds with every removed id.
 router.delete(
   '/tasks/:id',
   ah(async (req, res) => {
     const task = await Task.findByIdAndDelete(req.params.id);
     if (!task) return notFound(res, 'Task');
-    await Note.updateMany({ taskId: task._id }, { taskId: null });
-    res.status(204).end();
+    const actions = await Task.find({ parentId: task._id }, '_id');
+    const removedIds = [task._id, ...actions.map((a) => a._id)];
+    await Task.deleteMany({ parentId: task._id });
+    await Note.updateMany({ taskId: { $in: removedIds } }, { taskId: null });
+    const objective = await syncObjective(task.parentId);
+    res.json({ removedIds: removedIds.map(String), objectives: objective ? [objective] : [] });
   })
 );
 
