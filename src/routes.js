@@ -61,15 +61,15 @@ router.delete(
 
 /* ---------- Tasks ---------- */
 
-const TASK_FIELDS = ['title', 'notes', 'categoryId', 'priority', 'status', 'dueDate', 'dueTime', 'reminder', 'phaseId', 'topicId'];
+const TASK_FIELDS = ['title', 'notes', 'categoryId', 'priority', 'status', 'dueDate', 'dueTime', 'reminder', 'phaseId', 'topicId', 'mode'];
 
 const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-// Filters: ?q=search&status=todo&categoryId=..&priority=high&phaseId=..
+// Filters: ?q=search&status=todo&categoryId=..&priority=high&phaseId=..&mode=office
 router.get(
   '/tasks',
   ah(async (req, res) => {
-    const filter = pick(req.query, ['status', 'categoryId', 'priority', 'phaseId']);
+    const filter = pick(req.query, ['status', 'categoryId', 'priority', 'phaseId', 'mode']);
     if (req.query.q) filter.title = { $regex: escapeRegex(req.query.q), $options: 'i' };
     res.json(await Task.find(filter).sort({ createdAt: -1 }));
   })
@@ -110,7 +110,7 @@ router.delete(
 
 /* ---------- Sticky notes ---------- */
 
-const NOTE_FIELDS = ['text', 'color', 'pinned', 'taskId', 'x', 'y'];
+const NOTE_FIELDS = ['text', 'color', 'pinned', 'taskId', 'x', 'y', 'mode'];
 
 router.get('/notes', ah(async (_req, res) => res.json(await Note.find().sort({ pinned: -1, updatedAt: -1 }))));
 
