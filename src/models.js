@@ -15,6 +15,10 @@ mongoose.set('toJSON', {
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
 
+// Tasks and sticky notes each belong to one workspace. Older records without it load as 'personal'.
+export const MODES = ['office', 'personal'];
+const mode = { type: String, enum: MODES, default: 'personal' };
+
 const categorySchema = new Schema(
   {
     name: { type: String, required: true, trim: true, unique: true },
@@ -37,6 +41,7 @@ const taskSchema = new Schema(
     phaseId: { type: Schema.Types.ObjectId, ref: 'Phase', default: null },
     topicId: { type: Schema.Types.ObjectId, default: null },
     completedAt: { type: Date, default: null },
+    mode,
   },
   { timestamps: true }
 );
@@ -85,6 +90,7 @@ const noteSchema = new Schema(
     taskId: { type: Schema.Types.ObjectId, ref: 'Task', default: null },
     x: coord,
     y: coord,
+    mode,
   },
   { timestamps: true }
 );
