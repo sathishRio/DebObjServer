@@ -181,6 +181,7 @@ router.get(
       unlocked: !!s,
       unlockExpiresAt: s ? new Date(s.expiresAt).toISOString() : null,
       lockedUntil: meta?.lockedUntil > new Date() ? meta.lockedUntil : null,
+      transfer: transferEnabled(),
     });
   })
 );
@@ -283,9 +284,15 @@ router.post(
   })
 );
 
+// Export / import are off unless VAULT_TRANSFER=true (server/.env).
+const transferEnabled = () => process.env.VAULT_TRANSFER === 'true';
+const requireTransfer = (_req, res, next) =>
+  transferEnabled() ? next() : res.status(403).json({ error: 'Vault export / import is turned off on this server' });
+
 // Decrypted backup of every entry, for moving the vault (e.g. local -> production). POST so it is never cached.
 router.post(
   '/export',
+  requireTransfer,
   requireUnlocked,
   ah(async (req, res) => {
     const { owner, dek } = req.vault;
@@ -316,6 +323,7 @@ router.post(
 // so importing the same file twice is harmless.
 router.post(
   '/import',
+  requireTransfer,
   requireUnlocked,
   ah(async (req, res) => {
     const { owner, dek } = req.vault;
