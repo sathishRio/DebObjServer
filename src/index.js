@@ -32,6 +32,8 @@ app.use(cors(corsOrigins.length ? { origin: corsOrigins } : {}));
 app.use('/api/learning', express.json({ limit: '4mb' }));
 // Statement PDFs are uploaded as base64 JSON.
 app.use('/api/wealth/statements', express.json({ limit: '15mb' }));
+// A full vault + Wealth backup being imported.
+app.use('/api/vault/import', express.json({ limit: '25mb' }));
 app.use(express.json({ limit: '1mb' }));
 
 app.get('/api/health', (_req, res) =>

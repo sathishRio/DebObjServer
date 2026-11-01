@@ -1,6 +1,7 @@
 import crypto from 'node:crypto';
 import { promisify } from 'node:util';
 import { Router } from 'express';
+import mongoose from 'mongoose';
 import { VaultEntry, VaultMeta, WealthRecord } from './models.js';
 
 /*
@@ -279,6 +280,88 @@ router.post(
       notes: notes ? seal(dek, String(notes), entryAad(owner)) : '',
     });
     res.status(201).json(entry);
+  })
+);
+
+// Decrypted backup of every entry, for moving the vault (e.g. local -> production). POST so it is never cached.
+router.post(
+  '/export',
+  requireUnlocked,
+  ah(async (req, res) => {
+    const { owner, dek } = req.vault;
+    const rows = await VaultEntry.find({ owner }).collation({ locale: 'en', strength: 2 }).sort({ title: 1 });
+    res.json({
+      format: 'vault-export-v1',
+      exportedAt: new Date().toISOString(),
+      entries: rows.map((e) => ({
+        title: e.title,
+        username: e.username || '',
+        url: e.url || '',
+        password: open(dek, e.password, entryAad(owner)).toString('utf8'),
+        notes: e.notes ? open(dek, e.notes, entryAad(owner)).toString('utf8') : '',
+      })),
+      // Ids are kept: wealth records reference each other (accountId, fromId, ...).
+      wealth: (await WealthRecord.find({ owner }).sort({ createdAt: 1 })).map((r) => ({
+        id: String(r._id),
+        kind: r.kind,
+        key: r.key || '',
+        createdAt: r.createdAt,
+        data: openJson(dek, owner, 'wealth', r.data),
+      })),
+    });
+  })
+);
+
+// Re-encrypts an export with this vault's key. Entries with the same title + username + website are skipped,
+// so importing the same file twice is harmless.
+router.post(
+  '/import',
+  requireUnlocked,
+  ah(async (req, res) => {
+    const { owner, dek } = req.vault;
+    const list = req.body?.entries;
+    if (!Array.isArray(list)) throw new VaultError(400, 'Not a vault export file');
+    if (!Array.isArray(req.body?.wealth) && list.length === 0) throw new VaultError(400, 'The file has nothing to import');
+    if (list.length > 5000) throw new VaultError(400, 'Too many entries (max 5000)');
+    const key = (e) => [e.title, e.username, e.url].map((v) => String(v || '').trim().toLowerCase()).join('\u0000');
+    const seen = new Set((await VaultEntry.find({ owner }, 'title username url')).map(key));
+    const docs = [];
+    let skipped = 0;
+    for (const raw of list) {
+      const e = { ...pickText(raw || {}), password: raw?.password, notes: raw?.notes };
+      if (!e.title?.trim() || typeof e.password !== 'string' || !e.password || seen.has(key(e))) {
+        skipped++;
+        continue;
+      }
+      seen.add(key(e));
+      docs.push({
+        ...pickText(e),
+        owner,
+        password: seal(dek, e.password, entryAad(owner)),
+        notes: e.notes ? seal(dek, String(e.notes), entryAad(owner)) : '',
+      });
+    }
+    if (docs.length) await VaultEntry.insertMany(docs);
+
+    // Wealth: replaces all of this account's wealth data (merging would break the id links between records).
+    let wealth = null;
+    const w = req.body?.wealth;
+    if (Array.isArray(w) && req.body?.replaceWealth === true) {
+      if (w.length > 50000) throw new VaultError(400, 'Too many wealth records (max 50000)');
+      const valid = w.filter((r) => r && typeof r.kind === 'string' && /^[a-z]+$/.test(r.kind) && r.data != null);
+      const wdocs = valid.map((r) => ({
+        ...(mongoose.isValidObjectId(r.id) ? { _id: r.id } : {}),
+        owner,
+        kind: r.kind,
+        key: typeof r.key === 'string' ? r.key : '',
+        data: sealJson(dek, owner, 'wealth', r.data),
+        ...(r.createdAt ? { createdAt: new Date(r.createdAt) } : {}),
+      }));
+      await WealthRecord.deleteMany({ owner });
+      if (wdocs.length) await WealthRecord.insertMany(wdocs);
+      wealth = { imported: wdocs.length, skipped: w.length - wdocs.length };
+    }
+    res.json({ imported: docs.length, skipped, wealth });
   })
 );
 
