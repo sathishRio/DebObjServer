@@ -287,9 +287,9 @@ router.put(
 
 router.delete(
   '/entries/:id',
-  requireUnlocked,
+  // No PIN needed: deleting never decrypts anything. Still scoped to the signed-in owner.
   ah(async (req, res) => {
-    const entry = await VaultEntry.findOneAndDelete({ _id: req.params.id, owner: req.vault.owner });
+    const entry = await VaultEntry.findOneAndDelete({ _id: req.params.id, owner: req.user.email });
     if (!entry) throw new VaultError(404, 'Entry not found');
     res.status(204).end();
   })
