@@ -121,12 +121,12 @@ async function settingsFor(vault) {
   return { rec, settings: reveal(vault, rec) };
 }
 
-// Live gold spot price (USD per troy ounce, no key needed), cached for 30 minutes and returned as
+// Live gold spot price (USD per troy ounce, no key needed), cached for 1 minute and returned as
 // AED per gram of 24K gold. AED is pegged at 3.6725 per USD. null when the feed is unreachable.
 const OZ_GRAMS = 31.1034768;
 let goldCache = null;
 async function goldPrice() {
-  if (goldCache && Date.now() - goldCache.at < 30 * 60 * 1000) return goldCache.value;
+  if (goldCache && Date.now() - goldCache.at < 60 * 1000) return goldCache.value;
   try {
     const r = await fetch('https://api.gold-api.com/price/XAU', { signal: AbortSignal.timeout(5000) });
     const j = await r.json();
@@ -142,6 +142,12 @@ async function goldPrice() {
 const byCreated = (a, b) => new Date(a.createdAt) - new Date(b.createdAt);
 
 // Everything the page needs in one call, decrypted.
+// Live gold rate on its own, so the asset form can refresh it while open.
+router.get(
+  '/gold-price',
+  ah(async (_req, res) => res.json(await goldPrice()))
+);
+
 router.get(
   '/',
   ah(async (req, res) => {

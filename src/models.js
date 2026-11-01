@@ -188,6 +188,7 @@ const flowSchema = new Schema({
   kind: { type: String, enum: ['contribution', 'withdrawal'], required: true },
   amount: { ...money, required: true },
   grams: { type: Number, min: 0, default: 0 }, // gold / metal: weight added or taken out
+  growth: { type: Number, min: -100, max: 1000, default: 0 }, // real estate: % this contribution raised the value
   note: { type: String, default: '', maxlength: 200 },
 });
 const assetSchema = new Schema(
