@@ -4,17 +4,34 @@ import express from 'express';
 import mongoose from 'mongoose';
 import { connect } from './db.js';
 import routes from './routes.js';
-import authRoutes, { assertAuthConfig, requireAuth } from './auth.js';
+import authRoutes, { assertAuthConfig, requireAuth, requireAuthOr } from './auth.js';
 import vaultRoutes, { assertVaultConfig } from './vault.js';
+import wealthRoutes from './wealth.js';
+import learningRoutes, { syncHandler } from './learning.js';
+import learningNotesRoutes from './learningNotes.js';
 import { seedIfEmpty } from './seed.js';
 
 const app = express();
 // Behind the hosting panel's proxy (Passenger/Nginx): take the client IP from X-Forwarded-For.
 app.set('trust proxy', 1);
+
+// Coursera sync: the bookmarklet posts from coursera.org, so this one route gets its own CORS
+// (before the app-wide one). Chrome also asks before a public site may call a local-network API.
+const courseraCors = cors({ origin: /^https:\/\/([a-z0-9-]+\.)*coursera\.org$/, maxAge: 600 });
+app.use('/api/learning/sync', (req, res, next) => {
+  if (req.get('access-control-request-private-network')) res.set('Access-Control-Allow-Private-Network', 'true');
+  next();
+}, courseraCors);
+app.post('/api/learning/sync', express.json({ limit: '4mb' }), syncHandler);
+
 // The web app (task.devobj.com) is a separate origin; CORS_ORIGINS lists who may call the API.
 // Empty = allow any origin (local development). Requests carry a Bearer token, not cookies.
 const corsOrigins = (process.env.CORS_ORIGINS || '').split(',').map((o) => o.trim().replace(/\/$/, '')).filter(Boolean);
 app.use(cors(corsOrigins.length ? { origin: corsOrigins } : {}));
+// Course syncs carry every module and item, so learning routes get a larger body limit.
+app.use('/api/learning', express.json({ limit: '4mb' }));
+// Statement PDFs are uploaded as base64 JSON.
+app.use('/api/wealth/statements', express.json({ limit: '15mb' }));
 app.use(express.json({ limit: '1mb' }));
 
 app.get('/api/health', (_req, res) =>
@@ -24,6 +41,10 @@ app.get('/api/health', (_req, res) =>
 // Google sign-in (public), then everything else under /api requires an allowed, signed-in user.
 app.use('/api/auth', authRoutes);
 app.use('/api/vault', requireAuth, vaultRoutes);
+app.use('/api/wealth', requireAuth, wealthRoutes);
+// Notes also accept the Chrome extension's token, so they mount before the session-only learning routes.
+app.use('/api/learning/notes', requireAuthOr('learning-notes'), learningNotesRoutes);
+app.use('/api/learning', requireAuth, learningRoutes);
 app.use('/api', requireAuth, routes);
 app.use('/api', (_req, res) => res.status(404).json({ error: 'Not found' }));
 

@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 import { promisify } from 'node:util';
 import { Router } from 'express';
-import { VaultEntry, VaultMeta } from './models.js';
+import { VaultEntry, VaultMeta, WealthRecord } from './models.js';
 
 /*
  * Password vault crypto
@@ -22,6 +22,7 @@ const SCRYPT_OPTS = { N: 2 ** 16, r: 8, p: 1, maxmem: 128 * 1024 * 1024 }; // ~6
 const MAX_ATTEMPTS = 5;
 const LOCK_MINUTES = 15;
 const UNLOCK_MINUTES = 5;
+const EXTENDED_UNLOCK_MINUTES = 60; // when "keep unlocked for 1 hour" is ticked
 const PIN_RE = /^\d{4}$/;
 
 export function assertVaultConfig() {
@@ -76,11 +77,11 @@ function sweep() {
   for (const [token, s] of sessions) if (s.expiresAt <= now) sessions.delete(token);
 }
 
-function startSession(owner, dek) {
+function startSession(owner, dek, minutes = UNLOCK_MINUTES) {
   sweep();
   for (const [token, s] of sessions) if (s.owner === owner) sessions.delete(token); // one per account
   const token = crypto.randomBytes(32).toString('base64url');
-  const expiresAt = Date.now() + UNLOCK_MINUTES * 60_000;
+  const expiresAt = Date.now() + minutes * 60_000;
   sessions.set(token, { owner, dek, expiresAt });
   return { unlockToken: token, expiresAt: new Date(expiresAt).toISOString() };
 }
@@ -129,6 +130,12 @@ async function unwrapWithPin(owner, pin) {
   }
 }
 
+/* ---------- Shared with other encrypted features (Wealth) ---------- */
+
+// Encrypts a JSON value with the vault data key; `scope` keeps one feature's data from opening as another's.
+export const sealJson = (dek, owner, scope, value) => seal(dek, JSON.stringify(value), `${scope}:${owner}`);
+export const openJson = (dek, owner, scope, sealed) => JSON.parse(open(dek, sealed, `${scope}:${owner}`).toString('utf8'));
+
 /* ---------- Routes (mounted behind requireAuth; req.user.email is the owner) ---------- */
 
 const router = Router();
@@ -144,7 +151,7 @@ router.use((_req, res, next) => {
 });
 
 // 423 Locked: distinct from 401 so the app doesn't treat it as "signed out".
-const requireUnlocked = (req, res, next) => {
+export const requireUnlocked = (req, res, next) => {
   const s = sessionFor(req);
   if (!s) return res.status(423).json({ error: 'Vault is locked. Enter your PIN.' });
   req.vault = s;
@@ -182,7 +189,7 @@ router.post(
   '/unlock',
   ah(async (req, res) => {
     const { dek } = await unwrapWithPin(req.user.email, req.body?.pin);
-    res.json(startSession(req.user.email, dek));
+    res.json(startSession(req.user.email, dek, req.body?.extended === true ? EXTENDED_UNLOCK_MINUTES : UNLOCK_MINUTES));
   })
 );
 
@@ -211,7 +218,8 @@ router.delete(
   ah(async (req, res) => {
     if (req.body?.confirm !== 'DELETE') throw new VaultError(400, 'Type DELETE to confirm');
     const owner = req.user.email;
-    await Promise.all([VaultEntry.deleteMany({ owner }), VaultMeta.deleteOne({ owner })]);
+    // Wealth data is encrypted with the same key, so it is unreadable without the vault too.
+    await Promise.all([VaultEntry.deleteMany({ owner }), WealthRecord.deleteMany({ owner }), VaultMeta.deleteOne({ owner })]);
     for (const [token, s] of sessions) if (s.owner === owner) sessions.delete(token);
     res.status(204).end();
   })

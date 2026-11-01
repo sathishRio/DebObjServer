@@ -55,6 +55,8 @@ export function requireAuth(req, res, next) {
   if (!token) return res.status(401).json({ error: 'Sign in required' });
   try {
     const user = jwt.verify(token, settings().secret, { algorithms: ['HS256'] });
+    // Purpose tokens (e.g. the Coursera sync token) only open their own endpoint, never a session.
+    if (user.purpose) return res.status(401).json({ error: 'Sign in required' });
     // Re-checked on every request, so removing an email from ALLOWED_EMAILS locks it out immediately.
     if (!isAllowed(user.email)) return res.status(403).json({ error: 'This Google account is no longer allowed' });
     // Admin (dev) sessions stop working the moment dev mode is switched off.
@@ -65,6 +67,36 @@ export function requireAuth(req, res, next) {
     res.status(401).json({ error: 'Session expired. Please sign in again.' });
   }
 }
+
+// Long-lived "purpose" tokens for helpers outside the app: each opens only its own endpoints for
+// one account, never a full session (requireAuth rejects them).
+//   learning-sync:  the Coursera sync bookmarklet (POST /api/learning/sync)
+//   learning-notes: the Chrome notes extension (/api/learning/notes)
+const PURPOSE_DAYS = { 'learning-sync': 180, 'learning-notes': 365 };
+export const issuePurposeToken = (email, purpose) =>
+  jwt.sign({ email, purpose }, settings().secret, { algorithm: 'HS256', expiresIn: `${PURPOSE_DAYS[purpose]}d`, subject: email });
+
+// Returns the account email for a valid, still-allowed token of this purpose, or null.
+export function verifyPurposeToken(token, purpose) {
+  try {
+    const t = jwt.verify(token, settings().secret, { algorithms: ['HS256'] });
+    return t.purpose === purpose && isAllowed(t.email) ? t.email : null;
+  } catch {
+    return null;
+  }
+}
+
+export const issueSyncToken = (email) => issuePurposeToken(email, 'learning-sync');
+export const verifySyncToken = (token) => verifyPurposeToken(token, 'learning-sync');
+
+// Accepts a signed-in session, or a token for `purpose` (sets req.user = { email }).
+export const requireAuthOr = (purpose) => (req, res, next) => {
+  const header = req.get('authorization') || '';
+  const email = header.startsWith('Bearer ') ? verifyPurposeToken(header.slice(7), purpose) : null;
+  if (!email) return requireAuth(req, res, next);
+  req.user = { email };
+  next();
+};
 
 const router = Router();
 
