@@ -19,7 +19,7 @@ const ah = (fn) => (req, res, next) => Promise.resolve(fn(req, res, next)).catch
 const pick = (obj, keys) => Object.fromEntries(keys.filter((k) => obj[k] !== undefined).map((k) => [k, obj[k]]));
 const SCOPE = 'wealth';
 
-const ASSET_FIELDS = ['name', 'type', 'currency', 'principal', 'currentValue', 'interestRate', 'compounding', 'startDate', 'maturityDate', 'flows', 'reserved', 'reservedAmount', 'holdAmount', 'balanceMonth', 'openingDate', 'statementTo', 'statementBalance', 'notes'];
+const ASSET_FIELDS = ['name', 'type', 'currency', 'principal', 'currentValue', 'interestRate', 'compounding', 'startDate', 'maturityDate', 'flows', 'grams', 'purity', 'reserved', 'reservedAmount', 'holdAmount', 'balanceMonth', 'openingDate', 'statementTo', 'statementBalance', 'notes'];
 const COLLECTIONS = {
   assets: { Model: Asset, fields: ASSET_FIELDS, what: 'Asset' },
   liabilities: {
@@ -121,6 +121,24 @@ async function settingsFor(vault) {
   return { rec, settings: reveal(vault, rec) };
 }
 
+// Live gold spot price (USD per troy ounce, no key needed), cached for 30 minutes and returned as
+// AED per gram of 24K gold. AED is pegged at 3.6725 per USD. null when the feed is unreachable.
+const OZ_GRAMS = 31.1034768;
+let goldCache = null;
+async function goldPrice() {
+  if (goldCache && Date.now() - goldCache.at < 30 * 60 * 1000) return goldCache.value;
+  try {
+    const r = await fetch('https://api.gold-api.com/price/XAU', { signal: AbortSignal.timeout(5000) });
+    const j = await r.json();
+    if (!(j.price > 0)) throw new Error('no price');
+    const value = { aedPerGram24: (j.price * 3.6725) / OZ_GRAMS, updatedAt: j.updatedAt };
+    goldCache = { at: Date.now(), value };
+    return value;
+  } catch {
+    return goldCache?.value ?? null;
+  }
+}
+
 const byCreated = (a, b) => new Date(a.createdAt) - new Date(b.createdAt);
 
 // Everything the page needs in one call, decrypted.
@@ -138,6 +156,7 @@ router.get(
     out.budgets.sort((a, b) => a.category.localeCompare(b.category));
     out.snapshots.sort((a, b) => a.month.localeCompare(b.month));
     out.transactions.sort((a, b) => b.date.localeCompare(a.date) || byCreated(a, b));
+    out.goldPrice = await goldPrice();
     res.json(out);
   })
 );

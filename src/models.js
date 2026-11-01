@@ -187,6 +187,7 @@ const flowSchema = new Schema({
   date: { type: String, match: DATE_RE, required: true },
   kind: { type: String, enum: ['contribution', 'withdrawal'], required: true },
   amount: { ...money, required: true },
+  grams: { type: Number, min: 0, default: 0 }, // gold / metal: weight added or taken out
   note: { type: String, default: '', maxlength: 200 },
 });
 const assetSchema = new Schema(
@@ -202,6 +203,8 @@ const assetSchema = new Schema(
     startDate: optionalDate,
     maturityDate: optionalDate,
     flows: [flowSchema],
+    grams: { type: Number, min: 0, default: 0 }, // gold / metal: weight first bought
+    purity: { type: String, enum: ['24K', '22K'], default: '24K' }, // gold: valued at the live rate for this purity
     // Money set aside for an upcoming bill: shown, but not counted in net worth or the emergency fund.
     reserved: { type: Boolean, default: false },
     // Part of the balance set aside for a bill (e.g. rent), left out of net worth like `reserved`.
