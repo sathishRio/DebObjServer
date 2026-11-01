@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import {
-  Asset, Budget, CashEntry, Debt, FixedItem, Goal, Liability, MailSource, TagRule, Transaction, Transfer, VaultMeta, WealthRecord, WealthSettings, WealthSnapshot,
+  Asset, Budget, CashEntry, Debt, FixedItem, Goal, Liability, MailSource, MarketRates, TagRule, Transaction, Transfer, VaultMeta, WealthRecord, WealthSettings, WealthSnapshot,
 } from './models.js';
 import { StatementError, autoTag, merchantKey, parseStatement, txnHash } from './statements.js';
 import { gmailRoutes } from './gmail.js';
@@ -42,7 +42,7 @@ const COLLECTIONS = {
   },
 };
 const SETTINGS_FIELDS = [
-  'baseCurrency', 'rates', 'scenarios', 'inflation', 'savingsGrowth', 'withdrawalRate', 'forecastYears', 'excludeHomeFromFi',
+  'baseCurrency', 'rates', 'scenarios', 'inflation', 'savingsGrowth', 'withdrawalRate', 'forecastYears', 'excludeHomeFromFi', 'autoRates',
   'incomeCategories', 'expenseCategories',
 ];
 
@@ -125,16 +125,23 @@ async function settingsFor(vault) {
 // AED per gram of 24K gold. AED is pegged at 3.6725 per USD. null when the feed is unreachable.
 const OZ_GRAMS = 31.1034768;
 let goldCache = null;
+let goldError = null; // last failure, shown by /gold-price so production problems are visible
 async function goldPrice() {
   if (goldCache && Date.now() - goldCache.at < 60 * 1000) return goldCache.value;
   try {
-    const r = await fetch('https://api.gold-api.com/price/XAU', { signal: AbortSignal.timeout(5000) });
+    const r = await fetch('https://api.gold-api.com/price/XAU', {
+      signal: AbortSignal.timeout(8000),
+      headers: { Accept: 'application/json', 'User-Agent': 'task-assistant/1.0' },
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
     const j = await r.json();
-    if (!(j.price > 0)) throw new Error('no price');
+    if (!(j.price > 0)) throw new Error('no price in response');
     const value = { aedPerGram24: (j.price * 3.6725) / OZ_GRAMS, updatedAt: j.updatedAt };
     goldCache = { at: Date.now(), value };
     return value;
-  } catch {
+  } catch (e) {
+    goldError = `${e.name}: ${e.message}${e.cause ? ` (${e.cause.code || e.cause.message})` : ''}`;
+    console.error('[gold-price] fetch failed:', goldError);
     return goldCache?.value ?? null;
   }
 }
@@ -142,10 +149,99 @@ async function goldPrice() {
 const byCreated = (a, b) => new Date(a.createdAt) - new Date(b.createdAt);
 
 // Everything the page needs in one call, decrypted.
+// Market exchange rates as AED per 1 unit of each currency (the shape settings.rates uses).
+// ExchangeRate-API's open feed first, the fawazahmed0 CDN feed as a backup. Fetched daily at
+// 18:00 UAE time (UTC+4, no DST) and stored in MarketRates, so every account and restart shares them.
+async function fetchFx() {
+  const opts = { signal: AbortSignal.timeout(8000), headers: { Accept: 'application/json', 'User-Agent': 'task-assistant/1.0' } };
+  const sources = [
+    async () => {
+      const j = await (await fetch('https://open.er-api.com/v6/latest/AED', opts)).json();
+      if (j.result !== 'success') throw new Error(j['error-type'] || 'bad response');
+      return { perAed: j.rates, updatedAt: new Date(j.time_last_update_unix * 1000).toISOString(), source: 'ExchangeRate-API' };
+    },
+    async () => {
+      const j = await (await fetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/aed.json', opts)).json();
+      if (!j.aed) throw new Error('bad response');
+      const perAed = Object.fromEntries(Object.entries(j.aed).map(([c, v]) => [c.toUpperCase(), v]));
+      return { perAed, updatedAt: j.date, source: 'fawazahmed0 currency-api' };
+    },
+  ];
+  const errors = [];
+  for (const src of sources) {
+    try {
+      const { perAed, updatedAt, source } = await src();
+      const rates = {};
+      for (const [c, v] of Object.entries(perAed)) if (/^[A-Z]{3}$/.test(c) && v > 0 && c !== 'AED') rates[c] = 1 / v;
+      return { rates, updatedAt, source };
+    } catch (e) {
+      errors.push(`${e.name}: ${e.message}${e.cause ? ` (${e.cause.code || e.cause.message})` : ''}`);
+    }
+  }
+  throw new HttpError(502, `Exchange rates unavailable: ${errors.join(' | ')}`);
+}
+
+const UAE_OFFSET_H = 4;
+const FX_HOUR = 18;
+// The most recent 18:00 UAE time at or before `now`.
+function lastFxRun(now = new Date()) {
+  const run = new Date(now);
+  run.setUTCHours(FX_HOUR - UAE_OFFSET_H, 0, 0, 0);
+  if (run > now) run.setUTCDate(run.getUTCDate() - 1);
+  return run;
+}
+
+async function refreshMarketRates() {
+  try {
+    const value = await fetchFx();
+    await MarketRates.findByIdAndUpdate('fx', { ...value, fetchedAt: new Date() }, { upsert: true });
+    console.log(`[fx-rates] updated from ${value.source}`);
+    return value;
+  } catch (e) {
+    console.error('[fx-rates]', e.message);
+    return null;
+  }
+}
+
+// Stored rates; refetched first when they predate the latest 18:00 run (e.g. the host slept through it).
+let fxRefreshing = null;
+async function marketRates() {
+  let doc = await MarketRates.findById('fx').lean();
+  if (!doc || !doc.fetchedAt || doc.fetchedAt < lastFxRun()) {
+    fxRefreshing ??= refreshMarketRates().finally(() => (fxRefreshing = null));
+    await fxRefreshing;
+    doc = (await MarketRates.findById('fx').lean()) || doc;
+  }
+  return doc ? { rates: doc.rates, updatedAt: doc.updatedAt, source: doc.source, fetchedAt: doc.fetchedAt } : null;
+}
+
+// Daily timer for 18:00 UAE time; call once after the database connects.
+export function startFxSchedule() {
+  const next = () => lastFxRun().getTime() + 24 * 60 * 60 * 1000 - Date.now();
+  const tick = async () => {
+    await refreshMarketRates();
+    setTimeout(tick, next());
+  };
+  setTimeout(tick, next());
+  marketRates().catch(() => {}); // catch up now if today's run was missed
+}
+
+router.get(
+  '/fx-rates',
+  ah(async (_req, res) => {
+    const value = await refreshMarketRates();
+    if (!value) throw new HttpError(502, 'Exchange rates unavailable right now; see the server log.');
+    res.json(await marketRates());
+  })
+);
+
 // Live gold rate on its own, so the asset form can refresh it while open.
 router.get(
   '/gold-price',
-  ah(async (_req, res) => res.json(await goldPrice()))
+  ah(async (_req, res) => {
+    const price = await goldPrice();
+    res.json(price ?? { error: goldError || 'Gold rate unavailable' });
+  })
 );
 
 router.get(
@@ -163,6 +259,7 @@ router.get(
     out.snapshots.sort((a, b) => a.month.localeCompare(b.month));
     out.transactions.sort((a, b) => b.date.localeCompare(a.date) || byCreated(a, b));
     out.goldPrice = await goldPrice();
+    out.marketRates = await marketRates().catch(() => null);
     res.json(out);
   })
 );

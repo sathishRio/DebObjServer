@@ -452,6 +452,7 @@ const wealthSettingsSchema = new Schema(
     withdrawalRate: { type: Number, min: 1, max: 10, default: 4 }, // safe withdrawal rate for financial independence
     forecastYears: { type: Number, min: 1, max: 50, default: 20 },
     excludeHomeFromFi: { type: Boolean, default: true }, // real estate is not counted as investable
+    autoRates: { type: Boolean, default: false }, // use the daily market rates (MarketRates) instead of `rates`
     // The user's own category lists; empty means the built-in defaults.
     incomeCategories: { type: [{ type: String, trim: true, maxlength: 60 }], default: [] },
     expenseCategories: { type: [{ type: String, trim: true, maxlength: 60 }], default: [] },
@@ -556,6 +557,17 @@ export const Budget = model('Budget', budgetSchema);
 export const Goal = model('Goal', goalSchema);
 export const WealthSnapshot = model('WealthSnapshot', snapshotSchema);
 export const WealthSettings = model('WealthSettings', wealthSettingsSchema);
+
+// Market exchange rates shared by every account (public data, not encrypted): AED per 1 unit.
+// One document, _id 'fx', refreshed daily at 18:00 UAE time.
+const marketRatesSchema = new Schema({
+  _id: { type: String },
+  rates: { type: Schema.Types.Mixed, default: {} },
+  updatedAt: String, // when the provider last updated them
+  source: String,
+  fetchedAt: Date, // when this server fetched them
+});
+export const MarketRates = model('MarketRates', marketRatesSchema);
 
 // Every wealth record, encrypted with the account's vault key. The models above are used only to
 // validate a record before it is encrypted; `kind` is the collection name, `key` the snapshot month.

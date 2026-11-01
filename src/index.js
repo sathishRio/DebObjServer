@@ -6,7 +6,7 @@ import { connect } from './db.js';
 import routes from './routes.js';
 import authRoutes, { assertAuthConfig, requireAuth, requireAuthOr } from './auth.js';
 import vaultRoutes, { assertVaultConfig } from './vault.js';
-import wealthRoutes from './wealth.js';
+import wealthRoutes, { startFxSchedule } from './wealth.js';
 import learningRoutes, { syncHandler } from './learning.js';
 import learningNotesRoutes from './learningNotes.js';
 import { seedIfEmpty } from './seed.js';
@@ -70,5 +70,6 @@ assertAuthConfig();
 assertVaultConfig();
 await connect();
 await seedIfEmpty();
+startFxSchedule();
 // Listen on all interfaces so a phone on the same network can reach the API.
 app.listen(port, '0.0.0.0', () => console.log(`API listening on http://0.0.0.0:${port}/api`));
