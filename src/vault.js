@@ -54,8 +54,10 @@ function open(key, sealed, aad) {
   return Buffer.concat([decipher.update(Buffer.from(data, 'base64')), decipher.final()]);
 }
 
-async function deriveKek(pin, saltB64) {
-  const peppered = crypto.createHmac('sha256', process.env.VAULT_SECRET).update(pin).digest();
+// Secret rotation: set the new VAULT_SECRET and move the previous one to VAULT_SECRET_OLD.
+// Each vault is re-wrapped with the new secret on its next successful PIN entry.
+async function deriveKek(pin, saltB64, secret = process.env.VAULT_SECRET) {
+  const peppered = crypto.createHmac('sha256', secret).update(pin).digest();
   return scrypt(peppered, Buffer.from(saltB64, 'base64'), 32, SCRYPT_OPTS);
 }
 
@@ -110,7 +112,17 @@ async function unwrapWithPin(owner, pin) {
     throw new VaultError(429, 'Too many wrong PINs. Vault is locked.', { lockedUntil: meta.lockedUntil });
   }
   try {
-    const dek = open(await deriveKek(pin, meta.kdfSalt), meta.wrappedKey, keyAad(owner));
+    let dek;
+    try {
+      dek = open(await deriveKek(pin, meta.kdfSalt), meta.wrappedKey, keyAad(owner));
+    } catch (e) {
+      const old = process.env.VAULT_SECRET_OLD;
+      if (!old) throw e;
+      dek = open(await deriveKek(pin, meta.kdfSalt, old), meta.wrappedKey, keyAad(owner));
+      Object.assign(meta, await wrapKey(dek, pin, owner)); // migrate to the new secret
+      await meta.save();
+      console.info(`Vault for ${owner} re-wrapped with the new VAULT_SECRET`);
+    }
     if (meta.failedAttempts || meta.lockedUntil) {
       meta.failedAttempts = 0;
       meta.lockedUntil = null;
