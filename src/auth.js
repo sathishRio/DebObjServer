@@ -15,6 +15,8 @@ const settings = () => ({
   // client IDs (e.g. iOS) can be accepted too.
   audiences: [process.env.GOOGLE_WEB_CLIENT_ID, ...list(process.env.GOOGLE_EXTRA_CLIENT_IDS)].filter(Boolean),
   allowed: list(process.env.ALLOWED_EMAILS).map((e) => e.toLowerCase()),
+  // Learners: may use the Learn site (/api/learn) only, not the rest of the Assistant.
+  learners: list(process.env.LEARN_ALLOWED_EMAILS).map((e) => e.toLowerCase()),
   secret: process.env.JWT_SECRET || '',
   days: Number(process.env.SESSION_DAYS) || 30,
   // Dev mode: an "Admin" button signs in as the first ALLOWED_EMAILS account without Google.
@@ -45,27 +47,46 @@ const isLocalRequest = (req) =>
   LOCAL_IP.test((req.socket.remoteAddress || '').replace(/^::ffff:/, ''));
 
 const isAllowed = (email) => settings().allowed.includes((email || '').toLowerCase());
+const isLearner = (email) => settings().learners.includes((email || '').toLowerCase());
+
+// Shared token check. Returns the user, or sends the error response and returns null.
+function sessionUser(req, res) {
+  const header = req.get('authorization') || '';
+  const token = header.startsWith('Bearer ') ? header.slice(7) : '';
+  if (!token) { res.status(401).json({ error: 'Sign in required' }); return null; }
+  let user;
+  try {
+    user = jwt.verify(token, settings().secret, { algorithms: ['HS256'] });
+  } catch {
+    res.status(401).json({ error: 'Session expired. Please sign in again.' }); return null;
+  }
+  // Purpose tokens (e.g. the Coursera sync token) only open their own endpoint, never a session.
+  if (user.purpose) { res.status(401).json({ error: 'Sign in required' }); return null; }
+  // Admin (dev) sessions stop working the moment dev mode is switched off.
+  if (user.dev && !settings().devLogin) { res.status(401).json({ error: 'Dev mode is off. Please sign in with Google.' }); return null; }
+  return user;
+}
 
 const googleClient = new OAuth2Client();
 
 // Express middleware: requires "Authorization: Bearer <session token>" from an allowed user.
+// Learner-scoped sessions are rejected here: they only open /api/learn.
 export function requireAuth(req, res, next) {
-  const header = req.get('authorization') || '';
-  const token = header.startsWith('Bearer ') ? header.slice(7) : '';
-  if (!token) return res.status(401).json({ error: 'Sign in required' });
-  try {
-    const user = jwt.verify(token, settings().secret, { algorithms: ['HS256'] });
-    // Purpose tokens (e.g. the Coursera sync token) only open their own endpoint, never a session.
-    if (user.purpose) return res.status(401).json({ error: 'Sign in required' });
-    // Re-checked on every request, so removing an email from ALLOWED_EMAILS locks it out immediately.
-    if (!isAllowed(user.email)) return res.status(403).json({ error: 'This Google account is no longer allowed' });
-    // Admin (dev) sessions stop working the moment dev mode is switched off.
-    if (user.dev && !settings().devLogin) return res.status(401).json({ error: 'Dev mode is off. Please sign in with Google.' });
-    req.user = user;
-    next();
-  } catch {
-    res.status(401).json({ error: 'Session expired. Please sign in again.' });
-  }
+  const user = sessionUser(req, res);
+  if (!user) return;
+  // Re-checked on every request, so removing an email from ALLOWED_EMAILS locks it out immediately.
+  if (user.scope === 'learn' || !isAllowed(user.email)) return res.status(403).json({ error: 'This Google account is not allowed here' });
+  req.user = user;
+  next();
+}
+
+// For /api/learn: accepts full users and learners (LEARN_ALLOWED_EMAILS).
+export function requireLearnAuth(req, res, next) {
+  const user = sessionUser(req, res);
+  if (!user) return;
+  if (!isAllowed(user.email) && !isLearner(user.email)) return res.status(403).json({ error: 'This Google account is no longer allowed' });
+  req.user = user;
+  next();
 }
 
 // Long-lived "purpose" tokens for helpers outside the app: each opens only its own endpoints for
@@ -134,16 +155,18 @@ router.post('/google', async (req, res) => {
     return res.status(401).json({ error: 'Google sign-in could not be verified' });
   }
 
-  if (!payload?.email || !payload.email_verified || !isAllowed(payload.email)) {
+  // Learn site (app: 'learn') also accepts LEARN_ALLOWED_EMAILS, with a Learn-only session.
+  const learnOnly = req.body?.app === 'learn' && !isAllowed(payload?.email) && isLearner(payload?.email);
+  if (!payload?.email || !payload.email_verified || !(isAllowed(payload.email) || learnOnly)) {
     console.warn(`Rejected sign-in from ${payload?.email || 'unknown account'}`);
     return res.status(403).json({ error: `${payload?.email || 'This account'} is not allowed to use this app` });
   }
 
   const user = { email: payload.email.toLowerCase(), name: payload.name || '', picture: payload.picture || '' };
-  res.json({ token: issueSession(user), user });
+  res.json({ token: issueSession(user, learnOnly ? { scope: 'learn' } : {}), user });
 });
 
-router.get('/me', requireAuth, (req, res) => {
+router.get('/me', requireLearnAuth, (req, res) => {
   const { email, name, picture, exp, dev } = req.user;
   res.json({ email, name, picture, dev: !!dev, expiresAt: new Date(exp * 1000).toISOString() });
 });

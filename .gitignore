@@ -8,3 +8,4 @@ web-build/
 reference/*
 server/.env
  .env.production
+backups/

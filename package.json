@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch src/index.js",
-    "seed": "node src/seed.js --reset-career"
+    "seed": "node src/seed.js --reset-career",
+    "seed:learn": "node src/learnSeed.js",
+    "seed:learn:reset": "node src/learnSeed.js --reset"
   },
   "engines": {
     "node": ">=20"

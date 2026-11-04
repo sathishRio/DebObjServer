@@ -1,0 +1,8 @@
+{
+  "slug": "ai-journey",
+  "title": "OutSystems Architect to AI Engineer",
+  "tagline": "60 minutes a day: Mon–Fri study, Saturday practice, Sunday rest",
+  "description": "Python, data and math, ML fundamentals, LLMs and RAG, agents and backend, production and cloud certification. 6 stages over 37 weeks.",
+  "order": 1,
+  "minutesPerDay": 60
+}

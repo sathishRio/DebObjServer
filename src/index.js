@@ -4,11 +4,12 @@ import express from 'express';
 import mongoose from 'mongoose';
 import { connect } from './db.js';
 import routes from './routes.js';
-import authRoutes, { assertAuthConfig, requireAuth, requireAuthOr } from './auth.js';
+import authRoutes, { assertAuthConfig, requireAuth, requireAuthOr, requireLearnAuth } from './auth.js';
 import vaultRoutes, { assertVaultConfig } from './vault.js';
 import wealthRoutes, { startFxSchedule } from './wealth.js';
 import learningRoutes, { syncHandler } from './learning.js';
 import learningNotesRoutes from './learningNotes.js';
+import learnRoutes from './learn.js';
 import { seedIfEmpty } from './seed.js';
 
 const app = express();
@@ -47,6 +48,8 @@ app.use('/api/wealth', requireAuth, wealthRoutes);
 // Notes also accept the Chrome extension's token, so they mount before the session-only learning routes.
 app.use('/api/learning/notes', requireAuthOr('learning-notes'), learningNotesRoutes);
 app.use('/api/learning', requireAuth, learningRoutes);
+// Learn site (daily courses).
+app.use('/api/learn', requireLearnAuth, learnRoutes);
 app.use('/api', requireAuth, routes);
 app.use('/api', (_req, res) => res.status(404).json({ error: 'Not found' }));
 
