@@ -125,9 +125,9 @@ export function gmailRoutes(router, { ah, HttpError, store, reveal, reseal, stri
               try {
                 const parsed = await parseStatement(Buffer.from(att.data, 'base64url'), src.password).catch(statementError);
                 const r = await importStatement(vault, src.account, parsed, 'gmail');
-                result.imported += r.created.length;
+                result.imported += r.created.length + r.matched.length;
                 result.duplicates += r.duplicates;
-                created.push(...r.created);
+                created.push(...r.created, ...r.matched); // the page replaces mapped lines by id
                 if (r.account) accounts.push(r.account);
               } catch (e) {
                 ok = false;

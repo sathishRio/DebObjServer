@@ -145,6 +145,31 @@ export async function parseStatement(buffer, password) {
   return { transactions: out, from: dates[0], to: dates.at(-1), opening, closing };
 }
 
+/* ---------- Mapping lines added by hand ---------- */
+
+const MATCH_DAYS = 7;
+const dayGap = (a, b) => Math.abs(Date.parse(a) - Date.parse(b)) / 86_400_000;
+
+// Which line added by hand each statement line replaces (its id, or null). A line's `match` is the user's
+// choice: an id, or null for "none". Without a choice it takes the closest open line going the same way
+// for the same amount, within a week. Each line added by hand is used once; duplicates never match.
+export function matchManual(lines, manual) {
+  const open = new Map(manual.map((m) => [m.id, m]));
+  const take = (id) => (open.delete(id) ? id : null);
+  const out = lines.map((t) => {
+    if (t.duplicate || !t.match || open.get(t.match)?.direction !== t.direction) return null;
+    return take(t.match);
+  });
+  lines.forEach((t, i) => {
+    if (t.duplicate || t.match !== undefined) return;
+    const best = [...open.values()]
+      .filter((m) => m.direction === t.direction && Math.abs(m.amount - t.amount) < 0.005 && dayGap(m.date, t.date) <= MATCH_DAYS)
+      .sort((a, b) => dayGap(a.date, t.date) - dayGap(b.date, t.date))[0];
+    if (best) out[i] = take(best.id);
+  });
+  return out;
+}
+
 /* ---------- Tags ---------- */
 
 // Tags that are not income or expenses (the money only moves between your own accounts).

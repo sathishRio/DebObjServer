@@ -2,7 +2,7 @@ import { Router } from 'express';
 import {
   Asset, Budget, CashEntry, Debt, FixedItem, Goal, Liability, MailSource, MarketRates, TagRule, Transaction, Transfer, VaultMeta, WealthRecord, WealthSettings, WealthSnapshot,
 } from './models.js';
-import { StatementError, autoTag, merchantKey, parseStatement, txnHash } from './statements.js';
+import { StatementError, autoTag, matchManual, merchantKey, parseStatement, txnHash } from './statements.js';
 import { gmailRoutes } from './gmail.js';
 import { openJson, requireUnlocked, sealJson } from './vault.js';
 
@@ -308,7 +308,14 @@ async function rulesFor(vault) {
 const INCOME_CATEGORIES = ['Salary', 'Bonus', 'Business', 'Rental', 'Interest & dividends', 'Other income'];
 const EXPENSE_CATEGORIES = ['Housing', 'Utilities', 'Groceries', 'Dining', 'Transport', 'Insurance', 'Health', 'Education', 'Shopping', 'Travel', 'Entertainment', 'Family support', 'Loan EMI', 'Other'];
 
-// Marks each parsed line as a duplicate (already imported for this account) and gives it a starting tag.
+// Lines added by hand to an account that no statement line has replaced yet (imported lines have a key).
+async function openManualLines(vault, account) {
+  const recs = await WealthRecord.find({ owner: vault.owner, kind: 'transactions', key: '' });
+  return recs.map((r) => reveal(vault, r)).filter((t) => t.account === account && t.source === 'manual');
+}
+
+// Marks each parsed line as a duplicate (already imported for this account), maps it to the line added
+// by hand that it replaces, and gives it a starting tag.
 async function previewLines(vault, account, lines, isCard) {
   const keys = lines.map((t) => txnHash(account, t));
   const known = new Set((await WealthRecord.find({ owner: vault.owner, kind: 'transactions', key: { $in: keys } }, { key: 1 })).map((r) => r.key));
@@ -318,7 +325,14 @@ async function previewLines(vault, account, lines, isCard) {
     income: settings.incomeCategories?.length ? settings.incomeCategories : INCOME_CATEGORIES,
     expense: settings.expenseCategories?.length ? settings.expenseCategories : EXPENSE_CATEGORIES,
   };
-  return lines.map((t, i) => ({ ...t, key: keys[i], duplicate: known.has(keys[i]), category: t.category ?? autoTag(t, isCard, rules, categories) }));
+  const marked = lines.map((t, i) => ({ ...t, key: keys[i], duplicate: known.has(keys[i]) }));
+  const manual = await openManualLines(vault, account);
+  const matches = matchManual(marked, manual);
+  return marked.map((t, i) => {
+    const m = manual.find((x) => x.id === matches[i]);
+    const match = m ? { id: m.id, date: m.date, description: m.description, amount: m.amount, category: m.category } : null;
+    return { ...t, match, category: t.category ?? (m?.category || autoTag(t, isCard, rules, categories)) };
+  });
 }
 
 // Saves the new lines of a statement for an account; a newer statement also updates its balance.
@@ -327,8 +341,20 @@ export async function importStatement(vault, account, { transactions, to, closin
   const isCard = acct.kind === 'liabilities';
   const lines = await previewLines(vault, account, transactions, isCard);
   const created = [];
+  const matched = [];
   for (const t of lines) {
     if (t.duplicate) continue;
+    if (t.match) {
+      // The statement line replaces the line added by hand: the statement's date, wording and amount,
+      // with its own wording kept as the note, and its key so importing again skips it.
+      const rec = await WealthRecord.findOne({ _id: t.match.id, owner: vault.owner, kind: 'transactions' });
+      const mine = strip(reveal(vault, rec));
+      const merged = { ...mine, date: t.date, description: t.description, amount: t.amount, category: t.category || mine.category, note: mine.note || mine.description, source };
+      const plain = await validated(Transaction, merged, vault.owner);
+      rec.key = t.key;
+      matched.push(await reseal(vault, rec, plain));
+      continue;
+    }
     const plain = await validated(
       Transaction,
       { account, date: t.date, description: t.description, amount: t.amount, direction: t.direction, category: t.category || '', currency: acct.plain.currency, source },
@@ -343,7 +369,7 @@ export async function importStatement(vault, account, { transactions, to, closin
     const Model = isCard ? Liability : Asset;
     updated = await reseal(vault, acct.rec, await validated(Model, { ...strip(acct.plain), ...patch }, vault.owner));
   }
-  return { created, duplicates: lines.length - created.length, account: updated && { kind: acct.kind, item: updated } };
+  return { created, matched, duplicates: lines.length - created.length - matched.length, account: updated && { kind: acct.kind, item: updated } };
 }
 
 const statementError = (e) => {
@@ -371,8 +397,22 @@ router.post(
     if (!Array.isArray(transactions) || transactions.length > 2000) throw new HttpError(400, 'No transactions to import');
     const lines = transactions.map((t) => ({
       date: String(t.date), description: String(t.description || '').slice(0, 200), amount: Number(t.amount), direction: t.direction, category: String(t.category || ''),
+      match: typeof t.match === 'string' ? t.match : null, // what the page showed and the user kept
     }));
     res.json(await importStatement(req.vault, account, { transactions: lines, to, closing: closing == null ? null : Number(closing) }, 'upload'));
+  })
+);
+
+// A credit or debit added by hand, in the account's currency. Importing a statement later maps it to its line.
+router.post(
+  '/transactions',
+  ah(async (req, res) => {
+    const vault = req.vault;
+    const acct = await accountRecord(vault, req.body?.account);
+    if (!(Number(req.body?.amount) > 0)) throw new HttpError(400, 'Enter an amount above zero');
+    const fields = pick(req.body, COLLECTIONS.transactions.fields);
+    const plain = await validated(Transaction, { ...fields, account: req.body.account, currency: acct.plain.currency, source: 'manual' }, vault.owner);
+    res.status(201).json(reveal(vault, await store(vault, 'transactions', plain)));
   })
 );
 
