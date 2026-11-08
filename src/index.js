@@ -10,6 +10,8 @@ import wealthRoutes, { startFxSchedule } from './wealth.js';
 import learningRoutes, { syncHandler } from './learning.js';
 import learningNotesRoutes from './learningNotes.js';
 import learnRoutes from './learn.js';
+import plannerRoutes from './planner.js';
+import { startReminders } from './plannerReminders.js';
 import { seedIfEmpty } from './seed.js';
 
 const app = express();
@@ -50,6 +52,8 @@ app.use('/api/learning/notes', requireAuthOr('learning-notes'), learningNotesRou
 app.use('/api/learning', requireAuth, learningRoutes);
 // Learn site (daily courses).
 app.use('/api/learn', requireLearnAuth, learnRoutes);
+// Personal planner (free time and what to do next). Full accounts only.
+app.use('/api/planner', requireAuth, plannerRoutes);
 app.use('/api', requireAuth, routes);
 app.use('/api', (_req, res) => res.status(404).json({ error: 'Not found' }));
 
@@ -74,5 +78,6 @@ assertVaultConfig();
 await connect();
 await seedIfEmpty();
 startFxSchedule();
+startReminders();
 // Listen on all interfaces so a phone on the same network can reach the API.
 app.listen(port, '0.0.0.0', () => console.log(`API listening on http://0.0.0.0:${port}/api`));
