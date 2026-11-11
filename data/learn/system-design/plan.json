@@ -1,0 +1,412 @@
+{
+ "title": "System Design",
+ "minutes_per_day": 45,
+ "sessions": [
+  {
+   "day": 1,
+   "week": 1,
+   "weekday": "Monday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "HLD vs LLD and the Banking Context",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Know what each design level contains and draw the system context for the banking app.\n\n*Concept: High-Level Design (HLD) vs Low-Level Design (LLD)*\n\n### Understand (10 min)\n\n**HLD:** The big picture: systems, components, integrations, data stores, deployment and quality attributes. Audience: architects, leads, business and security stakeholders.\n\n**LLD:** The inside of one component: classes, interfaces, database tables, API payloads, sequence diagrams. Audience: developers.\n\n**System context:** The system as one box, surrounded by users and external systems it talks to. Always the first diagram (C4 Level 1).\n\n### Compare (5 min)\n\nHLD answers 'what parts exist and how do they connect?'; LLD answers 'how is this one part built?'. An architect owns the HLD and reviews LLDs.\n\n### Design (banking app) (20 min)\n\n**Task:** Draw the system context diagram for the Enterprise Banking Application.\n\n1. Put 'Banking Platform' in the centre.\n2. Add actors: Retail customer (mobile/web), Branch staff, Operations/back-office, Compliance officer.\n3. Add external systems: UAE PASS (identity), Payment network/switch, Core banking (if legacy), SMS/email providers, Central bank reporting, Credit bureau.\n4. Label each arrow with what flows: 'logs in via', 'sends payment to', 'sends OTP via'.\n\n### Document & defend (10 min)\n\n**Document:** Start an HLD document with sections: Context, Requirements, Architecture, Data, Integration, Deployment, Security, Decisions (ADRs). Paste the context diagram in.\n\n**Defend:** Explain in 60 seconds what the platform does and who uses it, to a non-technical manager.\n\n**Self-check**\n\n- **Q:** Would a database table design go in the HLD or LLD?\n  <details><summary>Answer</summary>LLD. The HLD only names the data store and its main entities.</details>\n- **Q:** What is the first diagram in any HLD?\n  <details><summary>Answer</summary>The system context diagram.</details>"
+  },
+  {
+   "day": 2,
+   "week": 1,
+   "weekday": "Tuesday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Functional vs Non-Functional Requirements",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Turn the banking brief into clear, measurable requirements.\n\n*Concept: Functional vs non-functional requirements*\n\n### Understand (10 min)\n\n**Functional requirements:** What the system does: open account, transfer money, view statement.\n\n**Non-functional requirements (quality attributes):** How well it does it: performance, availability, security, scalability, compliance, maintainability. These drive architecture far more than features do.\n\n**Measurable NFRs:** 'Fast' is not a requirement. 'p95 balance lookup under 300 ms at 2,000 requests/sec' is.\n\n**Constraints:** Fixed decisions you must accept: UAE data residency, Azure as cloud, central bank regulations, existing core banking.\n\n### Compare (5 min)\n\nMissing a functional requirement means a missing feature; missing an NFR often means redesigning the whole system.\n\n### Design (banking app) (20 min)\n\n**Task:** Write the requirements for the banking app.\n\n1. List 3 functional requirements for each of the 5 capabilities (15 total).\n2. Write 8 NFRs with numbers: e.g. availability 99.95%, payment p95 < 1 s, 500k customers / 50k daily active, RPO 5 min / RTO 1 h, all data in UAE regions, MFA for all logins, 7-year audit retention, deploy weekly with zero downtime.\n3. List constraints: Azure, UAE PASS, regulatory reporting.\n4. Mark the top 3 NFRs that will drive the design (likely security, availability, consistency of money).\n\n### Document & defend (10 min)\n\n**Document:** Add a Requirements section with a functional table and an NFR table (attribute, target, how measured).\n\n**Defend:** A stakeholder asks why you need 99.95% and not 99.99%. Explain the cost difference and business impact.\n\n**Self-check**\n\n- **Q:** Is 'the system must be secure' a good NFR?\n  <details><summary>Answer</summary>No. It must be specific and testable, e.g. 'MFA for all customer logins; data encrypted at rest with customer-managed keys'.</details>\n- **Q:** Which usually shapes architecture more: features or NFRs?\n  <details><summary>Answer</summary>NFRs.</details>"
+  },
+  {
+   "day": 3,
+   "week": 1,
+   "weekday": "Wednesday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Monolith vs Modular Monolith vs Microservices",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Choose an application style for the banking platform and justify it.\n\n*Concept: Monolithic vs modular monolithic vs microservices*\n\n### Understand (10 min)\n\n**Monolith:** One codebase, one deployment, one database. Simple to build and run; becomes hard to change and scale as it grows.\n\n**Modular monolith:** One deployment, but strict internal modules with clear boundaries and no cross-module table access. Easy to split later.\n\n**Microservices:** Independently deployable services, each owning its data. Team autonomy and independent scaling, at the cost of network, data and operational complexity.\n\n### Compare (5 min)\n\nTeam size, release frequency, scaling differences and operational maturity decide the style, not fashion. Small team + new domain → modular monolith. Many teams + different scaling needs → microservices.\n\n### Design (banking app) (20 min)\n\n**Task:** Decide the style for the banking app.\n\n1. Score each style 1–5 against: delivery speed, independent scaling, team autonomy, operational complexity, data consistency.\n2. Note the banking specifics: payments need strong consistency; notifications and statements scale differently from accounts.\n3. Make a decision. A strong answer: modular monolith for Customer/Account/Transaction, with Payments and Notifications as separate services — or full microservices if you assume several teams.\n4. State the assumptions behind your choice (team count, expected growth).\n\n### Document & defend (10 min)\n\n**Document:** Write ADR-001: Application architecture style (context, decision, alternatives, consequences).\n\n**Defend:** Answer: 'Why not just use microservices for everything? Everyone does.'\n\n**Self-check**\n\n- **Q:** What makes a modular monolith different from a plain monolith?\n  <details><summary>Answer</summary>Enforced module boundaries and data ownership inside one deployable.</details>\n- **Q:** Name two costs of microservices.\n  <details><summary>Answer</summary>Distributed data consistency and operational overhead (monitoring, deployment, networking).</details>"
+  },
+  {
+   "day": 4,
+   "week": 1,
+   "weekday": "Thursday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Layered Architecture",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Structure each component into clean layers.\n\n*Concept: Layered architecture (presentation, business, data)*\n\n### Understand (10 min)\n\n**Presentation layer:** UI and API controllers: input validation, mapping requests and responses. No business rules.\n\n**Business (application/domain) layer:** The rules: 'a transfer can't exceed the daily limit', 'an account must be KYC-verified to transact'.\n\n**Data layer:** Persistence: repositories, queries, ORM mapping.\n\n**Strict vs relaxed layering:** Strict: each layer calls only the one below. Relaxed: may skip layers. Strict is cleaner; relaxed is faster to build.\n\n### Compare (5 min)\n\nLayered is simple and familiar, but business logic often drifts into controllers or stored procedures, and the domain ends up depending on the database.\n\n### Design (banking app) (20 min)\n\n**Task:** Layer the Account Management component.\n\n1. Presentation: AccountController (GET /accounts/{id}, POST /accounts).\n2. Business: AccountService with rules — open account only for KYC-verified customers; freeze/unfreeze; minimum balance.\n3. Data: AccountRepository on Azure SQL.\n4. Mark one place where a rule could wrongly leak into the controller or a stored procedure, and fix it.\n\n### Document & defend (10 min)\n\n**Document:** Add a short 'Internal structure' note for components: which layers exist and the rule 'no business logic in controllers or SQL'.\n\n**Defend:** A developer wants to put the daily-limit check in a stored procedure for speed. Respond.\n\n**Self-check**\n\n- **Q:** Where does 'transfer cannot exceed daily limit' belong?\n  <details><summary>Answer</summary>The business layer.</details>\n- **Q:** Main weakness of classic layering?\n  <details><summary>Answer</summary>The business layer depends on the data layer, so the domain is tied to the database.</details>"
+  },
+  {
+   "day": 5,
+   "week": 1,
+   "weekday": "Friday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Clean and Hexagonal Architecture",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Make business logic independent of frameworks, databases and external systems.\n\n*Concept: Clean Architecture and Hexagonal Architecture*\n\n### Understand (10 min)\n\n**Hexagonal (ports & adapters):** The core defines ports (interfaces). Adapters implement them: SQL adapter, REST adapter, UAE PASS adapter, Service Bus adapter.\n\n**Clean Architecture:** Concentric rings: Entities → Use cases → Interface adapters → Frameworks. Dependencies always point inward.\n\n**Dependency inversion:** The core depends on abstractions; infrastructure depends on the core, not the other way round.\n\n**Benefit:** Swap a database or payment provider without touching rules; unit-test rules without infrastructure.\n\n### Compare (5 min)\n\nLayered: domain → data. Hexagonal/Clean: data → domain. More structure upfront, worth it for complex, long-lived domains like payments.\n\n### Design (banking app) (20 min)\n\n**Task:** Redesign Payment Processing as a hexagon.\n\n1. Core use case: InitiatePayment (validate limits, check balance, create payment).\n2. Driving ports (in): REST API, scheduled-payment job.\n3. Driven ports (out): IAccountGateway, IPaymentNetwork, IPaymentRepository, IEventPublisher.\n4. Adapters: SQL repository, payment switch client, Service Bus publisher, a fake network adapter for tests.\n\n### Document & defend (10 min)\n\n**Document:** Add the hexagon diagram for Payments to the HLD appendix.\n\n**Defend:** Explain to a team lead why this structure makes changing the payment provider a 1-week job instead of 2 months.\n\n**Self-check**\n\n- **Q:** Which direction do dependencies point in Clean Architecture?\n  <details><summary>Answer</summary>Inward, toward the domain.</details>\n- **Q:** Give one driven port in the payments hexagon.\n  <details><summary>Answer</summary>IPaymentNetwork (or repository, event publisher).</details>"
+  },
+  {
+   "day": 6,
+   "week": 1,
+   "weekday": "Saturday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Domain-Driven Design Fundamentals",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Find the natural boundaries of the banking domain.\n\n*Concept: Domain-Driven Design (DDD) fundamentals*\n\n### Understand (10 min)\n\n**Ubiquitous language:** Business and tech use the same words in code and conversation (e.g. 'Beneficiary', 'Hold', 'Posting').\n\n**Bounded context:** A boundary where a model has one consistent meaning. 'Customer' in Onboarding (KYC data) differs from 'Customer' in Notifications (contact preferences).\n\n**Entities, value objects, aggregates:** Entity has identity (Account). Value object has none (Money = amount + currency). Aggregate is a consistency boundary with one root (Account owns its holds).\n\n**Context map:** How contexts relate: upstream/downstream, shared kernel, anti-corruption layer.\n\n### Compare (5 min)\n\nTechnical splits ('UI service', 'DB service') create tight coupling. Domain splits (bounded contexts) create independent, meaningful components.\n\n### Design (banking app) (20 min)\n\n**Task:** Model the banking bounded contexts.\n\n1. Define contexts: Customer (KYC, profile), Accounts, Payments, Transactions/Ledger, Notifications.\n2. For each, list 3–5 key terms from the ubiquitous language.\n3. Identify aggregates: Customer, Account, Payment, LedgerEntry.\n4. Draw a context map: Payments → Accounts (balance check), Payments → Ledger (posting), all → Notifications (events). Put an anti-corruption layer in front of legacy core banking.\n\n### Document & defend (10 min)\n\n**Document:** Add a Domain section: context map + glossary of key terms.\n\n**Defend:** Explain why 'Customer' shouldn't be one shared table used by every component.\n\n**Self-check**\n\n- **Q:** Is Money an entity or a value object?\n  <details><summary>Answer</summary>A value object — defined only by amount and currency.</details>\n- **Q:** What does an aggregate protect?\n  <details><summary>Answer</summary>Consistency of its internal rules within one transaction.</details>"
+  },
+  {
+   "day": 7,
+   "week": 1,
+   "weekday": "Sunday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Component-Based Architecture",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Define components with clear responsibilities and interfaces — the component diagram.\n\n*Concept: Component-based architecture*\n\n### Understand (10 min)\n\n**Component:** A replaceable unit with one responsibility, a published interface and hidden internals.\n\n**High cohesion, low coupling:** Things that change together live together; components depend on each other as little as possible.\n\n**Interface contract:** What a component offers (APIs/events) and requires.\n\n**C4 Container/Component views:** Level 2 shows deployable units (apps, APIs, DBs); Level 3 shows components inside one container.\n\n### Compare (5 min)\n\nComponents map to bounded contexts. Whether each runs as a module or a microservice is the deployment choice from Day 3 — the component boundaries stay the same.\n\n### Design (banking app) (20 min)\n\n**Task:** Draw the component diagram (deliverable 1 of 4).\n\n1. Channels: Mobile app, Web portal, Back-office portal.\n2. Edge: API Gateway (Azure API Management), Identity (UAE PASS + Entra ID).\n3. Core components: Customer, Account, Payment, Transaction/Ledger, Notification — each with its data store.\n4. Shared: Message broker (Service Bus), Audit log, Reporting.\n5. List each component's responsibility in one sentence and its main interfaces.\n\n### Document & defend (10 min)\n\n**Document:** Insert the component diagram with a responsibility table into the HLD Architecture section.\n\n**Defend:** Someone suggests merging Payments and Transactions. Argue for or against using cohesion and change frequency.\n\n**Self-check**\n\n- **Q:** What does low coupling mean?\n  <details><summary>Answer</summary>A change in one component rarely forces changes in others.</details>\n- **Q:** Which C4 level shows deployable apps and databases?\n  <details><summary>Answer</summary>Level 2, the Container view.</details>"
+  },
+  {
+   "day": 8,
+   "week": 2,
+   "weekday": "Monday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Synchronous vs Asynchronous Communication",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Choose how components talk — the integration diagram.\n\n*Concept: Synchronous vs asynchronous communication*\n\n### Understand (10 min)\n\n**Synchronous:** Request-response (REST, gRPC). The caller waits. Simple and immediate, but couples availability and latency.\n\n**Asynchronous:** Messages/events via a broker. Caller continues. Resilient and decoupled, but results are eventual and harder to trace.\n\n**Rule of thumb:** Sync when the user needs the answer now; async for side effects, long work, and fan-out to many consumers.\n\n**Patterns:** Request-reply, fire-and-forget command, publish/subscribe events.\n\n### Compare (5 min)\n\nA chain of 4 sync calls at 99.9% each gives ~99.6% availability and adds every latency. Async breaks the chain but adds eventual consistency.\n\n### Design (banking app) (20 min)\n\n**Task:** Draw the integration diagram (deliverable 2 of 4).\n\n1. Payment → Account: sync balance check/hold (user waits).\n2. Payment → Payment network: sync with timeout + idempotency key; async callback for final status.\n3. Payment → Ledger: async PaymentCompleted event (with guaranteed delivery).\n4. All → Notification: async events (PaymentCompleted, AccountOpened, LoginAlert).\n5. External: UAE PASS (OIDC), SMS/email providers, central bank reporting (scheduled batch).\n\n### Document & defend (10 min)\n\n**Document:** Add the integration diagram with a table: from, to, style (sync/async), protocol, why.\n\n**Defend:** Explain why sending the SMS confirmation synchronously inside the payment request is a bad idea.\n\n**Self-check**\n\n- **Q:** Main risk of long synchronous call chains?\n  <details><summary>Answer</summary>Latency adds up and any single failure breaks the whole request.</details>\n- **Q:** When must a call stay synchronous?\n  <details><summary>Answer</summary>When the user needs the result immediately, e.g. balance check before payment.</details>"
+  },
+  {
+   "day": 9,
+   "week": 2,
+   "weekday": "Tuesday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Database Design and Data Modelling",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Model banking data correctly and choose stores per component.\n\n*Concept: Database design and data modelling*\n\n### Understand (10 min)\n\n**Conceptual → logical → physical model:** Entities and relationships → tables, keys, normalization → indexes, partitions, storage engine.\n\n**Normalization vs denormalization:** Normalize for integrity in transactional data; denormalize read models for speed.\n\n**Ledger modelling:** Money is never updated in place: append immutable ledger entries (double-entry: every debit has a matching credit) and derive balances.\n\n**Data ownership:** Each component owns its data; others use its API or events, never its tables.\n\n### Compare (5 min)\n\nRelational (Azure SQL) for money and strong consistency; document store for flexible customer profiles; Redis for sessions; Blob for statements/KYC documents.\n\n### Design (banking app) (20 min)\n\n**Task:** Model the core banking data.\n\n1. Customer: CustomerId, EmiratesIdHash, Name, KycStatus, ContactPrefs.\n2. Account: AccountId, CustomerId, Type, Currency, Status, OpenedAt.\n3. Payment: PaymentId, IdempotencyKey (unique), FromAccount, ToBeneficiary, Amount, Currency, Status, CreatedAt.\n4. LedgerEntry: EntryId, AccountId, PaymentId, Direction (Dr/Cr), Amount, PostedAt — append-only.\n5. Indexes: LedgerEntry(AccountId, PostedAt) for statements; Payment(IdempotencyKey) unique.\n6. Draw the data-flow diagram (deliverable 3 of 4): where data enters, is stored, transformed and reported.\n\n### Document & defend (10 min)\n\n**Document:** Add a Data section: entity diagram, store per component, retention (7 years for transactions), encryption and PII handling.\n\n**Defend:** Explain why you don't store a balance column that is simply updated on every payment.\n\n**Self-check**\n\n- **Q:** Why use an append-only ledger?\n  <details><summary>Answer</summary>Full audit trail, no lost updates, balances can be rebuilt and verified.</details>\n- **Q:** Why a unique index on IdempotencyKey?\n  <details><summary>Answer</summary>To guarantee a retried payment request is processed only once.</details>"
+  },
+  {
+   "day": 10,
+   "week": 2,
+   "weekday": "Wednesday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Trade-offs and Technology Selection",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Choose technologies with a structured, defensible method.\n\n*Concept: Architecture trade-offs and technology selection*\n\n### Understand (10 min)\n\n**Trade-off:** Every gain costs something: consistency vs availability, speed of delivery vs flexibility, managed service vs control.\n\n**Selection criteria:** Fit to NFRs, team skills, cost (total, not licence), vendor support, security/compliance, ecosystem, lock-in.\n\n**Weighted decision matrix:** Score options against weighted criteria to make choices transparent.\n\n**Reversible vs irreversible decisions:** Spend time on hard-to-reverse choices (data store, cloud); move fast on easy ones (library).\n\n### Compare (5 min)\n\nKafka vs Azure Service Bus: Kafka for high-throughput streams and replay; Service Bus for transactional business messaging with sessions, dead-lettering and less ops work.\n\n### Design (banking app) (20 min)\n\n**Task:** Select the messaging technology for the banking app.\n\n1. Criteria with weights: reliability/transactions 30%, ops effort 20%, team skill 15%, throughput 15%, cost 10%, replay 10%.\n2. Score Azure Service Bus, Kafka (Event Hubs), RabbitMQ 1–5 each.\n3. Calculate totals and make a decision.\n4. Repeat quickly for the main database (Azure SQL vs PostgreSQL vs Cosmos DB).\n\n### Document & defend (10 min)\n\n**Document:** Write ADR-002: Messaging platform, and ADR-003: Primary database, including the decision matrices.\n\n**Defend:** A senior developer insists on Kafka because it's 'industry standard'. Respond using your matrix.\n\n**Self-check**\n\n- **Q:** Which decisions deserve the most analysis?\n  <details><summary>Answer</summary>Irreversible or expensive-to-reverse ones.</details>\n- **Q:** Why use a weighted matrix?\n  <details><summary>Answer</summary>It makes criteria and reasoning explicit and reviewable.</details>"
+  },
+  {
+   "day": 11,
+   "week": 2,
+   "weekday": "Thursday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Logical vs Physical Architecture",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Separate what the system is from where it runs — the deployment diagram.\n\n*Concept: Logical vs physical architecture*\n\n### Understand (10 min)\n\n**Logical architecture:** Components and relationships independent of technology and hosting.\n\n**Physical architecture:** Actual infrastructure: regions, zones, networks, compute, databases, firewalls.\n\n**Network zones:** Public edge (Front Door/WAF), DMZ (API Management), private application subnet, data subnet with private endpoints.\n\n**Environment strategy:** Dev, Test, UAT, Production — separate subscriptions, same infrastructure as code.\n\n### Compare (5 min)\n\nThe logical view rarely changes; the physical view changes with cost, scale and cloud decisions. Keeping them separate lets you discuss design without arguing about servers.\n\n### Design (banking app) (20 min)\n\n**Task:** Draw the deployment diagram (deliverable 4 of 4).\n\n1. Region: UAE North (primary), UAE Central (DR).\n2. Edge: Azure Front Door + WAF → API Management in a VNet.\n3. Compute: AKS or App Service across 3 availability zones for each component.\n4. Data: Azure SQL (zone-redundant, geo-replicated), Redis, Blob, Service Bus Premium — all on private endpoints.\n5. Security: Key Vault, Entra ID, managed identities, no public DB access.\n6. Ops: Application Insights / Log Analytics; CI/CD from GitHub Actions or Azure DevOps.\n\n### Document & defend (10 min)\n\n**Document:** Add the Deployment section with the diagram and an environment table.\n\n**Defend:** The infrastructure team asks why every service needs private endpoints. Explain the security reason.\n\n**Self-check**\n\n- **Q:** Does the logical view mention AKS or App Service?\n  <details><summary>Answer</summary>No, that's the physical view.</details>\n- **Q:** Why deploy across 3 availability zones?\n  <details><summary>Answer</summary>To survive the loss of a single datacenter.</details>"
+  },
+  {
+   "day": 12,
+   "week": 2,
+   "weekday": "Friday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Architecture Documentation and Diagrams",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Communicate the architecture clearly to different audiences.\n\n*Concept: Architecture documentation and diagrams*\n\n### Understand (10 min)\n\n**C4 model:** Context → Container → Component → Code. Zoom levels for different audiences.\n\n**ArchiMate:** Enterprise-wide notation linking business, application and technology layers.\n\n**ADRs:** Context, decision, alternatives, consequences, status — one per significant decision.\n\n**Diagram hygiene:** Title, legend, labelled arrows, consistent shapes and colours, one purpose per diagram.\n\n### Compare (5 min)\n\nC4 suits solution and software architecture; ArchiMate suits enterprise-level views across business capabilities. Use C4 for this project.\n\n### Design (banking app) (20 min)\n\n**Task:** Review and tidy every diagram you've made.\n\n1. Add a title, legend and labelled arrows to each diagram.\n2. Check every diagram answers one question only.\n3. Map your diagrams to C4: context (L1), component/container (L2), payments hexagon (L3).\n4. Add the views you're still missing: security & identity view, availability/DR note.\n\n### Document & defend (10 min)\n\n**Document:** Finalise the HLD outline: Context, Stakeholders, Requirements, Domain, Architecture, Integration, Data, Deployment, Security, Availability, Risks, ADRs.\n\n**Defend:** Present the context diagram to a business stakeholder and the deployment diagram to an infrastructure engineer — note how your language changes.\n\n**Self-check**\n\n- **Q:** What are the four C4 levels?\n  <details><summary>Answer</summary>Context, Container, Component, Code.</details>\n- **Q:** What must every architecture diagram have?\n  <details><summary>Answer</summary>A title, a legend, and labelled relationships.</details>"
+  },
+  {
+   "day": 13,
+   "week": 2,
+   "weekday": "Saturday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Capstone: Assemble the Banking HLD",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": false,
+   "content": "**Goal:** Produce the complete HLD deliverable.\n\n*Concept: Course capstone*\n\n### Understand (10 min)\n\n**Quality attribute scenarios:** Concrete tests of the design: 'Payment network times out at peak — what happens?'\n\n**Risks & assumptions:** What could break the design and what you assumed to be true.\n\n### Compare (5 min)\n\nCheck the HLD against your Day 2 NFRs: does each NFR have a design answer?\n\n### Design (banking app) (20 min)\n\n**Task:** Finish the HLD.\n\n1. Confirm the 4 required diagrams: component, integration, deployment, data-flow.\n2. Walk through 3 scenarios end to end: customer login via UAE PASS; domestic transfer; failed payment with refund and notification.\n3. Fill an NFR traceability table: NFR → design decision → diagram.\n4. List top 5 risks with mitigations (e.g. payment network outage, data residency, single core banking dependency).\n\n### Document & defend (10 min)\n\n**Document:** Export the HLD (PDF or your site) and confirm ADR-001 to ADR-003 are attached.\n\n**Defend:** Record a 5-minute walkthrough of the HLD (a good candidate for your portfolio or YouTube channel).\n\n**Self-check**\n\n- **Q:** Does every NFR map to at least one design decision?\n  <details><summary>Answer</summary>It should — gaps are design risks.</details>\n- **Q:** Which 4 diagrams does the deliverable need?\n  <details><summary>Answer</summary>Component, integration, deployment and data-flow.</details>"
+  },
+  {
+   "day": 14,
+   "week": 2,
+   "weekday": "Sunday",
+   "stage": "Stage 1: Architecture Fundamentals",
+   "type": "study",
+   "title": "Defend the Design",
+   "minutes": 45,
+   "blocks": [
+    {
+     "name": "Understand",
+     "minutes": 10
+    },
+    {
+     "name": "Compare",
+     "minutes": 5
+    },
+    {
+     "name": "Design (banking app)",
+     "minutes": 20
+    },
+    {
+     "name": "Document & defend",
+     "minutes": 10
+    }
+   ],
+   "milestone": true,
+   "content": "**Goal:** Practise defending the design like a real architecture review board.\n\n*Concept: Architecture review practice*\n\n### Understand (10 min)\n\n**Architecture review:** Stakeholders challenge decisions on risk, cost, security and fit.\n\n**Answer framework:** Restate the concern → state the decision and requirement it serves → name the trade-off → offer a mitigation.\n\n### Compare (5 min)\n\nWeak answers defend the technology ('it's best practice'); strong answers defend the requirement and trade-off.\n\n### Design (banking app) (20 min)\n\n**Task:** Answer 6 review-board questions in writing (2–3 sentences each).\n\n1. Security: 'How do you stop one customer seeing another's account?'\n2. Availability: 'What happens if UAE North goes down?'\n3. Consistency: 'Can a customer be charged twice?'\n4. Cost: 'Why not run everything on a few VMs?'\n5. Change: 'How would you add a new payment provider?'\n6. Scale: 'Traffic grows 10× during Ramadan and salary days. What breaks first?'\n\n### Document & defend (10 min)\n\n**Document:** Add the Q&A to the HLD as 'Review notes' and mark System Design in your checklist: can explain, can compare, applied in design, portfolio evidence.\n\n**Defend:** Do a timed 10-minute mock review with a friend or colleague.\n\n**Self-check**\n\n- **Q:** What makes a strong review answer?\n  <details><summary>Answer</summary>It ties the decision to a requirement and states the trade-off and mitigation.</details>\n- **Q:** Is the course done?\n  <details><summary>Answer</summary>Yes, when all four checklist columns can be ticked for System Design.</details>"
+  }
+ ]
+}

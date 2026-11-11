@@ -1,0 +1,3912 @@
+{
+ "title": "Simple English: Words + Accent (Tamil support)",
+ "minutes_per_day": 20,
+ "schedule": "Mon-Fri study, Saturday practice, Sunday rest",
+ "total_weeks": 26,
+ "study_days": 130,
+ "practice_days": 26,
+ "start_date": null,
+ "how_to_use_dates": "Set start_date to a Monday. Week N starts start_date + 7*(N-1) days; weekday gives the day within the week.",
+ "sessions": [
+  {
+   "day": 1,
+   "week": 1,
+   "weekday": "Monday",
+   "stage": "Stage 1: Words for work + clear sounds",
+   "type": "study",
+   "title": "Words for meetings + the V and W sounds",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| agenda | uh-JEN-duh | கூட்ட நிகழ்ச்சி நிரல் | Let's start with the **agenda**. |\n| clarify | KLAIR-ih-fy | தெளிவுபடுத்து | Can you **clarify** this point? |\n| deadline | DED-line | கடைசி தேதி | The **deadline** is Friday. |\n| update | UP-date | புதிய தகவல் | I'll give you a quick **update**. |\n| priority | pry-OR-ih-tee | முன்னுரிமை | This is our top **priority**. |\n\n### Accent: V vs W\nMany Tamil speakers say **V** and **W** the same way (வ). In English they're different:\n- **V**: top teeth touch your lower lip. Feel a buzz. → *very, video, voice*\n- **W**: round your lips like a kiss. Teeth don't touch. → *we, work, window*\n\n*V = மேல் பற்கள் கீழ் உதட்டைத் தொடும். W = உதடுகளை வட்டமாக்குங்கள், பற்கள் தொடாது.*\n\n**Say these pairs slowly, then fast:**\n- **v**est / **w**est\n- **v**ine / **w**ine\n- **v**ery **w**ell\n- \"**W**e **w**ill **v**isit the **v**illage on **W**ednesday.\"\n\n🪞 **Mirror check:** watch your lips in a mirror. For W, your teeth must not touch your lip.\n\n✅ **Try it today:** use *agenda* or *update* in a meeting or email."
+  },
+  {
+   "day": 2,
+   "week": 1,
+   "weekday": "Tuesday",
+   "stage": "Stage 1: Words for work + clear sounds",
+   "type": "study",
+   "title": "Words for email + the TH sounds",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| attached | uh-TACHT | இணைக்கப்பட்ட | Please find the file **attached**. |\n| regarding | rih-GAR-ding | தொடர்பாக | I'm writing **regarding** the project. |\n| confirm | kun-FURM | உறுதிப்படுத்து | Can you **confirm** the time? |\n| available | uh-VAY-luh-bul | கிடைக்கும் / நேரம் இருக்கும் | Are you **available** tomorrow? |\n| follow up | FOL-oh up | தொடர்ந்து கேட்பது | I'll **follow up** next week. |\n\n### Accent: TH\nEnglish has two TH sounds. Tamil speakers often say them as **த** or **ட**. Put the **tip of your tongue lightly between your teeth** and blow air.\n- Soft TH (no buzz): **th**ink, **th**ree, **th**anks\n- Buzzing TH: **th**is, **th**at, **th**ey\n\n*நாக்கின் நுனியை பற்களுக்கு இடையில் வைத்து காற்றை ஊதுங்கள்.*\n\n**Say slowly, then fast:**\n- **th**ree / **t**ree\n- **th**ank / **t**ank\n- \"**Th**ank you for **th**e **th**ree **th**ings.\"\n- \"**Th**is is **th**e **th**ird **th**ursday.\"\n\n✅ **Try it today:** write one email using *regarding* and *confirm*."
+  },
+  {
+   "day": 3,
+   "week": 1,
+   "weekday": "Wednesday",
+   "stage": "Stage 1: Words for work + clear sounds",
+   "type": "study",
+   "title": "Words for describing work + word stress",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| efficient | ih-FISH-unt | திறமையான / வேகமான | This method is more **efficient**. |\n| reliable | rih-LY-uh-bul | நம்பகமான | Our system is **reliable**. |\n| improve | im-PROOV | மேம்படுத்து | We need to **improve** speed. |\n| feature | FEE-chur | அம்சம் | This app has a new **feature**. |\n| solution | suh-LOO-shun | தீர்வு | We found a good **solution**. |\n\n### Accent: word stress\nIn English, **one part of each word is louder and longer**. Saying every part equally (as in Tamil) can make words hard to understand.\n*ஒவ்வொரு சொல்லிலும் ஒரு பகுதி மட்டும் சத்தமாகவும் நீளமாகவும் இருக்கும்.*\n\nClap on the **BIG** part:\n- de-VE-lo-per · ap-pli-CA-tion · com-PU-ter\n- PHO-to · pho-TO-gra-phy · pho-to-GRA-phic\n- \"I'm a MO-bile de-VE-lo-per.\"\n\n💡 Dictionaries show the stress with a mark **ˈ** before the strong part: /dɪˈveləpər/.\n\n✅ **Try it today:** say your job title with the right stress 5 times."
+  },
+  {
+   "day": 4,
+   "week": 1,
+   "weekday": "Thursday",
+   "stage": "Stage 1: Words for work + clear sounds",
+   "type": "study",
+   "title": "Words for opinions + the short and long vowels",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| suggest | sug-JEST | பரிந்துரை செய் | I **suggest** we test it first. |\n| concern | kun-SURN | கவலை | My only **concern** is cost. |\n| agree | uh-GREE | ஒப்புக்கொள் | I **agree** with you. |\n| option | OP-shun | விருப்பம் / வழி | We have two **options**. |\n| benefit | BEN-ih-fit | பயன் | The main **benefit** is speed. |\n\n### Accent: short **i** vs long **ee**\nLike Tamil **இ** (short) and **ஈ** (long), English has *ship* and *sheep*. The difference changes the meaning.\n*இ (ship) மற்றும் ஈ (sheep) போல.*\n\n**Say the pairs:**\n- sh**i**p / sh**ee**p\n- l**i**ve / l**ea**ve\n- f**i**ll / f**ee**l\n- b**i**t / b**ea**t\n- \"Please l**ea**ve the sh**ee**p on the sh**i**p.\"\n\n✅ **Try it today:** give one opinion at work using *I suggest…* or *My concern is…*"
+  },
+  {
+   "day": 5,
+   "week": 1,
+   "weekday": "Friday",
+   "stage": "Stage 1: Words for work + clear sounds",
+   "type": "study",
+   "title": "Words for confidence + no extra \"i\" at the start",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| confident | KON-fih-dunt | தன்னம்பிக்கை உள்ள | I feel **confident** about this. |\n| explain | ik-SPLAYN | விளக்கு | Let me **explain** quickly. |\n| specific | spuh-SIF-ik | குறிப்பிட்ட | Can you be more **specific**? |\n| straightforward | strayt-FOR-wurd | எளிமையான | The process is **straightforward**. |\n| exactly | ig-ZAKT-lee | சரியாக | That's **exactly** right. |\n\n### Accent: words starting with **s + consonant**\nTamil speakers sometimes add a small \"i\" before words like *school* (*iskool*) or *station* (*istation*). Start directly with the **s**, like a snake: **sss**-chool.\n*\"இஸ்கூல்\" அல்ல, \"ஸ்கூல்\". பாம்பு போல \"ஸ்ஸ்\" என்று தொடங்குங்கள்.*\n\n**Say slowly, then fast:**\n- **s**chool · **s**tation · **s**pecific · **s**tart · **s**trong\n- \"**S**tart the **s**pecific **s**tep at the **s**tation.\"\n\n✅ **Try it today:** say *Let me explain* before explaining something at work."
+  },
+  {
+   "day": null,
+   "week": 1,
+   "weekday": "Saturday",
+   "stage": "Stage 1: Words for work + clear sounds",
+   "type": "practice",
+   "title": "Week 1 practice",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 1 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 6,
+   "week": 2,
+   "weekday": "Monday",
+   "stage": "Stage 2: Words for meetings + the schwa sound",
+   "type": "study",
+   "title": "Starting a meeting + The schwa /ə/ (the lazy \"uh\")",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| get started | get STAR-tid | தொடங்குவோம் | Shall we **get started**? |\n| attend | uh-TEND | கலந்துகொள் | Thanks for **attending** today. |\n| purpose | PUR-pus | நோக்கம் | The **purpose** of this call is planning. |\n| brief | BREEF | சுருக்கமான | I'll be **brief**. |\n| discuss | dis-KUS | விவாதி | Let's **discuss** the timeline. |\n\n### Accent: The schwa /ə/ (the lazy \"uh\")\nThe most common English sound is a short, relaxed \"uh\" in weak parts of words: a-GO, BA-na-na → buh-NA-nuh.\n*ஆங்கிலத்தின் மிகப் பொதுவான ஒலி \"அ\" போன்ற மெல்லிய ஒலி. அழுத்தம் இல்லாத பகுதியில் வரும்.*\n\n**Say slowly, then fast:**\n- a-bout → uh-BOUT\n- to-day → tuh-DAY\n- \"Let's get uh-LONG to the uh-JEN-duh.\"\n\n✅ **Try it today:** Open a meeting with \"Shall we get started?\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 7,
+   "week": 2,
+   "weekday": "Tuesday",
+   "stage": "Stage 2: Words for meetings + the schwa sound",
+   "type": "study",
+   "title": "Giving updates + Schwa in \"-tion\" and \"-ment\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| progress | PRO-gres | முன்னேற்றம் | We made good **progress** this week. |\n| on track | on TRAK | சரியான பாதையில் | The project is **on track**. |\n| delay | dih-LAY | தாமதம் | There's a small **delay**. |\n| complete | kum-PLEET | முடி | We **completed** the login screen. |\n| pending | PEN-ding | நிலுவையில் | Two tasks are still **pending**. |\n\n### Accent: Schwa in \"-tion\" and \"-ment\"\nEndings like -tion and -ment are weak: \"shun\", \"munt\", never \"shan\" or \"ment\" with full vowels.\n*-tion = \"ஷன்\", -ment = \"மன்ட்\" மெல்லியதாக.*\n\n**Say slowly, then fast:**\n- in-for-MA-tion → in-fer-MAY-shun\n- de-VEL-op-ment → dih-VEL-up-munt\n- \"The man-uh-JUR-munt wants more in-fer-MAY-shun.\"\n\n✅ **Try it today:** Give a one-line status update using \"progress\".\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 8,
+   "week": 2,
+   "weekday": "Wednesday",
+   "stage": "Stage 2: Words for meetings + the schwa sound",
+   "type": "study",
+   "title": "Asking questions + Weak \"to\", \"for\", \"of\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| question | KWES-chun | கேள்வி | I have a quick **question**. |\n| mean | MEEN | அர்த்தம் கொள் | What do you **mean** by that? |\n| example | ig-ZAM-pul | உதாரணம் | Can you give an **example**? |\n| detail | DEE-tail | விவரம் | Let's go into more **detail**. |\n| point | POYNT | கருத்து | That's a good **point**. |\n\n### Accent: Weak \"to\", \"for\", \"of\"\nSmall words are usually weak: to → tuh, for → fer, of → uv.\n*சிறிய சொற்கள் மெல்லியதாக: to→டு, for→ஃபர், of→அவ்.*\n\n**Say slowly, then fast:**\n- I want tuh go\n- This is fer you\n- A cup uv tea\n\n✅ **Try it today:** Ask one question in a meeting starting with \"Could you…\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 9,
+   "week": 2,
+   "weekday": "Thursday",
+   "stage": "Stage 2: Words for meetings + the schwa sound",
+   "type": "study",
+   "title": "Agreeing and disagreeing + Weak \"and\", \"but\", \"can\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| see your point | SEE yer POYNT | உங்கள் கருத்து புரிகிறது | I **see your point**, but cost matters. |\n| however | how-EV-er | இருப்பினும் | **However**, we need more time. |\n| fair | FAIR | நியாயமான | That's a **fair** question. |\n| alternative | ol-TUR-nuh-tiv | மாற்று | Is there an **alternative**? |\n| approach | uh-PROHCH | அணுகுமுறை | I like this **approach**. |\n\n### Accent: Weak \"and\", \"but\", \"can\"\nand → un, but → but (short), can → kun in sentences. Strong only when stressed.\n*and→அன், can→கன் வாக்கியத்தில் மெல்லியதாக.*\n\n**Say slowly, then fast:**\n- bread un butter\n- I kun do it\n- You and me → you-un-ME\n\n✅ **Try it today:** Disagree politely once: \"I see your point, but…\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 10,
+   "week": 2,
+   "weekday": "Friday",
+   "stage": "Stage 2: Words for meetings + the schwa sound",
+   "type": "study",
+   "title": "Ending a meeting + Sentence stress on key words",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| wrap up | RAP up | முடித்துக்கொள் | Let's **wrap up**. |\n| summary | SUM-uh-ree | சுருக்கம் | Here's a quick **summary**. |\n| action item | AK-shun eye-tum | செய்ய வேண்டிய பணி | Each person has one **action item**. |\n| next steps | NEKST steps | அடுத்த படிகள் | Let's agree on **next steps**. |\n| appreciate | uh-PREE-shee-ate | பாராட்டு / நன்றி | I **appreciate** your time. |\n\n### Accent: Sentence stress on key words\nStress the important words (nouns, verbs). Small words stay quick and weak.\n*முக்கிய சொற்களை மட்டும் அழுத்தமாகச் சொல்லுங்கள்.*\n\n**Say slowly, then fast:**\n- \"Let's MEET on FRI-day.\"\n- \"SEND me the RE-port.\"\n- \"THANKS for your TIME.\"\n\n✅ **Try it today:** End a meeting with \"Let's wrap up.\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 2,
+   "weekday": "Saturday",
+   "stage": "Stage 2: Words for meetings + the schwa sound",
+   "type": "practice",
+   "title": "Week 2 practice: Words for meetings + the schwa sound",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 2 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 11,
+   "week": 3,
+   "weekday": "Monday",
+   "stage": "Stage 3: Words for describing problems + the \"Z\" sound",
+   "type": "study",
+   "title": "Reporting a bug + Z vs S",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| issue | ISH-oo | பிரச்சனை | We found an **issue** in the app. |\n| occur | uh-KUR | நிகழ் | The error **occurs** on login. |\n| crash | KRASH | செயலிழப்பு | The app **crashes** on Android. |\n| reproduce | ree-pruh-DOOS | மீண்டும் உருவாக்கு | I can't **reproduce** the bug. |\n| cause | KAWZ | காரணம் | What's the root **cause**? |\n\n### Accent: Z vs S\nTamil has no Z. Make S, then add a buzz from your throat: zzz like a bee.\n*Z = \"ஸ்\" ஒலியுடன் தொண்டையில் அதிர்வு (தேனீ போல \"ஸ்ஸ்ஸ்\").*\n\n**Say slowly, then fast:**\n- zoo / Sue\n- zip / sip\n- \"Zero issues is easy.\"\n\n✅ **Try it today:** Report one issue using \"occurs\".\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 12,
+   "week": 3,
+   "weekday": "Tuesday",
+   "stage": "Stage 3: Words for describing problems + the \"Z\" sound",
+   "type": "study",
+   "title": "Explaining impact + -s endings that sound like Z",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| affect | uh-FEKT | பாதிப்பு ஏற்படுத்து | It **affects** all users. |\n| impact | IM-pakt | தாக்கம் | The **impact** is small. |\n| critical | KRIT-ih-kul | மிக முக்கியமான | This is a **critical** bug. |\n| minor | MY-ner | சிறிய | It's a **minor** issue. |\n| risk | RISK | ஆபத்து | There's a **risk** of data loss. |\n\n### Accent: -s endings that sound like Z\nPlural -s after a voiced sound is /z/: users → USE-erz, systems → SIS-tumz.\n*பன்மை -s பல சமயம் \"ஸ்\" அல்ல \"ஸ்\" அதிர்வுடன் (z).*\n\n**Say slowly, then fast:**\n- users\n- servers\n- emails\n- \"The users lose files.\"\n\n✅ **Try it today:** Explain impact: \"This affects…\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 13,
+   "week": 3,
+   "weekday": "Wednesday",
+   "stage": "Stage 3: Words for describing problems + the \"Z\" sound",
+   "type": "study",
+   "title": "Fixing things + Final consonants (don't drop them)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| fix | FIKS | சரி செய் | I'll **fix** it today. |\n| workaround | WURK-uh-round | தற்காலிக தீர்வு | Here's a **workaround**. |\n| patch | PACH | சிறு திருத்தம் | We'll release a **patch**. |\n| resolve | rih-ZOLV | தீர் | The issue is **resolved**. |\n| test | TEST | சோதி | Please **test** it again. |\n\n### Accent: Final consonants (don't drop them)\nPronounce the last sound clearly: fixed (fikst), helped (helpt), asked (askt).\n*கடைசி ஒலியை விடாதீர்கள்: fixed = ஃபிக்ஸ்ட்.*\n\n**Say slowly, then fast:**\n- fixed\n- checked\n- asked\n- \"I fixed it and tested it.\"\n\n✅ **Try it today:** Say \"I've fixed it\" clearly to someone.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 14,
+   "week": 3,
+   "weekday": "Thursday",
+   "stage": "Stage 3: Words for describing problems + the \"Z\" sound",
+   "type": "study",
+   "title": "Investigating + -ed endings: t, d, id",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| investigate | in-VES-tih-gate | ஆராய் | We're **investigating** the error. |\n| log | LOG | பதிவு | Check the **logs**. |\n| check | CHEK | சரிபார் | I **checked** the server. |\n| identify | eye-DEN-tih-fy | கண்டறி | We **identified** the problem. |\n| trace | TRAYS | கண்டுபிடி | Let's **trace** the request. |\n\n### Accent: -ed endings: t, d, id\nAfter p,k,s,sh,ch → /t/ (stopped); after t,d → /id/ (wanted); others → /d/ (called).\n*-ed: \"ட்\", \"ட்\", அல்லது \"இட்\".*\n\n**Say slowly, then fast:**\n- stopped (stopt)\n- called (kawld)\n- wanted (WON-tid)\n\n✅ **Try it today:** Describe what you checked yesterday with -ed verbs.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 15,
+   "week": 3,
+   "weekday": "Friday",
+   "stage": "Stage 3: Words for describing problems + the \"Z\" sound",
+   "type": "study",
+   "title": "Preventing problems + Stress in 2-syllable nouns vs verbs",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| prevent | prih-VENT | தடு | Tests **prevent** bugs. |\n| monitor | MON-ih-ter | கண்காணி | We **monitor** the servers. |\n| alert | uh-LURT | எச்சரிக்கை | We got an **alert** at night. |\n| backup | BAK-up | காப்புப் பிரதி | Do we have a **backup**? |\n| increase | in-KREES (v) | அதிகரி | Traffic will **increase**. |\n\n### Accent: Stress in 2-syllable nouns vs verbs\nMany words change: a REcord (noun) / to reCORD (verb), a PREsent / to preSENT.\n*பெயர்ச்சொல் முன்பகுதி, வினை பின்பகுதி அழுத்தம்.*\n\n**Say slowly, then fast:**\n- REcord / reCORD\n- OBject / obJECT\n- INcrease / inCREASE\n\n✅ **Try it today:** Use \"increase\" as noun and verb in two sentences.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 3,
+   "weekday": "Saturday",
+   "stage": "Stage 3: Words for describing problems + the \"Z\" sound",
+   "type": "practice",
+   "title": "Week 3 practice: Words for describing problems + the \"Z\" sound",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 3 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 16,
+   "week": 4,
+   "weekday": "Monday",
+   "stage": "Stage 4: Words for planning + the \"F\" and \"P\" sounds",
+   "type": "study",
+   "title": "Making a plan + F vs P",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| plan | PLAN | திட்டம் | Here's the **plan**. |\n| goal | GOHL | இலக்கு | Our **goal** is to launch in May. |\n| phase | FAYZ | கட்டம் | We're in **phase** two. |\n| schedule | SKED-jool | அட்டவணை | The **schedule** is tight. |\n| estimate | ES-tih-mut (n) | மதிப்பீடு | My **estimate** is three days. |\n\n### Accent: F vs P\nF: top teeth on lower lip, blow air. P: lips close, then pop. Don't say \"pan\" for \"fan\".\n*F = பற்கள் உதட்டில், காற்று. P = உதடுகள் மூடித் திறக்கும்.*\n\n**Say slowly, then fast:**\n- fan / pan\n- fast / past\n- \"Five perfect plans.\"\n\n✅ **Try it today:** Share one plan using \"first… then…\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 17,
+   "week": 4,
+   "weekday": "Tuesday",
+   "stage": "Stage 4: Words for planning + the \"F\" and \"P\" sounds",
+   "type": "study",
+   "title": "Talking about time + The /oʊ/ sound in \"go\", \"no\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| soon | SOON | விரைவில் | I'll send it **soon**. |\n| by | BY | …க்குள் | Done **by** Friday. |\n| ahead of | uh-HED uv | முன்னதாக | We're **ahead of** schedule. |\n| behind | bih-HYND | பின்தங்கி | We're a bit **behind**. |\n| on time | on TYM | சரியான நேரத்தில் | It'll be **on time**. |\n\n### Accent: The /oʊ/ sound in \"go\", \"no\"\nEnglish \"o\" in go is a glide: o→oo. Not a flat Tamil ஓ.\n*\"கோ\" அல்ல, \"கோ-உ\" போல மெல்லிய சறுக்கல்.*\n\n**Say slowly, then fast:**\n- go\n- so\n- know\n- \"I don't know, so let's go.\"\n\n✅ **Try it today:** Say \"I'll let you know\" today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 18,
+   "week": 4,
+   "weekday": "Wednesday",
+   "stage": "Stage 4: Words for planning + the \"F\" and \"P\" sounds",
+   "type": "study",
+   "title": "Resources + The /æ/ sound (cat, man)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| budget | BUJ-it | வரவு செலவு | We're within **budget**. |\n| resource | REE-sors | வளம் | We need more **resources**. |\n| team | TEEM | குழு | The **team** is small. |\n| capacity | kuh-PAS-ih-tee | திறன் | We don't have the **capacity**. |\n| assign | uh-SYN | ஒதுக்கு | I'll **assign** the task to Ravi. |\n\n### Accent: The /æ/ sound (cat, man)\nOpen your mouth wide, like a smile + \"a\": cat, plan, app. Between அ and எ.\n*\"அ\" க்கும் \"எ\" க்கும் இடையில், வாயை அகலமாக.*\n\n**Say slowly, then fast:**\n- cat / cut\n- man / men\n- \"The app has a bad map.\"\n\n✅ **Try it today:** Ask for help: \"Do we have enough…?\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 19,
+   "week": 4,
+   "weekday": "Thursday",
+   "stage": "Stage 4: Words for planning + the \"F\" and \"P\" sounds",
+   "type": "study",
+   "title": "Risks and dependencies + The /ʌ/ sound (cut, but)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| depend on | dih-PEND on | சார்ந்திரு | It **depends on** the API. |\n| dependency | dih-PEN-dun-see | சார்பு | There's one **dependency**. |\n| blocker | BLOK-er | தடை | Do you have any **blockers**? |\n| assume | uh-SOOM | ஊகி | I **assume** the data is clean. |\n| contingency | kun-TIN-jun-see | மாற்றுத் திட்டம் | We need a **contingency** plan. |\n\n### Accent: The /ʌ/ sound (cut, but)\nShort, relaxed \"a\" in the middle of the mouth: cut, but, budget.\n*\"அ\" சுருக்கமாக: cut = கட்.*\n\n**Say slowly, then fast:**\n- cut\n- much\n- come\n- \"Such a fun budget run.\"\n\n✅ **Try it today:** Name one dependency in your project.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 20,
+   "week": 4,
+   "weekday": "Friday",
+   "stage": "Stage 4: Words for planning + the \"F\" and \"P\" sounds",
+   "type": "study",
+   "title": "Reviewing a plan + Intonation in yes/no questions",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| review | rih-VYOO | மறுஆய்வு | Let's **review** the plan. |\n| feasible | FEE-zuh-bul | சாத்தியமான | Is this **feasible**? |\n| realistic | ree-uh-LIS-tik | யதார்த்தமான | Is the date **realistic**? |\n| adjust | uh-JUST | சரிசெய் | We'll **adjust** the timeline. |\n| milestone | MYL-stohn | முக்கியக் கட்டம் | The first **milestone** is in June. |\n\n### Accent: Intonation in yes/no questions\nYes/no questions go UP at the end. Wh- questions go DOWN.\n*ஆம்/இல்லை கேள்வி இறுதியில் மேலே; என்ன/எப்போது கேள்வி கீழே.*\n\n**Say slowly, then fast:**\n- Is it ready? ↗\n- When is it ready? ↘\n- Can you join? ↗\n\n✅ **Try it today:** Ask one yes/no question with rising tone.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 4,
+   "weekday": "Saturday",
+   "stage": "Stage 4: Words for planning + the \"F\" and \"P\" sounds",
+   "type": "practice",
+   "title": "Week 4 practice: Words for planning + the \"F\" and \"P\" sounds",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 4 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 21,
+   "week": 5,
+   "weekday": "Monday",
+   "stage": "Stage 5: Words for technology + linking words together",
+   "type": "study",
+   "title": "Apps and systems + Linking consonant to vowel",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| deploy | dih-PLOY | வெளியிடு | We **deploy** on Tuesday. |\n| release | rih-LEES | வெளியீடு | The next **release** is big. |\n| version | VUR-zhun | பதிப்பு | Update to the latest **version**. |\n| environment | in-VY-run-munt | சூழல் | Test it in the dev **environment**. |\n| configure | kun-FIG-yer | அமை | **Configure** the settings first. |\n\n### Accent: Linking consonant to vowel\nWhen a word ends in a consonant and the next starts with a vowel, join them: \"turn it on\" → tur-ni-ton.\n*மெய்யெழுத்து + உயிரெழுத்து = இணைத்துச் சொல்லுங்கள்.*\n\n**Say slowly, then fast:**\n- log in → lo-gin\n- check it out → che-ki-tout\n- \"Pick it up.\"\n\n✅ **Try it today:** Say \"log in\" and \"set up\" linked smoothly.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 22,
+   "week": 5,
+   "weekday": "Tuesday",
+   "stage": "Stage 5: Words for technology + linking words together",
+   "type": "study",
+   "title": "Data + Linking vowel to vowel (w/y glide)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| data | DAY-tuh | தரவு | The **data** is clean. |\n| database | DAY-tuh-bays | தரவுத்தளம் | Save it in the **database**. |\n| query | KWEER-ee | வினவல் | Run this **query**. |\n| store | STOR | சேமி | We **store** files in the cloud. |\n| secure | sih-KYOOR | பாதுகாப்பான | Is the data **secure**? |\n\n### Accent: Linking vowel to vowel (w/y glide)\nAdd a tiny w or y between vowels: \"go on\" → go-won, \"I am\" → I-yam.\n*இரண்டு உயிரெழுத்துகளுக்கு இடையில் சிறிய w/y.*\n\n**Say slowly, then fast:**\n- do it → do-wit\n- the end → thee-yend\n- \"Say it again.\"\n\n✅ **Try it today:** Use \"data\" in a sentence (DAY-tuh).\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 23,
+   "week": 5,
+   "weekday": "Wednesday",
+   "stage": "Stage 5: Words for technology + linking words together",
+   "type": "study",
+   "title": "Cloud and servers + Dropping the \"t\" in \"can't\" vs \"can\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| server | SUR-ver | சர்வர் | The **server** is down. |\n| cloud | KLOWD | மேகக் கணினி | We moved to the **cloud**. |\n| scale | SKAYL | அளவை அதிகரி | Can it **scale**? |\n| performance | per-FOR-muns | செயல்திறன் | **Performance** is better now. |\n| latency | LAY-tun-see | தாமத நேரம் | The **latency** is high. |\n\n### Accent: Dropping the \"t\" in \"can't\" vs \"can\"\ncan → kun (weak); can't → KANT (strong, long). The stress tells the difference.\n*can = மெல்லிய \"கன்\"; can't = நீளமான \"காண்ட்\".*\n\n**Say slowly, then fast:**\n- I kun come\n- I KANT come\n- \"We can't scale it.\"\n\n✅ **Try it today:** Use \"scale\" in a sentence.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 24,
+   "week": 5,
+   "weekday": "Thursday",
+   "stage": "Stage 5: Words for technology + linking words together",
+   "type": "study",
+   "title": "Security + The \"sh\" vs \"s\" sound",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| access | AK-ses | அணுகல் | You need **access** to the server. |\n| permission | per-MISH-un | அனுமதி | I don't have **permission**. |\n| password | PAS-wurd | கடவுச்சொல் | Change your **password**. |\n| authenticate | aw-THEN-tih-kate | அடையாளம் சரிபார் | Users **authenticate** with Google. |\n| vulnerable | VUL-ner-uh-bul | பாதிக்கக்கூடிய | This API is **vulnerable**. |\n\n### Accent: The \"sh\" vs \"s\" sound\nS: tongue behind teeth, thin hiss. SH: lips round, wider \"shhh\".\n*S = ஸ், SH = ஷ்.*\n\n**Say slowly, then fast:**\n- sip / ship\n- sea / she\n- \"She sells secure software.\"\n\n✅ **Try it today:** Say \"password\" and \"access\" clearly.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 25,
+   "week": 5,
+   "weekday": "Friday",
+   "stage": "Stage 5: Words for technology + linking words together",
+   "type": "study",
+   "title": "AI words + Stress in long tech words",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| algorithm | AL-guh-rith-um | வழிமுறை | This **algorithm** is fast. |\n| model | MOD-ul | மாதிரி | We trained a new **model**. |\n| train | TRAYN | பயிற்றுவி | It takes an hour to **train**. |\n| predict | prih-DIKT | கணி | The model **predicts** sales. |\n| accuracy | AK-yer-uh-see | துல்லியம் | The **accuracy** is 92%. |\n\n### Accent: Stress in long tech words\nLearn the stress with the word: al-GO-ri-thm? No: AL-guh-ri-thum. TECH-nol-o-gy? No: tek-NOL-uh-jee.\n*நீண்ட சொற்களின் அழுத்தத்தை சொல்லுடன் சேர்த்து கற்கவும்.*\n\n**Say slowly, then fast:**\n- AL-guh-rith-um\n- tek-NOL-uh-jee\n- ar-tih-FISH-ul in-TEL-ih-junce\n\n✅ **Try it today:** Tell someone you're learning AI, with correct stress.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 5,
+   "weekday": "Saturday",
+   "stage": "Stage 5: Words for technology + linking words together",
+   "type": "practice",
+   "title": "Week 5 practice: Words for technology + linking words together",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 5 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 26,
+   "week": 6,
+   "weekday": "Monday",
+   "stage": "Stage 6: Words for small talk + the \"R\" sound",
+   "type": "study",
+   "title": "Weekend chat + English R (no rolling)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| weekend | WEEK-end | வார இறுதி | How was your **weekend**? |\n| relax | rih-LAKS | ஓய்வெடு | I just **relaxed** at home. |\n| plans | PLANZ | திட்டங்கள் | Any **plans** for Friday? |\n| outing | OW-ting | வெளியே செல்லுதல் | We had a family **outing**. |\n| chill | CHIL | சும்மா இரு | I'm just going to **chill**. |\n\n### Accent: English R (no rolling)\nEnglish R doesn't tap or roll like Tamil ர. Curl the tongue back, don't touch the roof.\n*ர போல நாக்கைத் தட்ட வேண்டாம்; பின்னால் வளைத்து வைக்கவும்.*\n\n**Say slowly, then fast:**\n- red\n- right\n- \"Really, really right.\"\n\n✅ **Try it today:** Ask a colleague \"How was your weekend?\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 27,
+   "week": 6,
+   "weekday": "Tuesday",
+   "stage": "Stage 6: Words for small talk + the \"R\" sound",
+   "type": "study",
+   "title": "Weather + R after vowels",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| humid | HYOO-mid | ஈரப்பதமான | It's so **humid** today. |\n| pleasant | PLEZ-unt | இனிமையான | The weather is **pleasant**. |\n| scorching | SKOR-ching | கடும் வெயில் | It's **scorching** outside. |\n| breeze | BREEZ | தென்றல் | There's a nice **breeze**. |\n| forecast | FOR-kast | வானிலை முன்னறிவிப்பு | The **forecast** says rain. |\n\n### Accent: R after vowels\nIn \"car\", \"work\", the R is soft and short (American) or silent (British). Don't over-roll.\n*சொல்லின் கடைசியில் R மெல்லியதாக.*\n\n**Say slowly, then fast:**\n- car\n- work\n- \"The weather is warmer.\"\n\n✅ **Try it today:** Comment on the weather in English.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 28,
+   "week": 6,
+   "weekday": "Wednesday",
+   "stage": "Stage 6: Words for small talk + the \"R\" sound",
+   "type": "study",
+   "title": "Food talk + L vs R",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| delicious | dih-LISH-us | சுவையான | The biryani was **delicious**. |\n| spicy | SPY-see | காரமான | Is it too **spicy**? |\n| recommend | rek-uh-MEND | பரிந்துரை | I **recommend** this place. |\n| craving | KRAY-ving | ஆசை | I'm **craving** dosa. |\n| portion | POR-shun | பகுதி | The **portion** is huge. |\n\n### Accent: L vs R\nL: tongue tip touches behind teeth. R: tongue doesn't touch.\n*L = நாக்கு பற்களின் பின் தொடும்; R = தொடாது.*\n\n**Say slowly, then fast:**\n- light / right\n- lead / read\n- \"Really lovely lunch.\"\n\n✅ **Try it today:** Recommend a restaurant.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 29,
+   "week": 6,
+   "weekday": "Thursday",
+   "stage": "Stage 6: Words for small talk + the \"R\" sound",
+   "type": "study",
+   "title": "Hobbies + Dark L at word end",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| hobby | HOB-ee | பொழுதுபோக்கு | My **hobby** is cooking. |\n| into | IN-too | ஆர்வம் உள்ள | I'm really **into** cricket. |\n| enjoy | in-JOY | மகிழ் | I **enjoy** reading. |\n| spare time | SPAIR tym | ஓய்வு நேரம் | In my **spare time**, I swim. |\n| passionate | PASH-uh-nut | ஆர்வமிகு | I'm **passionate** about tech. |\n\n### Accent: Dark L at word end\nAt the end (ball, feel) the L is deeper, like ல் with the back of the tongue raised.\n*கடைசி L ஆழமாக: \"ஃபீல்\".*\n\n**Say slowly, then fast:**\n- feel\n- hotel\n- \"I feel well at the hotel.\"\n\n✅ **Try it today:** Tell someone one hobby.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 30,
+   "week": 6,
+   "weekday": "Friday",
+   "stage": "Stage 6: Words for small talk + the \"R\" sound",
+   "type": "study",
+   "title": "Showing interest + Rising tone for interest",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| sounds great | sownz GRAYT | அருமையாக இருக்கிறது | That **sounds great**! |\n| interesting | IN-trus-ting | சுவாரஸ்யமான | How **interesting**! |\n| no way | noh WAY | நம்பவே முடியவில்லை | **No way**! Really? |\n| lucky | LUK-ee | அதிர்ஷ்டம் | You're so **lucky**! |\n| catch up | KACH up | சந்தித்துப் பேசு | Let's **catch up** soon. |\n\n### Accent: Rising tone for interest\n\"Really?\" \"Oh, nice!\" with a lively up-and-down voice sounds friendly. Flat tone sounds bored.\n*ஆர்வத்தைக் காட்ட குரலை ஏற்றி இறக்குங்கள்.*\n\n**Say slowly, then fast:**\n- Really? ↗\n- Oh, NICE! ↗↘\n- That's AMAZING!\n\n✅ **Try it today:** React with \"That sounds great!\" today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 6,
+   "weekday": "Saturday",
+   "stage": "Stage 6: Words for small talk + the \"R\" sound",
+   "type": "practice",
+   "title": "Week 6 practice: Words for small talk + the \"R\" sound",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 6 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 31,
+   "week": 7,
+   "weekday": "Monday",
+   "stage": "Stage 7: Words for emails + contractions",
+   "type": "study",
+   "title": "Opening an email + Contractions: I'm, I'll",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| hope you're well | hohp yer WEL | நலமாக இருக்கிறீர்கள் என நம்புகிறேன் | I **hope you're well**. |\n| reach out | REECH owt | தொடர்பு கொள் | I'm **reaching out** about the invoice. |\n| quick note | kwik NOHT | சிறு குறிப்பு | Just a **quick note** on today. |\n| touch base | tuch BAYS | சுருக்கமாகப் பேசு | Let's **touch base** tomorrow. |\n| introduce | in-truh-DOOS | அறிமுகப்படுத்து | Let me **introduce** myself. |\n\n### Accent: Contractions: I'm, I'll\nNatives say I'm, I'll, we're, not \"I am\" every time. It sounds natural and faster.\n*I am → I'm, I will → I'll என்று சுருக்குங்கள்.*\n\n**Say slowly, then fast:**\n- I'm (AYM)\n- I'll (AYL)\n- we're (WEER)\n\n✅ **Try it today:** Use \"I hope you're well\" in an email.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 32,
+   "week": 7,
+   "weekday": "Tuesday",
+   "stage": "Stage 7: Words for emails + contractions",
+   "type": "study",
+   "title": "Requests in email + Contractions: don't, can't, won't",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| could you please | kud yoo PLEEZ | தயவுசெய்து முடியுமா | **Could you please** send the file? |\n| request | rih-KWEST | கோரிக்கை | I have a small **request**. |\n| when you can | wen yoo KAN | உங்களுக்கு முடியும்போது | Please review it **when you can**. |\n| at your convenience | at yer kun-VEE-nee-uns | உங்கள் வசதிப்படி | Reply **at your convenience**. |\n| grateful | GRAYT-ful | நன்றியுள்ள | I'd be **grateful** for your help. |\n\n### Accent: Contractions: don't, can't, won't\nwon't (WOHNT) ≠ want (WONT). Practise the difference.\n*won't = \"வோன்ட்\" (மாட்டேன்), want = \"வான்ட்\" (வேண்டும்).*\n\n**Say slowly, then fast:**\n- won't / want\n- don't\n- \"I won't want it.\"\n\n✅ **Try it today:** Write one polite request with \"Could you please…\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 33,
+   "week": 7,
+   "weekday": "Wednesday",
+   "stage": "Stage 7: Words for emails + contractions",
+   "type": "study",
+   "title": "Replying + \"Would\" and \"I'd\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| happy to | HAP-ee tuh | மகிழ்ச்சியுடன் | I'm **happy to** help. |\n| noted | NOH-tid | குறித்துக்கொண்டேன் | **Noted**, thanks. |\n| as discussed | az dis-KUST | பேசியபடி | **As discussed**, here's the plan. |\n| apologies | uh-POL-uh-jeez | மன்னிப்பு | **Apologies** for the late reply. |\n| shortly | SHORT-lee | விரைவில் | I'll reply **shortly**. |\n\n### Accent: \"Would\" and \"I'd\"\nI'd = I would / I had. Say \"ayd\" quickly.\n*I'd = \"ஐட்\".*\n\n**Say slowly, then fast:**\n- I'd like\n- I'd love to\n- \"I'd be happy to help.\"\n\n✅ **Try it today:** Reply with \"I'd be happy to…\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 34,
+   "week": 7,
+   "weekday": "Thursday",
+   "stage": "Stage 7: Words for emails + contractions",
+   "type": "study",
+   "title": "Attachments and links + Silent letters",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| find attached | FYND uh-TACHT | இணைப்பைக் காண்க | Please **find attached** the report. |\n| link | LINK | இணைப்பு | Here's the **link**. |\n| draft | DRAFT | வரைவு | This is the first **draft**. |\n| share | SHAIR | பகிர் | I'll **share** the doc. |\n| forward | FOR-wurd | அனுப்பு | Can you **forward** this to HR? |\n\n### Accent: Silent letters\nSome letters are silent: the k in know, the b in debt, the l in should.\n*சில எழுத்துகள் ஒலிக்காது: know (நோ), should (ஷுட்).*\n\n**Say slowly, then fast:**\n- know\n- should\n- debt\n- \"I should know the debt.\"\n\n✅ **Try it today:** Find two silent letters in your email today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 35,
+   "week": 7,
+   "weekday": "Friday",
+   "stage": "Stage 7: Words for emails + contractions",
+   "type": "study",
+   "title": "Closing an email + Polite falling tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| let me know | let mee NOH | சொல்லுங்கள் | **Let me know** if you need anything. |\n| regards | rih-GARDZ | அன்புடன் | Best **regards**, Sathish |\n| look forward to | look FOR-wurd tuh | எதிர்பார்க்கிறேன் | I **look forward to** your reply. |\n| in advance | in ad-VANS | முன்கூட்டியே | Thanks **in advance**. |\n| further | FUR-ther | மேலும் | Any **further** questions? |\n\n### Accent: Polite falling tone\nEnd polite sentences with a soft fall: \"Thanks a lot.\" ↘\n*நன்றி வாக்கியத்தை மெல்லிய இறக்கத்துடன் முடியுங்கள்.*\n\n**Say slowly, then fast:**\n- Thanks so much ↘\n- Best regards ↘\n- \"Let me know ↘.\"\n\n✅ **Try it today:** Close with \"Let me know if you have questions.\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 7,
+   "weekday": "Saturday",
+   "stage": "Stage 7: Words for emails + contractions",
+   "type": "practice",
+   "title": "Week 7 practice: Words for emails + contractions",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 7 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 36,
+   "week": 8,
+   "weekday": "Monday",
+   "stage": "Stage 8: Words for feelings + the \"-ing\" sound",
+   "type": "study",
+   "title": "Feeling good + -ing endings (no hard g)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| excited | ik-SY-tid | உற்சாகமான | I'm **excited** about the launch. |\n| relieved | rih-LEEVD | நிம்மதியான | I'm **relieved** it works. |\n| proud | PROWD | பெருமையான | I'm **proud** of the team. |\n| grateful | GRAYT-ful | நன்றியுள்ள | I'm **grateful** for the chance. |\n| motivated | MOH-tih-vay-tid | உந்துதலுடன் | I feel **motivated** today. |\n\n### Accent: -ing endings (no hard g)\n-ing is one nasal sound /ŋ/ like ங். Don't add a hard \"g\": \"sing\", not \"sing-g\".\n*-ing = \"இங்\" (ங் ஒலி), கடைசியில் \"க்\" இல்லை.*\n\n**Say slowly, then fast:**\n- working\n- sing\n- \"I'm going running.\"\n\n✅ **Try it today:** Tell someone how you're feeling with an adjective.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 37,
+   "week": 8,
+   "weekday": "Tuesday",
+   "stage": "Stage 8: Words for feelings + the \"-ing\" sound",
+   "type": "study",
+   "title": "Feeling stressed + The \"ow\" sound (now, out)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| stressed | STREST | மன அழுத்தமான | I'm a bit **stressed**. |\n| overwhelmed | oh-ver-WELMD | திணறும் | I feel **overwhelmed** this week. |\n| frustrated | FRUS-tray-tid | எரிச்சலான | I'm **frustrated** with the bug. |\n| worried | WUR-eed | கவலையான | I'm **worried** about the date. |\n| tired | TYRD | களைப்பான | I'm really **tired**. |\n\n### Accent: The \"ow\" sound (now, out)\nStart with a wide \"a\" and glide to \"oo\": now = na-oo.\n*\"நவ்\" அல்ல, \"நா-உ\" சறுக்கல்.*\n\n**Say slowly, then fast:**\n- now\n- out\n- \"How about now?\"\n\n✅ **Try it today:** Say \"I'm a bit overwhelmed\" honestly if true.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 38,
+   "week": 8,
+   "weekday": "Wednesday",
+   "stage": "Stage 8: Words for feelings + the \"-ing\" sound",
+   "type": "study",
+   "title": "Calm and balance + The \"oy\" sound",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| calm | KAHM | அமைதியான | Stay **calm**. |\n| balance | BAL-uns | சமநிலை | I need work-life **balance**. |\n| focus | FOH-kus | கவனம் | I want to **focus** on AI. |\n| patient | PAY-shunt | பொறுமையான | Be **patient** with yourself. |\n| energy | EN-er-jee | ஆற்றல் | The gym gives me **energy**. |\n\n### Accent: The \"oy\" sound\nStart with \"o\" and glide to \"ee\": boy, enjoy, avoid.\n*\"ஓ\" இருந்து \"இ\" க்கு சறுக்கல்: boy = பாய்.*\n\n**Say slowly, then fast:**\n- boy\n- enjoy\n- \"Avoid the noisy toy.\"\n\n✅ **Try it today:** Use \"balance\" in a sentence.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 39,
+   "week": 8,
+   "weekday": "Thursday",
+   "stage": "Stage 8: Words for feelings + the \"-ing\" sound",
+   "type": "study",
+   "title": "Showing empathy + Weak \"you\" → \"ya\" in fast speech",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| understand | un-der-STAND | புரிந்துகொள் | I **understand** how you feel. |\n| must be hard | must bee HARD | கடினமாக இருக்கும் | That **must be hard**. |\n| support | suh-PORT | ஆதரவு | I'm here to **support** you. |\n| sorry to hear | SOR-ee tuh HEER | கேட்டு வருந்துகிறேன் | **Sorry to hear** that. |\n| hang in there | hang in THAIR | தைரியமாக இரு | **Hang in there**! |\n\n### Accent: Weak \"you\" → \"ya\" in fast speech\nIn fast speech \"you\" can be \"ya\": \"see ya\", \"did ya\". Recognise it when listening.\n*வேகமாகப் பேசும்போது you = \"யா\".*\n\n**Say slowly, then fast:**\n- Did you → DID-juh\n- Would you → WUD-juh\n- \"Got you.\"\n\n✅ **Try it today:** Say \"That must be hard\" to someone.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 40,
+   "week": 8,
+   "weekday": "Friday",
+   "stage": "Stage 8: Words for feelings + the \"-ing\" sound",
+   "type": "study",
+   "title": "Confidence + Steady pace (not too fast)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| sure | SHOOR | உறுதியான | I'm **sure** about it. |\n| capable | KAY-puh-bul | திறமையான | You're **capable** of this. |\n| comfortable | KUMF-ter-bul | வசதியான | I'm **comfortable** speaking. |\n| determined | dih-TUR-mind | உறுதியுடன் | I'm **determined** to learn. |\n| believe | bih-LEEV | நம்பு | I **believe** in this plan. |\n\n### Accent: Steady pace (not too fast)\nMany fluent speakers speak too fast. Slow down, pause after key ideas. Clear beats fast.\n*வேகமாக அல்ல, தெளிவாக. முக்கிய கருத்துக்குப் பின் நிறுத்துங்கள்.*\n\n**Say slowly, then fast:**\n- \"I'm sure\n\n✅ **Try it today:**  we can do this.\";\"Let me think \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 8,
+   "weekday": "Saturday",
+   "stage": "Stage 8: Words for feelings + the \"-ing\" sound",
+   "type": "practice",
+   "title": "Week 8 practice: Words for feelings + the \"-ing\" sound",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 8 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 41,
+   "week": 9,
+   "weekday": "Monday",
+   "stage": "Stage 9: Phrasal verbs at work (part 1) + stress in phrasal verbs",
+   "type": "study",
+   "title": "Phrasal verbs: set up, carry out + Stress the particle",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| set up | set UP | அமை | I'll **set up** the meeting. |\n| carry out | kar-ee OWT | செயல்படுத்து | We **carried out** the test. |\n| figure out | fig-yer OWT | கண்டுபிடி | I'll **figure out** the issue. |\n| point out | poynt OWT | சுட்டிக்காட்டு | Thanks for **pointing** that **out**. |\n| work out | wurk OWT | தீர்வு காண் / பலன் தரு | It **worked out** well. |\n\n### Accent: Stress the particle\nIn phrasal verbs, the small word is usually stressed: set UP, carry OUT.\n*Phrasal verb-இல் சிறிய சொல்லுக்கு அழுத்தம்.*\n\n**Say slowly, then fast:**\n- set UP\n- log IN\n- \"Let's SET it UP.\"\n\n✅ **Try it today:** Use \"set up\" at work today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 42,
+   "week": 9,
+   "weekday": "Tuesday",
+   "stage": "Stage 9: Phrasal verbs at work (part 1) + stress in phrasal verbs",
+   "type": "study",
+   "title": "Phrasal verbs: bring up, come up + Linking in phrasal verbs",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| bring up | bring UP | எழுப்பு (பேச்சில்) | I want to **bring up** the budget. |\n| come up with | kum UP with | யோசனை தெரிவி | We **came up with** an idea. |\n| go over | goh OH-ver | பார்வையிடு | Let's **go over** the plan. |\n| look into | look IN-too | ஆராய் | I'll **look into** it. |\n| run into | run IN-too | எதிர்கொள் | We **ran into** a problem. |\n\n### Accent: Linking in phrasal verbs\nLink the verb and particle: bring up → brin-GUP.\n*வினை + துகள் இணைத்துச் சொல்லுங்கள்.*\n\n**Say slowly, then fast:**\n- bring up → brin-gup\n- come up → cu-mup\n- \"It came up again.\"\n\n✅ **Try it today:** Bring up one topic in a meeting.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 43,
+   "week": 9,
+   "weekday": "Wednesday",
+   "stage": "Stage 9: Phrasal verbs at work (part 1) + stress in phrasal verbs",
+   "type": "study",
+   "title": "Phrasal verbs: put off, call off + Short weak \"off\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| put off | put OFF | தள்ளிப்போடு | Don't **put off** the review. |\n| call off | kawl OFF | ரத்து செய் | They **called off** the meeting. |\n| hold on | hohld ON | காத்திரு | **Hold on**, let me check. |\n| take over | tayk OH-ver | பொறுப்பேற் | Can you **take over** this task? |\n| back up | bak UP | ஆதரி / காப்பு எடு | **Back up** the files first. |\n\n### Accent: Short weak \"off\"\noff = short \"of\" with an f: OFF, not \"aaf\".\n*off = \"ஆஃப்\" சுருக்கமாக.*\n\n**Say slowly, then fast:**\n- put off\n- call off\n- \"We called it off.\"\n\n✅ **Try it today:** Use \"put off\" in a sentence.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 44,
+   "week": 9,
+   "weekday": "Thursday",
+   "stage": "Stage 9: Phrasal verbs at work (part 1) + stress in phrasal verbs",
+   "type": "study",
+   "title": "Phrasal verbs: follow up, sign off + Rhythm in short phrases",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| sign off | syn OFF | ஒப்புதல் அளி | The manager **signed off** on it. |\n| fill in | fil IN | நிரப்பு / மாற்றாக இரு | Can you **fill in** for me? |\n| catch up on | kach UP on | தவறியதை முடி | I need to **catch up on** emails. |\n| sort out | sort OWT | சரிசெய் | We **sorted out** the problem. |\n| reach out | reech OWT | தொடர்பு கொள் | **Reach out** if you need help. |\n\n### Accent: Rhythm in short phrases\nKeep a da-DUM rhythm: fol-low UP, sign OFF.\n*\"ட-டம்\" ரிதம்.*\n\n**Say slowly, then fast:**\n- follow UP\n- sign OFF\n- \"Please FOLLow UP.\"\n\n✅ **Try it today:** Follow up on one open task.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 45,
+   "week": 9,
+   "weekday": "Friday",
+   "stage": "Stage 9: Phrasal verbs at work (part 1) + stress in phrasal verbs",
+   "type": "study",
+   "title": "Phrasal verbs: speed up, slow down + Up/down contrast in tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| speed up | speed UP | வேகப்படுத்து | Caching **speeds up** the app. |\n| slow down | sloh DOWN | மெதுவாக்கு | The API **slows down** at night. |\n| cut down on | kut DOWN on | குறை | We need to **cut down on** costs. |\n| break down | brayk DOWN | பகுதிகளாகப் பிரி / பழுதாகு | Let's **break down** the task. |\n| scale up | skayl UP | அளவை உயர்த்து | We'll **scale up** next month. |\n\n### Accent: Up/down contrast in tone\nSay \"speed UP\" with energy and \"slow DOWN\" calmly. Voice matches meaning.\n*சொல்லுக்கு ஏற்ப குரல்.*\n\n**Say slowly, then fast:**\n- speed UP\n- slow DOWN\n- \"Let's SPEED it UP.\"\n\n✅ **Try it today:** Use \"speed up\" about your work.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 9,
+   "weekday": "Saturday",
+   "stage": "Stage 9: Phrasal verbs at work (part 1) + stress in phrasal verbs",
+   "type": "practice",
+   "title": "Week 9 practice: Phrasal verbs at work (part 1) + stress in phrasal verbs",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 9 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 46,
+   "week": 10,
+   "weekday": "Monday",
+   "stage": "Stage 10: Phrasal verbs (part 2) + the \"J\" and \"Z\" in -sion",
+   "type": "study",
+   "title": "Phrasal verbs for people + The \"zh\" sound (vision)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| get along | get uh-LONG | நல்லுறவுடன் இரு | We **get along** well. |\n| look up to | look UP tuh | மதி | I **look up to** my manager. |\n| count on | kownt ON | நம்பியிரு | You can **count on** me. |\n| stand out | stand OWT | தனித்து தெரி | Your work **stands out**. |\n| let down | let DOWN | ஏமாற்று | I won't **let** you **down**. |\n\n### Accent: The \"zh\" sound (vision)\n\"zh\" in vision, decision: like \"sh\" with a buzz.\n*\"ஷ்\" ஒலியுடன் அதிர்வு: vision = விழன்.*\n\n**Say slowly, then fast:**\n- vision\n- decision\n- \"Usual decision.\"\n\n✅ **Try it today:** Use \"get along\" about a colleague.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 47,
+   "week": 10,
+   "weekday": "Tuesday",
+   "stage": "Stage 10: Phrasal verbs (part 2) + the \"J\" and \"Z\" in -sion",
+   "type": "study",
+   "title": "Phrasal verbs for learning + J vs Z",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| pick up | pik UP | கற்றுக்கொள் | I'm **picking up** Arabic. |\n| brush up on | brush UP on | மீண்டும் பயிற்சி செய் | I'm **brushing up on** Python. |\n| keep up with | keep UP with | தொடர்ந்து அறிந்திரு | It's hard to **keep up with** AI. |\n| go through | goh THROO | படி / கடந்து செல் | Let's **go through** the notes. |\n| look back | look BAK | திரும்பிப் பார் | **Looking back**, it was worth it. |\n\n### Accent: J vs Z\nJ (judge) is a short \"dj\" sound. Don't confuse with Z.\n*J = \"ஜ்\", Z = அதிர்வுள்ள \"ஸ்\".*\n\n**Say slowly, then fast:**\n- jam / zap\n- job\n- \"Just join the jazz.\"\n\n✅ **Try it today:** Say what you're \"picking up\" this month.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 48,
+   "week": 10,
+   "weekday": "Wednesday",
+   "stage": "Stage 10: Phrasal verbs (part 2) + the \"J\" and \"Z\" in -sion",
+   "type": "study",
+   "title": "Phrasal verbs for problems + TH + R (three, through)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| deal with | DEEL with | கையாள் | I'll **deal with** it. |\n| get around | get uh-ROWND | சுற்றி வழி காண் | We found a way to **get around** it. |\n| give up | giv UP | கைவிடு | Don't **give up**. |\n| turn out | turn OWT | ஆக மாறு | It **turned out** fine. |\n| end up | end UP | இறுதியில் ஆகு | We **ended up** rewriting it. |\n\n### Accent: TH + R (three, through)\nTongue between teeth for TH, then curl back for R. Slowly: th-roo.\n*TH பிறகு R: த்-ரூ.*\n\n**Say slowly, then fast:**\n- three\n- through\n- \"Three thrilling throws.\"\n\n✅ **Try it today:** Use \"deal with\" today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 49,
+   "week": 10,
+   "weekday": "Thursday",
+   "stage": "Stage 10: Phrasal verbs (part 2) + the \"J\" and \"Z\" in -sion",
+   "type": "study",
+   "title": "Phrasal verbs for decisions + Stress in \"decide/decision\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| go ahead | goh uh-HED | தொடரு | **Go ahead** with the plan. |\n| rule out | rool OWT | விலக்கு | We **ruled out** that option. |\n| narrow down | nar-oh DOWN | குறுக்கு | Let's **narrow down** the choices. |\n| stick to | STIK tuh | கடைப்பிடி | Let's **stick to** the plan. |\n| weigh up | way UP | எடை போடு | **Weigh up** the pros and cons. |\n\n### Accent: Stress in \"decide/decision\"\nde-CIDE → de-CI-sion. Stress moves to the syllable before -sion.\n*-sion க்கு முன் உள்ள பகுதிக்கு அழுத்தம்.*\n\n**Say slowly, then fast:**\n- de-CIDE / de-CI-sion\n- re-VISE / re-VI-sion\n- con-CLUDE / con-CLU-sion\n\n✅ **Try it today:** Explain a decision you made.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 50,
+   "week": 10,
+   "weekday": "Friday",
+   "stage": "Stage 10: Phrasal verbs (part 2) + the \"J\" and \"Z\" in -sion",
+   "type": "study",
+   "title": "Phrasal verbs in daily life + Natural speed practice",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| wake up | wayk UP | எழு | I **wake up** at 6:30. |\n| get ready | get RED-ee | தயாராகு | I **get ready** for work. |\n| drop off | drop OFF | இறக்கிவிடு | I **drop off** my daughter. |\n| pick up | pik UP | அழைத்து வா | I **pick up** groceries. |\n| turn off | turn OFF | அணை | **Turn off** the lights. |\n\n### Accent: Natural speed practice\nSay each phrasal verb sentence slow, then at normal speed, linking words.\n*மெதுவாக, பிறகு இயல்பான வேகத்தில்.*\n\n**Say slowly, then fast:**\n- \"I woke up at six.\"\n- \"I'll pick you up.\"\n- \"Turn it off.\"\n\n✅ **Try it today:** Describe your morning with 3 phrasal verbs.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 10,
+   "weekday": "Saturday",
+   "stage": "Stage 10: Phrasal verbs (part 2) + the \"J\" and \"Z\" in -sion",
+   "type": "practice",
+   "title": "Week 10 practice: Phrasal verbs (part 2) + the \"J\" and \"Z\" in -sion",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 10 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 51,
+   "week": 11,
+   "weekday": "Monday",
+   "stage": "Stage 11: Words for presenting + pausing and chunking",
+   "type": "study",
+   "title": "Opening a presentation + Chunking",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| overview | OH-ver-vyoo | கண்ணோட்டம் | Here's a quick **overview**. |\n| present | prih-ZENT (v) | வழங்கு | I'll **present** our results. |\n| outline | OWT-lyn | வரைவு | Let me **outline** the talk. |\n| cover | KUV-er | உள்ளடக்கு | I'll **cover** three points. |\n| audience | AW-dee-uns | பார்வையாளர்கள் | Thanks to the **audience**. |\n\n### Accent: Chunking\nSplit long sentences into small chunks with tiny pauses. Each chunk = one idea.\n*நீண்ட வாக்கியத்தை சிறு பகுதிகளாகப் பிரித்து நிறுத்திச் சொல்லுங்கள்.*\n\n**Say slowly, then fast:**\n- \"Today\n\n✅ **Try it today:**  I'll show you \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 52,
+   "week": 11,
+   "weekday": "Tuesday",
+   "stage": "Stage 11: Words for presenting + pausing and chunking",
+   "type": "study",
+   "title": "Explaining slides + Emphasis words",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| chart | CHART | வரைபடம் | This **chart** shows growth. |\n| trend | TREND | போக்கு | The **trend** is positive. |\n| highlight | HY-lyt | முக்கியமாகக் காட்டு | I want to **highlight** this. |\n| compare | kum-PAIR | ஒப்பிடு | Let's **compare** the two. |\n| significant | sig-NIF-ih-kunt | குறிப்பிடத்தக்க | There's a **significant** increase. |\n\n### Accent: Emphasis words\nStress the word that carries new info: \"This is our BIGGEST improvement.\"\n*புதிய தகவலுக்கு அழுத்தம்.*\n\n**Say slowly, then fast:**\n- \"Sales went UP.\"\n- \"This is the KEY point.\"\n- \"NOT the old version.\"\n\n✅ **Try it today:** Explain one chart in 2 sentences.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 53,
+   "week": 11,
+   "weekday": "Wednesday",
+   "stage": "Stage 11: Words for presenting + pausing and chunking",
+   "type": "study",
+   "title": "Transitions + Pause before transitions",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| moving on | MOO-ving ON | அடுத்து | **Moving on** to costs. |\n| next | NEKST | அடுத்து | **Next**, the demo. |\n| in addition | in uh-DISH-un | கூடுதலாக | **In addition**, it's cheaper. |\n| on the other hand | on thee UTH-er hand | மறுபக்கம் | **On the other hand**, it's slower. |\n| finally | FY-nuh-lee | இறுதியாக | **Finally**, let's see the results. |\n\n### Accent: Pause before transitions\nPause, then say the transition word clearly: \"\n* Next, ...\" \"*\n\n**Say slowly, then fast:**\n- Moving on, ...\"\n\n✅ **Try it today:** மாற்றுச் சொல்லுக்கு முன் நிறுத்துங்கள்.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 54,
+   "week": 11,
+   "weekday": "Thursday",
+   "stage": "Stage 11: Words for presenting + pausing and chunking",
+   "type": "study",
+   "title": "Handling questions + Buying time phrases",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| good question | good KWES-chun | நல்ல கேள்வி | **Good question**. |\n| clarify | KLAIR-ih-fy | தெளிவுபடுத்து | Let me **clarify**. |\n| get back to you | get BAK tuh yoo | பிறகு பதில் சொல்கிறேன் | I'll **get back to you**. |\n| off the top of my head | off thuh TOP uv my HED | உடனடியாக நினைவில் | **Off the top of my head**, about 20%. |\n| valid | VAL-id | சரியான | That's a **valid** point. |\n\n### Accent: Buying time phrases\nUse calm phrases to think: \"That's a great question.\" Say them slowly.\n*யோசிக்க நேரம் பெற அமைதியான சொற்றொடர்கள்.*\n\n**Say slowly, then fast:**\n- \"Good question.\"\n- \"Let me think about that.\"\n- \"I'll get back to you.\"\n\n✅ **Try it today:** Answer one question with \"Good question…\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 55,
+   "week": 11,
+   "weekday": "Friday",
+   "stage": "Stage 11: Words for presenting + pausing and chunking",
+   "type": "study",
+   "title": "Closing a presentation + Falling tone for final statements",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| to sum up | tuh sum UP | சுருக்கமாக | **To sum up**, it works. |\n| key takeaway | kee TAYK-uh-way | முக்கியக் கருத்து | The **key takeaway** is speed. |\n| thank you for listening | THANK yoo fer LIS-uh-ning | கேட்டதற்கு நன்றி | **Thank you for listening**. |\n| questions | KWES-chunz | கேள்விகள் | Any **questions**? |\n| conclude | kun-KLOOD | முடிவுக்கு வா | Let me **conclude**. |\n\n### Accent: Falling tone for final statements\nFinish key sentences firmly, voice going down. It sounds confident.\n*இறுதி வாக்கியத்தை உறுதியாக, குரல் இறங்கி முடியுங்கள்.*\n\n**Say slowly, then fast:**\n- \"That's all from me. ↘\"\n- \"Thank you. ↘\"\n- \"Any questions? ↗\"\n\n✅ **Try it today:** End a talk with \"To sum up…\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 11,
+   "weekday": "Saturday",
+   "stage": "Stage 11: Words for presenting + pausing and chunking",
+   "type": "practice",
+   "title": "Week 11 practice: Words for presenting + pausing and chunking",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 11 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 56,
+   "week": 12,
+   "weekday": "Monday",
+   "stage": "Stage 12: Words for interviews + talking about yourself",
+   "type": "study",
+   "title": "Introducing yourself + Stress in numbers: -teen vs -ty",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| background | BAK-grownd | பின்னணி | My **background** is in mobile. |\n| experience | ik-SPEER-ee-uns | அனுபவம் | I have 8 years' **experience**. |\n| specialise | SPESH-uh-lyz | சிறப்பு பெறு | I **specialise** in OutSystems. |\n| role | ROHL | பங்கு / பதவி | My current **role** is architect. |\n| responsible for | rih-SPON-sih-bul fer | பொறுப்பானவர் | I'm **responsible for** design. |\n\n### Accent: Stress in numbers: -teen vs -ty\nthirTEEN (stress at end, long) vs THIRty (stress at start, short \"dee\").\n*-teen: பின் அழுத்தம்; -ty: முன் அழுத்தம்.*\n\n**Say slowly, then fast:**\n- thir-TEEN / THIR-ty\n- fif-TEEN / FIF-ty\n- \"I have fif-TEEN years of experience.\"\n\n✅ **Try it today:** Say your years of experience correctly.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 57,
+   "week": 12,
+   "weekday": "Tuesday",
+   "stage": "Stage 12: Words for interviews + talking about yourself",
+   "type": "study",
+   "title": "Strengths + Contrastive stress",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| strength | STRENGTH | பலம் | My **strength** is problem-solving. |\n| skilled | SKILD | திறமையான | I'm **skilled** in Python. |\n| adaptable | uh-DAP-tuh-bul | எளிதில் பொருந்தும் | I'm very **adaptable**. |\n| proactive | proh-AK-tiv | முன்முயற்சியுள்ள | I'm **proactive** about risks. |\n| collaborate | kuh-LAB-uh-rayt | ஒத்துழை | I **collaborate** well with teams. |\n\n### Accent: Contrastive stress\nStress what's different: \"I'm not just a DEVeloper, I'm an ARchitect.\"\n*வேறுபாட்டைக் காட்ட அழுத்தம்.*\n\n**Say slowly, then fast:**\n- not RED, BLUE\n- \"I LEAD, not just CODE.\"\n\n✅ **Try it today:** Name one strength out loud.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 58,
+   "week": 12,
+   "weekday": "Wednesday",
+   "stage": "Stage 12: Words for interviews + talking about yourself",
+   "type": "study",
+   "title": "Achievements + Past tense clarity (-ed)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| achieve | uh-CHEEV | அடை | We **achieved** 99% uptime. |\n| deliver | dih-LIV-er | வழங்கு | I **delivered** the project early. |\n| reduce | rih-DOOS | குறை | I **reduced** costs by 30%. |\n| lead | LEED | வழிநடத்து | I **led** a team of five. |\n| result | rih-ZULT | விளைவு | The **result** was faster apps. |\n\n### Accent: Past tense clarity (-ed)\nSay -ed endings clearly in achievements: \"I led, I built, I improved (im-PROOVD).\"\n*சாதனைகளில் -ed தெளிவாக.*\n\n**Say slowly, then fast:**\n- improved\n- delivered\n- reduced\n\n✅ **Try it today:** Describe one achievement with a number.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 59,
+   "week": 12,
+   "weekday": "Thursday",
+   "stage": "Stage 12: Words for interviews + talking about yourself",
+   "type": "study",
+   "title": "Weaknesses and growth + Softening phrases",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| weakness | WEEK-nus | பலவீனம் | My **weakness** was public speaking. |\n| improve | im-PROOV | மேம்படுத்து | I'm working to **improve** it. |\n| feedback | FEED-bak | கருத்து | I value **feedback**. |\n| learning | LUR-ning | கற்றல் | I'm always **learning**. |\n| challenge | CHAL-unj | சவால் | It was a big **challenge**. |\n\n### Accent: Softening phrases\nUse soft starters: \"To be honest,\" \"I'd say…\". Say them calmly.\n*மென்மையான தொடக்கச் சொற்கள்.*\n\n**Say slowly, then fast:**\n- \"To be honest, …\"\n- \"I'd say …\"\n- \"I'm working on …\"\n\n✅ **Try it today:** Answer \"What's your weakness?\" in 2 lines.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 60,
+   "week": 12,
+   "weekday": "Friday",
+   "stage": "Stage 12: Words for interviews + talking about yourself",
+   "type": "study",
+   "title": "Asking the interviewer + Polite rising questions",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| typical | TIP-ih-kul | வழக்கமான | What's a **typical** day? |\n| growth | GROHTH | வளர்ச்சி | What are the **growth** options? |\n| culture | KUL-cher | பண்பாடு | How's the team **culture**? |\n| expectation | ek-spek-TAY-shun | எதிர்பார்ப்பு | What are your **expectations**? |\n| opportunity | op-er-TOO-nih-tee | வாய்ப்பு | Thanks for the **opportunity**. |\n\n### Accent: Polite rising questions\nQuestions to the interviewer: friendly rising tone, not flat.\n*கேள்விகளை நட்பாக மேலேற்றும் தொனியில்.*\n\n**Say slowly, then fast:**\n- \"What does a typical day look like? ↘\"\n- \"Is there training? ↗\"\n\n✅ **Try it today:** Prepare 2 questions for an interviewer.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 12,
+   "weekday": "Saturday",
+   "stage": "Stage 12: Words for interviews + talking about yourself",
+   "type": "practice",
+   "title": "Week 12 practice: Words for interviews + talking about yourself",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 12 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 61,
+   "week": 13,
+   "weekday": "Monday",
+   "stage": "Stage 13: Review weeks 1–12 + record yourself",
+   "type": "study",
+   "title": "Review: meetings and email + Review V/W and TH",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| agenda | uh-JEN-duh | நிகழ்ச்சி நிரல் | Let's check the **agenda**. |\n| update | UP-date | புதிய தகவல் | Quick **update**: we're on track. |\n| regarding | rih-GAR-ding | தொடர்பாக | **Regarding** your question… |\n| confirm | kun-FURM | உறுதிப்படுத்து | Please **confirm** by Friday. |\n| wrap up | RAP up | முடித்துக்கொள் | Let's **wrap up**. |\n\n### Accent: Review V/W and TH\nRepeat Week 1 drills: vest/west, three/tree.\n*V/W, TH மீண்டும் பழகுங்கள்.*\n\n**Say slowly, then fast:**\n- \"We visit very well.\"\n- \"Thank you for three things.\"\n- \"The weather is warm.\"\n\n✅ **Try it today:** Write a meeting follow-up email with 5 old words.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 62,
+   "week": 13,
+   "weekday": "Tuesday",
+   "stage": "Stage 13: Review weeks 1–12 + record yourself",
+   "type": "study",
+   "title": "Review: problems and plans + Review word stress",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| issue | ISH-oo | பிரச்சனை | We had an **issue**. |\n| resolve | rih-ZOLV | தீர் | It's **resolved**. |\n| estimate | ES-tih-mut | மதிப்பீடு | My **estimate** is two days. |\n| blocker | BLOK-er | தடை | No **blockers**. |\n| milestone | MYL-stohn | முக்கியக் கட்டம் | We hit the **milestone**. |\n\n### Accent: Review word stress\nClap the stress of each word below.\n*அழுத்தத்தைக் கைதட்டிச் சொல்லுங்கள்.*\n\n**Say slowly, then fast:**\n- in-VES-tih-gate\n- dih-PEN-dun-see\n- FEE-zuh-bul\n\n✅ **Try it today:** Explain a problem and fix in 3 sentences.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 63,
+   "week": 13,
+   "weekday": "Wednesday",
+   "stage": "Stage 13: Review weeks 1–12 + record yourself",
+   "type": "study",
+   "title": "Review: tech words + Review linking",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| deploy | dih-PLOY | வெளியிடு | We **deployed** today. |\n| data | DAY-tuh | தரவு | The **data** is ready. |\n| scale | SKAYL | அளவை உயர்த்து | It **scales** well. |\n| access | AK-ses | அணுகல் | I need **access**. |\n| model | MOD-ul | மாதிரி | The **model** is trained. |\n\n### Accent: Review linking\nLink the words smoothly.\n*இணைத்துச் சொல்லுங்கள்.*\n\n**Say slowly, then fast:**\n- log it in\n- check it out\n- set it up\n\n✅ **Try it today:** Explain your project's tech in 4 sentences.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 64,
+   "week": 13,
+   "weekday": "Thursday",
+   "stage": "Stage 13: Review weeks 1–12 + record yourself",
+   "type": "study",
+   "title": "Review: feelings and small talk + Review R and L",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| weekend | WEEK-end | வார இறுதி | Good **weekend**? |\n| pleasant | PLEZ-unt | இனிமையான | Very **pleasant**. |\n| excited | ik-SY-tid | உற்சாகமான | I'm **excited**. |\n| calm | KAHM | அமைதியான | Stay **calm**. |\n| sounds great | sownz GRAYT | அருமை | **Sounds great**! |\n\n### Accent: Review R and L\nlight/right, lead/read.\n*L/R மீண்டும்.*\n\n**Say slowly, then fast:**\n- \"Really lovely rain.\"\n- \"Light and right.\"\n\n✅ **Try it today:** Have one 2-minute small talk in English.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 65,
+   "week": 13,
+   "weekday": "Friday",
+   "stage": "Stage 13: Review weeks 1–12 + record yourself",
+   "type": "study",
+   "title": "Review: phrasal verbs and presenting + Review chunking",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| set up | set UP | அமை | I **set up** the demo. |\n| look into | look IN-too | ஆராய் | I'll **look into** it. |\n| overview | OH-ver-vyoo | கண்ணோட்டம் | Quick **overview**. |\n| to sum up | tuh sum UP | சுருக்கமாக | **To sum up**, it works. |\n| key takeaway | kee TAYK-uh-way | முக்கியக் கருத்து | One **key takeaway**. |\n\n### Accent: Review chunking\nRead a paragraph, pausing at each \n* mark.*\n\n**Say slowly, then fast:**\n- பகுதிகளாக நிறுத்திப் படியுங்கள்.\n\n✅ **Try it today:** \"Today \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 13,
+   "weekday": "Saturday",
+   "stage": "Stage 13: Review weeks 1–12 + record yourself",
+   "type": "practice",
+   "title": "Week 13 practice: Review weeks 1–12 + record yourself",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": true,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 13 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 66,
+   "week": 14,
+   "weekday": "Monday",
+   "stage": "Stage 14: Words for negotiation + polite tone",
+   "type": "study",
+   "title": "Making an offer + Softening with \"would\" and \"could\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| offer | OF-er | வழங்கு / சலுகை | We can **offer** a discount. |\n| propose | pruh-POHZ | முன்மொழி | I **propose** a two-week trial. |\n| terms | TURMZ | விதிமுறைகள் | Let's agree on the **terms**. |\n| flexible | FLEK-sih-bul | நெகிழ்வான | We're **flexible** on dates. |\n| deal | DEEL | ஒப்பந்தம் | It's a **deal**. |\n\n### Accent: Softening with \"would\" and \"could\"\n\"Would it be possible…\" sounds polite. Say it slowly with a warm tone.\n*\"would/could\" மென்மையாக ஒலிக்கும்.*\n\n**Say slowly, then fast:**\n- \"Would that work?\"\n- \"Could we try…?\"\n- \"It might be better to…\"\n\n✅ **Try it today:** Make one polite offer.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 67,
+   "week": 14,
+   "weekday": "Tuesday",
+   "stage": "Stage 14: Words for negotiation + polite tone",
+   "type": "study",
+   "title": "Pushing back + Firm but polite tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| I'm afraid | aym uh-FRAYD | வருந்துகிறேன் ஆனால் | **I'm afraid** that's too high. |\n| unfortunately | un-FOR-chuh-nut-lee | துரதிர்ஷ்டவசமாக | **Unfortunately**, we can't. |\n| limit | LIM-it | வரம்பு | That's our **limit**. |\n| afford | uh-FORD | வசதி இருக்க | We can't **afford** that. |\n| reconsider | ree-kun-SID-er | மறுபரிசீலனை செய் | Could you **reconsider**? |\n\n### Accent: Firm but polite tone\nKeep the voice steady and low. Don't rise at the end of a \"no\".\n*\"இல்லை\" சொல்லும்போது குரல் நிலையாக, கீழே.*\n\n**Say slowly, then fast:**\n- \"I'm afraid that won't work. ↘\"\n- \"That's not possible. ↘\"\n\n✅ **Try it today:** Say \"I'm afraid…\" once today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 68,
+   "week": 14,
+   "weekday": "Wednesday",
+   "stage": "Stage 14: Words for negotiation + polite tone",
+   "type": "study",
+   "title": "Finding middle ground + Stress in \"compromise\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| compromise | KOM-pruh-myz | சமரசம் | Let's find a **compromise**. |\n| meet halfway | meet haf-WAY | பாதி வழியில் சந்தி | Can we **meet halfway**? |\n| negotiate | nih-GOH-shee-ayt | பேரம் பேசு | We **negotiated** the price. |\n| agreement | uh-GREE-munt | ஒப்பந்தம் | We reached an **agreement**. |\n| win-win | win-WIN | இருவருக்கும் நன்மை | It's a **win-win**. |\n\n### Accent: Stress in \"compromise\"\nCOM-pruh-myz: stress at the start.\n*COM-pro-mise: முதல் பகுதி அழுத்தம்.*\n\n**Say slowly, then fast:**\n- COM-pruh-myz\n- neh-GOH-shee-ayt\n- uh-GREE-munt\n\n✅ **Try it today:** Suggest a compromise.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 69,
+   "week": 14,
+   "weekday": "Thursday",
+   "stage": "Stage 14: Words for negotiation + polite tone",
+   "type": "study",
+   "title": "Asking for a raise + Confident pause",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| raise | RAYZ | சம்பள உயர்வு | I'd like to discuss a **raise**. |\n| contribution | kon-trih-BYOO-shun | பங்களிப்பு | My **contribution** was key. |\n| market rate | MAR-kit rayt | சந்தை விலை | It's below **market rate**. |\n| deserve | dih-ZURV | தகுதியுடைய | I believe I **deserve** it. |\n| review | rih-VYOO | மதிப்பாய்வு | At my annual **review**… |\n\n### Accent: Confident pause\nSay your request, then pause and wait. Don't rush to fill silence.\n*கேட்டதும் நிறுத்தி காத்திருங்கள்.*\n\n**Say slowly, then fast:**\n- \"I'd like to discuss my salary.\n\n✅ **Try it today:** \";\"Based on my results, \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 70,
+   "week": 14,
+   "weekday": "Friday",
+   "stage": "Stage 14: Words for negotiation + polite tone",
+   "type": "study",
+   "title": "Closing a deal + Clear numbers",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| budget | BUJ-it | பட்ஜெட் | What's your **budget**? |\n| quote | KWOHT | விலைக் குறிப்பு | Send me a **quote**. |\n| invoice | IN-voys | விலைப்பட்டியல் | I'll send the **invoice**. |\n| payment terms | PAY-munt turmz | கட்டண விதிமுறைகள் | **Payment terms** are 30 days. |\n| sign | SYN | கையெழுத்திடு | Ready to **sign**? |\n\n### Accent: Clear numbers\nSay numbers slowly, in chunks: \"twenty-five \n* thousand *\n\n**Say slowly, then fast:**\n- dirhams\".\n\n✅ **Try it today:** எண்களை மெதுவாக பகுதிகளாக.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 14,
+   "weekday": "Saturday",
+   "stage": "Stage 14: Words for negotiation + polite tone",
+   "type": "practice",
+   "title": "Week 14 practice: Words for negotiation + polite tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 14 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 71,
+   "week": 15,
+   "weekday": "Monday",
+   "stage": "Stage 15: Words for leadership + speaking with authority",
+   "type": "study",
+   "title": "Giving direction + Strong verbs, falling tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| direction | dih-REK-shun | திசை | We need clear **direction**. |\n| delegate | DEL-ih-gayt | பணி ஒப்படை | I'll **delegate** testing. |\n| ownership | OH-ner-ship | உரிமைப் பொறுப்பு | Take **ownership** of it. |\n| accountable | uh-KOWN-tuh-bul | பொறுப்புக் கூறும் | Who's **accountable**? |\n| expectation | ek-spek-TAY-shun | எதிர்பார்ப்பு | Let me set **expectations**. |\n\n### Accent: Strong verbs, falling tone\nInstructions: stress the verb, fall at the end.\n*வினைக்கு அழுத்தம், இறுதியில் இறக்கம்.*\n\n**Say slowly, then fast:**\n- \"PLEASE SEND it today. ↘\"\n- \"LET'S FOCUS on quality. ↘\"\n\n✅ **Try it today:** Give one clear instruction.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 72,
+   "week": 15,
+   "weekday": "Tuesday",
+   "stage": "Stage 15: Words for leadership + speaking with authority",
+   "type": "study",
+   "title": "Motivating a team + Warm rising energy",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| great job | grayt JOB | அருமையான வேலை | **Great job** on the release. |\n| recognise | REK-ug-nyz | அங்கீகரி | I want to **recognise** Priya. |\n| encourage | in-KUR-ij | ஊக்குவி | I **encourage** you to try. |\n| inspire | in-SPY-er | உத்வேகம் அளி | Her talk **inspired** us. |\n| milestone | MYL-stohn | முக்கியக் கட்டம் | We hit a big **milestone**. |\n\n### Accent: Warm rising energy\nEncouragement: lively tone, smile while speaking.\n*ஊக்கம் தரும்போது புன்னகையுடன் பேசுங்கள்.*\n\n**Say slowly, then fast:**\n- \"GREAT job, everyone!\"\n- \"I KNOW we can do this!\"\n\n✅ **Try it today:** Praise someone's work today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 73,
+   "week": 15,
+   "weekday": "Wednesday",
+   "stage": "Stage 15: Words for leadership + speaking with authority",
+   "type": "study",
+   "title": "Giving feedback + Sandwich rhythm",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| constructive | kun-STRUK-tiv | ஆக்கபூர்வமான | Here's some **constructive** feedback. |\n| suggestion | sug-JES-chun | பரிந்துரை | One **suggestion**: add tests. |\n| going forward | GOH-ing FOR-wurd | இனிமேல் | **Going forward**, let's review earlier. |\n| consistent | kun-SIS-tunt | நிலையான | Your work is **consistent**. |\n| area | AIR-ee-uh | பகுதி | One **area** to improve is docs. |\n\n### Accent: Sandwich rhythm\nPositive \n* improvement *\n\n**Say slowly, then fast:**\n- positive. Pause between parts.\n\n✅ **Try it today:** நல்லது \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 74,
+   "week": 15,
+   "weekday": "Thursday",
+   "stage": "Stage 15: Words for leadership + speaking with authority",
+   "type": "study",
+   "title": "Making decisions + Decisive short sentences",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| decide | dih-SYD | முடிவு செய் | We **decided** to use Azure. |\n| priority | pry-OR-ih-tee | முன்னுரிமை | Quality is the **priority**. |\n| trade-off | TRAYD-of | பரிமாற்றம் | There's a **trade-off**. |\n| go with | GOH with | தேர்வு செய் | Let's **go with** option B. |\n| final | FY-nul | இறுதி | That's **final**. |\n\n### Accent: Decisive short sentences\nShort sentences sound confident: \"We'll go with option B.\"\n*சுருக்கமான வாக்கியங்கள் தன்னம்பிக்கை காட்டும்.*\n\n**Say slowly, then fast:**\n- \"Let's go with B.\"\n- \"Decision made.\"\n- \"We move forward.\"\n\n✅ **Try it today:** Announce one small decision.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 75,
+   "week": 15,
+   "weekday": "Friday",
+   "stage": "Stage 15: Words for leadership + speaking with authority",
+   "type": "study",
+   "title": "Handling conflict + Calm, slower tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| conflict | KON-flikt | மோதல் | Let's resolve the **conflict**. |\n| perspective | per-SPEK-tiv | பார்வை | I see your **perspective**. |\n| step back | step BAK | சற்று நிதானி | Let's **step back**. |\n| common ground | KOM-un GROWND | பொதுவான கருத்து | Let's find **common ground**. |\n| respectful | rih-SPEKT-ful | மரியாதையுடன் | Please be **respectful**. |\n\n### Accent: Calm, slower tone\nLower your voice and slow down in conflict. It calms others.\n*மோதலில் மெதுவாகவும் தாழ்ந்த குரலிலும் பேசுங்கள்.*\n\n**Say slowly, then fast:**\n- \"I hear you.\"\n- \"Let's step back.\"\n- \"What do you suggest?\"\n\n✅ **Try it today:** Use \"Let's step back\" in a tense moment.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 15,
+   "weekday": "Saturday",
+   "stage": "Stage 15: Words for leadership + speaking with authority",
+   "type": "practice",
+   "title": "Week 15 practice: Words for leadership + speaking with authority",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 15 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 76,
+   "week": 16,
+   "weekday": "Monday",
+   "stage": "Stage 16: Words for architecture + tech explanations",
+   "type": "study",
+   "title": "Explaining a system + Stress in compound nouns",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| architecture | AR-kih-tek-cher | கட்டமைப்பு | Let me explain the **architecture**. |\n| component | kum-POH-nunt | கூறு | Each **component** is separate. |\n| layer | LAY-er | அடுக்கு | The data **layer** is here. |\n| integrate | IN-tih-grayt | ஒருங்கிணை | We **integrate** with SAP. |\n| interface | IN-ter-fays | இடைமுகம் | The **interface** is simple. |\n\n### Accent: Stress in compound nouns\nCompound nouns stress the first word: DAta-base, LOAD balancer, WEB server.\n*கூட்டுப் பெயர்ச்சொல்: முதல் சொல்லுக்கு அழுத்தம்.*\n\n**Say slowly, then fast:**\n- DAta-base\n- LOAD balancer\n- API GAteway → A-P-I GATE-way\n\n✅ **Try it today:** Explain your app's architecture in 3 lines.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 77,
+   "week": 16,
+   "weekday": "Tuesday",
+   "stage": "Stage 16: Words for architecture + tech explanations",
+   "type": "study",
+   "title": "Data flow + Letters in acronyms",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| flow | FLOH | ஓட்டம் | Here's the data **flow**. |\n| request | rih-KWEST | கோரிக்கை | The **request** hits the API. |\n| response | rih-SPONS | பதில் | The **response** is JSON. |\n| endpoint | END-poynt | முனைப்புள்ளி | Call this **endpoint**. |\n| payload | PAY-lohd | தரவுச் சுமை | The **payload** is small. |\n\n### Accent: Letters in acronyms\nSpell acronyms with stress at the end: A-P-I, S-Q-L, A-W-S.\n*சுருக்கச் சொல்: கடைசி எழுத்துக்கு அழுத்தம்.*\n\n**Say slowly, then fast:**\n- a-pee-EYE\n- es-kyoo-EL\n- ay-dub-ul-yoo-ES\n\n✅ **Try it today:** Say 5 tech acronyms clearly.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 78,
+   "week": 16,
+   "weekday": "Wednesday",
+   "stage": "Stage 16: Words for architecture + tech explanations",
+   "type": "study",
+   "title": "Trade-offs + Contrast with \"while\" and \"whereas\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| whereas | wair-AZ | ஆனால் (ஒப்பிடுகையில்) | SQL is strict, **whereas** NoSQL is flexible. |\n| pros and cons | PROHZ un KONZ | நன்மை தீமைகள் | Let's list **pros and cons**. |\n| overhead | OH-ver-hed | கூடுதல் சுமை | It adds **overhead**. |\n| maintainable | mayn-TAY-nuh-bul | பராமரிக்க எளிதான | The code is **maintainable**. |\n| robust | roh-BUST | உறுதியான | The system is **robust**. |\n\n### Accent: Contrast with \"while\" and \"whereas\"\nStress the two things you compare: \"SQL is strict, WHEREAS NoSQL is flexible.\"\n*ஒப்பிடும் இரண்டுக்கும் அழுத்தம்.*\n\n**Say slowly, then fast:**\n- \"FAST, but EXPENSIVE.\"\n- \"SIMPLE, whereas FLEXIBLE.\"\n\n✅ **Try it today:** Compare two tools in one sentence.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 79,
+   "week": 16,
+   "weekday": "Thursday",
+   "stage": "Stage 16: Words for architecture + tech explanations",
+   "type": "study",
+   "title": "Scalability + Stress in -ity words",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| scalability | skay-luh-BIL-ih-tee | அளவிடும் திறன் | We need **scalability**. |\n| availability | uh-vay-luh-BIL-ih-tee | கிடைக்கும் தன்மை | 99.9% **availability**. |\n| bottleneck | BOT-ul-nek | தடை புள்ளி | The database is the **bottleneck**. |\n| throughput | THROO-put | செயல் அளவு | **Throughput** doubled. |\n| distribute | dih-STRIB-yoot | பகிர்ந்தளி | We **distribute** the load. |\n\n### Accent: Stress in -ity words\nStress the syllable before -ity: scal-a-BIL-i-ty, a-VAIL-a-BIL-i-ty.\n*-ity க்கு முன் உள்ள பகுதிக்கு அழுத்தம்.*\n\n**Say slowly, then fast:**\n- skay-luh-BIL-ih-tee\n- ree-ly-uh-BIL-ih-tee\n- uh-vay-luh-BIL-ih-tee\n\n✅ **Try it today:** Say \"scalability\" and \"availability\" 5 times.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 80,
+   "week": 16,
+   "weekday": "Friday",
+   "stage": "Stage 16: Words for architecture + tech explanations",
+   "type": "study",
+   "title": "Explaining to non-tech people + Simple words, clear pauses",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| in simple terms | in SIM-pul TURMZ | எளிமையாகச் சொன்னால் | **In simple terms**, it's a messenger. |\n| think of it like | THINK uv it lyk | இதைப் போல நினையுங்கள் | **Think of it like** a waiter. |\n| basically | BAY-sik-lee | அடிப்படையில் | **Basically**, it stores data. |\n| behind the scenes | bih-HYND thuh SEENZ | பின்னணியில் | **Behind the scenes**, it syncs. |\n| user-friendly | yoo-zer-FREND-lee | பயனர் நட்பான | It's very **user-friendly**. |\n\n### Accent: Simple words, clear pauses\nUse analogies and pause: \"Think of it like \n* a restaurant kitchen.\"*\n\n**Say slowly, then fast:**\n- உவமையுடன், நிறுத்தி விளக்குங்கள்.\n\n✅ **Try it today:** \"Think of it like \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 16,
+   "weekday": "Saturday",
+   "stage": "Stage 16: Words for architecture + tech explanations",
+   "type": "practice",
+   "title": "Week 16 practice: Words for architecture + tech explanations",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 16 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 81,
+   "week": 17,
+   "weekday": "Monday",
+   "stage": "Stage 17: Words for AI and data + numbers and decimals",
+   "type": "study",
+   "title": "AI basics + Decimals and percentages",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| artificial intelligence | ar-tih-FISH-ul in-TEL-ih-juns | செயற்கை நுண்ணறிவு | I'm learning **artificial intelligence**. |\n| machine learning | muh-SHEEN LUR-ning | இயந்திரக் கற்றல் | **Machine learning** finds patterns. |\n| dataset | DAY-tuh-set | தரவுத் தொகுப்பு | The **dataset** has 10k rows. |\n| feature | FEE-cher | அம்சம் (தரவில்) | Age is a **feature**. |\n| label | LAY-bul | குறிச்சொல் | Each row has a **label**. |\n\n### Accent: Decimals and percentages\nSay \"point\" for decimals: 0.95 → \"zero point nine five\". % → \"per-SENT\".\n*தசமம்: \"point\", சதவீதம்: \"பர்-சென்ட்\".*\n\n**Say slowly, then fast:**\n- zero point nine five\n- ninety-two per-SENT\n- one point five million\n\n✅ **Try it today:** Say 3 metrics with decimals.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 82,
+   "week": 17,
+   "weekday": "Tuesday",
+   "stage": "Stage 17: Words for AI and data + numbers and decimals",
+   "type": "study",
+   "title": "Training models + \"-ize\" words",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| optimise | OP-tih-myz | மேம்படுத்து | We **optimise** the loss. |\n| overfit | oh-ver-FIT | அதிகப் பொருத்தம் | The model **overfits**. |\n| validate | VAL-ih-dayt | சரிபார் | **Validate** on new data. |\n| tune | TOON | சரிசெய் | We **tune** the parameters. |\n| evaluate | ih-VAL-yoo-ayt | மதிப்பிடு | Let's **evaluate** the model. |\n\n### Accent: \"-ize\" words\n-ize sounds like \"eyes\": optimize = OP-tih-myz.\n*-ize = \"ஐஸ்\".*\n\n**Say slowly, then fast:**\n- OP-tih-myz\n- NOR-muh-lyz\n- TOH-kuh-nyz\n\n✅ **Try it today:** Use \"optimise\" in a sentence.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 83,
+   "week": 17,
+   "weekday": "Wednesday",
+   "stage": "Stage 17: Words for AI and data + numbers and decimals",
+   "type": "study",
+   "title": "LLMs + Stress in \"language model\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| prompt | PROMPT | தூண்டுதல் | Write a clear **prompt**. |\n| token | TOH-kun | டோக்கன் | It costs per **token**. |\n| embedding | em-BED-ing | உட்பொதிவு | We store **embeddings**. |\n| generate | JEN-er-ayt | உருவாக்கு | It **generates** text. |\n| hallucinate | huh-LOO-sih-nayt | தவறான தகவல் உருவாக்கு | LLMs can **hallucinate**. |\n\n### Accent: Stress in \"language model\"\nLANG-gwij MOD-ul. \"Large\" is stressed too: LARJ LANG-gwij MOD-ul.\n*LANG-gwij MOD-ul.*\n\n**Say slowly, then fast:**\n- LARJ LANG-gwij MOD-ul\n- PROMPT\n- em-BED-ing\n\n✅ **Try it today:** Explain what an LLM is in one sentence.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 84,
+   "week": 17,
+   "weekday": "Thursday",
+   "stage": "Stage 17: Words for AI and data + numbers and decimals",
+   "type": "study",
+   "title": "Data analysis + \"Data\" and \"analysis\" stress",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| analyse | AN-uh-lyz | பகுப்பாய் | Let's **analyse** the data. |\n| insight | IN-syt | நுண்ணறிவு | One key **insight** is… |\n| pattern | PAT-ern | வடிவம் | We see a **pattern**. |\n| correlation | kor-uh-LAY-shun | தொடர்பு | There's a strong **correlation**. |\n| outlier | OWT-ly-er | விதிவிலக்கு மதிப்பு | Remove the **outliers**. |\n\n### Accent: \"Data\" and \"analysis\" stress\nuh-NAL-uh-sis (n) vs AN-uh-lyz (v).\n*analysis: NAL அழுத்தம், analyze: AN அழுத்தம்.*\n\n**Say slowly, then fast:**\n- uh-NAL-uh-sis\n- AN-uh-lyz\n- AN-uh-LIT-iks\n\n✅ **Try it today:** Describe one finding from data.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 85,
+   "week": 17,
+   "weekday": "Friday",
+   "stage": "Stage 17: Words for AI and data + numbers and decimals",
+   "type": "study",
+   "title": "Responsible AI + Long-word rhythm",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| bias | BY-us | சார்புநிலை | Check the data for **bias**. |\n| fair | FAIR | நியாயமான | Is the model **fair**? |\n| transparent | trans-PAIR-unt | வெளிப்படையான | Be **transparent** with users. |\n| privacy | PRY-vuh-see | தனியுரிமை | Protect user **privacy**. |\n| ethical | ETH-ih-kul | நெறிமுறையான | Use AI in an **ethical** way. |\n\n### Accent: Long-word rhythm\nBreak long words into beats: re-spon-si-BIL-i-ty.\n*நீண்ட சொல்லைத் தாளமாகப் பிரியுங்கள்.*\n\n**Say slowly, then fast:**\n- rih-spon-sih-BIL-ih-tee\n- trans-PAIR-un-see\n- PRY-vuh-see\n\n✅ **Try it today:** Say why AI must be fair.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 17,
+   "weekday": "Saturday",
+   "stage": "Stage 17: Words for AI and data + numbers and decimals",
+   "type": "practice",
+   "title": "Week 17 practice: Words for AI and data + numbers and decimals",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 17 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 86,
+   "week": 18,
+   "weekday": "Monday",
+   "stage": "Stage 18: Words for customers + friendly tone",
+   "type": "study",
+   "title": "Greeting clients + Smiling voice",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| client | KLY-unt | வாடிக்கையாளர் | Our **client** is in Abu Dhabi. |\n| welcome | WEL-kum | வரவேற்பு | **Welcome** to our office. |\n| pleasure | PLEZH-er | மகிழ்ச்சி | It's a **pleasure** to meet you. |\n| relationship | rih-LAY-shun-ship | உறவு | We value our **relationship**. |\n| partner | PART-ner | கூட்டாளி | We're your technology **partner**. |\n\n### Accent: Smiling voice\nSmile while speaking. It changes the sound and sounds friendlier.\n*புன்னகையுடன் பேசினால் குரல் நட்பாக ஒலிக்கும்.*\n\n**Say slowly, then fast:**\n- \"Lovely to meet you!\"\n- \"Thanks for coming!\"\n\n✅ **Try it today:** Greet a client warmly.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 87,
+   "week": 18,
+   "weekday": "Tuesday",
+   "stage": "Stage 18: Words for customers + friendly tone",
+   "type": "study",
+   "title": "Understanding needs + Echo questions",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| requirement | rih-KWYR-munt | தேவை | What are the **requirements**? |\n| need | NEED | தேவை | What do you **need**? |\n| expect | ik-SPEKT | எதிர்பார் | What do you **expect**? |\n| scope | SKOHP | வரம்பு | Let's define the **scope**. |\n| pain point | PAYN poynt | சிரமம் | What's your biggest **pain point**? |\n\n### Accent: Echo questions\nRepeat key words with rising tone to confirm: \"By Friday? ↗\"\n*உறுதிப்படுத்த சொல்லை மீண்டும் கேள்வியாக.*\n\n**Say slowly, then fast:**\n- \"By Friday? ↗\"\n- \"Two users? ↗\"\n- \"The mobile app? ↗\"\n\n✅ **Try it today:** Confirm one detail with an echo question.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 88,
+   "week": 18,
+   "weekday": "Wednesday",
+   "stage": "Stage 18: Words for customers + friendly tone",
+   "type": "study",
+   "title": "Handling complaints + Apologetic tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| complaint | kum-PLAYNT | புகார் | We received a **complaint**. |\n| inconvenience | in-kun-VEE-nee-uns | சிரமம் | Sorry for the **inconvenience**. |\n| immediately | ih-MEE-dee-ut-lee | உடனடியாக | We'll fix it **immediately**. |\n| compensate | KOM-pun-sayt | ஈடு செய் | We'll **compensate** you. |\n| escalate | ES-kuh-layt | மேலதிகாரிக்கு அனுப்பு | I'll **escalate** this. |\n\n### Accent: Apologetic tone\nLower, slower, sincere: \"I'm really sorry about that.\"\n*வருத்தம்: மெதுவாக, உண்மையாக.*\n\n**Say slowly, then fast:**\n- \"I'm REALLY sorry.\"\n- \"I completely understand.\"\n- \"Let me fix this.\"\n\n✅ **Try it today:** Practise an apology aloud.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 89,
+   "week": 18,
+   "weekday": "Thursday",
+   "stage": "Stage 18: Words for customers + friendly tone",
+   "type": "study",
+   "title": "Explaining delays + Honest, clear sentences",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| postpone | pohst-POHN | தள்ளிவை | We need to **postpone**. |\n| revised | rih-VYZD | திருத்தப்பட்ட | Here's the **revised** date. |\n| due to | DOO tuh | காரணமாக | **Due to** testing, it's late. |\n| commit | kuh-MIT | உறுதியளி | We **commit** to Friday. |\n| transparent | trans-PAIR-unt | வெளிப்படையான | I want to be **transparent**. |\n\n### Accent: Honest, clear sentences\nBe direct: say the problem, the reason, the new date.\n*பிரச்சனை, காரணம், புதிய தேதி.*\n\n**Say slowly, then fast:**\n- \"There's a delay.\n\n✅ **Try it today:**  The reason is… \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 90,
+   "week": 18,
+   "weekday": "Friday",
+   "stage": "Stage 18: Words for customers + friendly tone",
+   "type": "study",
+   "title": "Building trust + Pacing and warmth",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| rely on | rih-LY on | நம்பியிரு | You can **rely on** us. |\n| trust | TRUST | நம்பிக்கை | **Trust** takes time. |\n| long-term | long-TURM | நீண்டகால | A **long-term** partnership. |\n| value | VAL-yoo | மதிப்பு | We **value** your feedback. |\n| satisfied | SAT-is-fyd | திருப்தியான | Are you **satisfied**? |\n\n### Accent: Pacing and warmth\nModerate speed, clear endings, friendly fall.\n*மிதமான வேகம், தெளிவான முடிவு.*\n\n**Say slowly, then fast:**\n- \"You can rely on us.\"\n- \"We're here for you.\"\n\n✅ **Try it today:** Tell a client \"You can rely on us.\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 18,
+   "weekday": "Saturday",
+   "stage": "Stage 18: Words for customers + friendly tone",
+   "type": "practice",
+   "title": "Week 18 practice: Words for customers + friendly tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 18 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 91,
+   "week": 19,
+   "weekday": "Monday",
+   "stage": "Stage 19: Everyday life words + common mistakes",
+   "type": "study",
+   "title": "At the doctor + \"Th\" in \"throat\", \"teeth\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| appointment | uh-POYNT-munt | சந்திப்பு | I have a doctor's **appointment**. |\n| symptom | SIMP-tum | அறிகுறி | What are your **symptoms**? |\n| prescription | prih-SKRIP-shun | மருந்துச் சீட்டு | Here's your **prescription**. |\n| sore throat | sor THROHT | தொண்டை வலி | I have a **sore throat**. |\n| recover | rih-KUV-er | குணமடை | I'm **recovering** well. |\n\n### Accent: \"Th\" in \"throat\", \"teeth\"\nTH + R, TH at the end (teeth, mouth).\n*கடைசி TH: tongue between teeth.*\n\n**Say slowly, then fast:**\n- throat\n- teeth\n- mouth\n\n✅ **Try it today:** Describe a small health problem.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 92,
+   "week": 19,
+   "weekday": "Tuesday",
+   "stage": "Stage 19: Everyday life words + common mistakes",
+   "type": "study",
+   "title": "Shopping + Common mistake: \"I am having\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| receipt | rih-SEET | ரசீது | Can I have the **receipt**? |\n| exchange | iks-CHAYNJ | மாற்று | Can I **exchange** this? |\n| refund | REE-fund | பணத்தைத் திருப்பல் | I'd like a **refund**. |\n| discount | DIS-kownt | தள்ளுபடி | Is there a **discount**? |\n| out of stock | owt uv STOK | கையிருப்பில் இல்லை | It's **out of stock**. |\n\n### Accent: Common mistake: \"I am having\"\nSay \"I have a car\", not \"I am having a car\". Use -ing only for actions now.\n*\"I am having a car\" தவறு; \"I have a car\" சரி.*\n\n**Say slowly, then fast:**\n- I have two kids\n- I'm having lunch (now)\n- I know him (not \"I am knowing\")\n\n✅ **Try it today:** Correct one \"I am having\" in your speech.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 93,
+   "week": 19,
+   "weekday": "Wednesday",
+   "stage": "Stage 19: Everyday life words + common mistakes",
+   "type": "study",
+   "title": "At home + Common mistake: \"kindly do the needful\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| maintenance | MAYN-tuh-nuns | பராமரிப்பு | Call **maintenance**. |\n| leak | LEEK | கசிவு | There's a **leak** in the kitchen. |\n| landlord | LAND-lord | வீட்டு உரிமையாளர் | I'll call the **landlord**. |\n| rent | RENT | வாடகை | The **rent** is due. |\n| neighbour | NAY-ber | அண்டை வீட்டார் | My **neighbour** is friendly. |\n\n### Accent: Common mistake: \"kindly do the needful\"\nNatives say \"Please do what's needed\" or simply \"Please handle this\". Avoid \"do the needful\".\n*\"do the needful\" தவிர்க்கவும்.*\n\n**Say slowly, then fast:**\n- Please handle this\n- Could you sort this out?\n- Please take care of it\n\n✅ **Try it today:** Replace one Indian-English phrase today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 94,
+   "week": 19,
+   "weekday": "Thursday",
+   "stage": "Stage 19: Everyday life words + common mistakes",
+   "type": "study",
+   "title": "Travel + Common mistake: \"revert back\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| book | BOOK | முன்பதிவு செய் | I **booked** a flight. |\n| departure | dih-PAR-cher | புறப்பாடு | **Departure** is at 9. |\n| boarding pass | BOR-ding pas | ஏறுவதற்கான அட்டை | Here's my **boarding pass**. |\n| luggage | LUG-ij | பயணப் பைகள் | My **luggage** is lost. |\n| itinerary | eye-TIN-uh-rair-ee | பயணத் திட்டம் | Here's my **itinerary**. |\n\n### Accent: Common mistake: \"revert back\"\n\"Revert\" means go back. Say \"I'll reply\" or \"I'll get back to you\", not \"I'll revert\".\n*\"I'll revert\" அல்ல, \"I'll get back to you\".*\n\n**Say slowly, then fast:**\n- I'll get back to you\n- I'll reply soon\n- Let me check and reply\n\n✅ **Try it today:** Use \"get back to you\" instead of \"revert\".\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 95,
+   "week": 19,
+   "weekday": "Friday",
+   "stage": "Stage 19: Everyday life words + common mistakes",
+   "type": "study",
+   "title": "Family life + Common mistake: \"my good name\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| spouse | SPOWS | வாழ்க்கைத் துணை | My **spouse** works in Dubai. |\n| siblings | SIB-lingz | உடன்பிறப்புகள் | I have two **siblings**. |\n| raise | RAYZ | வளர் | We **raise** our kids bilingual. |\n| get together | get tuh-GETH-er | ஒன்றுகூடல் | A family **get-together**. |\n| celebrate | SEL-uh-brayt | கொண்டாடு | We **celebrate** Pongal. |\n\n### Accent: Common mistake: \"my good name\"\nSay \"My name is…\" or \"What's your name?\", not \"What's your good name?\".\n*\"good name\" தேவையில்லை.*\n\n**Say slowly, then fast:**\n- What's your name?\n- My name is Sathish\n- Nice to meet you\n\n✅ **Try it today:** Introduce a family member in English.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 19,
+   "weekday": "Saturday",
+   "stage": "Stage 19: Everyday life words + common mistakes",
+   "type": "practice",
+   "title": "Week 19 practice: Everyday life words + common mistakes",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 19 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 96,
+   "week": 20,
+   "weekday": "Monday",
+   "stage": "Stage 20: Idioms at work + natural rhythm",
+   "type": "study",
+   "title": "Idioms: progress + Rhythm of idioms",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| on the same page | on thuh saym PAYJ | ஒரே புரிதலில் | Are we **on the same page**? |\n| up and running | up un RUN-ing | இயங்குகிறது | The server is **up and running**. |\n| back to the drawing board | bak tuh thuh DRAW-ing bord | மீண்டும் தொடக்கத்திலிருந்து | It failed, so **back to the drawing board**. |\n| get the ball rolling | get thuh BAWL ROH-ling | தொடங்கு | Let's **get the ball rolling**. |\n| on the right track | on thuh ryt TRAK | சரியான பாதையில் | We're **on the right track**. |\n\n### Accent: Rhythm of idioms\nIdioms flow as one chunk with one main stress.\n*மரபுத்தொடரை ஒரே தொகுப்பாகச் சொல்லுங்கள்.*\n\n**Say slowly, then fast:**\n- \"on the same PAGE\"\n- \"back to the DRAWing board\"\n- \"up and RUNning\"\n\n✅ **Try it today:** Use \"on the same page\" today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 97,
+   "week": 20,
+   "weekday": "Tuesday",
+   "stage": "Stage 20: Idioms at work + natural rhythm",
+   "type": "study",
+   "title": "Idioms: problems + Weak \"the\" before consonants",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| hit a wall | hit uh WAWL | தடையை சந்தி | We **hit a wall** with the API. |\n| the tip of the iceberg | thuh TIP uv thee AYS-burg | சிறு பகுதி மட்டுமே | This bug is **the tip of the iceberg**. |\n| a long shot | uh LONG shot | வாய்ப்பு குறைவு | It's **a long shot**, but let's try. |\n| cut corners | kut KOR-nerz | குறுக்கு வழியில் தரம் குறை | Don't **cut corners** on testing. |\n| in hot water | in hot WAW-ter | சிக்கலில் | We're **in hot water** with the client. |\n\n### Accent: Weak \"the\" before consonants\n\"the\" = thuh before consonants, thee before vowels.\n*the = \"தஅ\" மெய்க்கு முன், \"தீ\" உயிருக்கு முன்.*\n\n**Say slowly, then fast:**\n- thuh bug\n- thee issue\n- thee end\n\n✅ **Try it today:** Use one problem idiom.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 98,
+   "week": 20,
+   "weekday": "Wednesday",
+   "stage": "Stage 20: Idioms at work + natural rhythm",
+   "type": "study",
+   "title": "Idioms: time + Contracted \"gonna\", \"wanna\" (listening)",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| ASAP | ay-es-ay-PEE / AY-sap | விரைவில் | Please send it **ASAP**. |\n| last minute | last MIN-it | கடைசி நேரம் | It was a **last-minute** change. |\n| in the long run | in thuh LONG run | நீண்ட காலத்தில் | **In the long run**, it saves money. |\n| behind schedule | bih-HYND SKED-jool | பின்தங்கி | We're **behind schedule**. |\n| time is tight | TYM iz TYT | நேரம் குறைவு | **Time is tight** this week. |\n\n### Accent: Contracted \"gonna\", \"wanna\" (listening)\nIn casual speech: going to → gonna, want to → wanna. Understand them; use carefully.\n*பேச்சில் going to = gonna.*\n\n**Say slowly, then fast:**\n- I'm gonna call\n- Do you wanna join?\n- We gotta go\n\n✅ **Try it today:** Notice \"gonna\" in a video today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 99,
+   "week": 20,
+   "weekday": "Thursday",
+   "stage": "Stage 20: Idioms at work + natural rhythm",
+   "type": "study",
+   "title": "Idioms: people + Friendly informal tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| team player | TEEM play-er | குழுவுடன் இணைந்து செயல்படுபவர் | She's a real **team player**. |\n| go the extra mile | goh thee EK-struh MYL | கூடுதல் முயற்சி செய் | He **goes the extra mile**. |\n| think outside the box | think owt-SYD thuh BOKS | புதிதாக யோசி | We need to **think outside the box**. |\n| pull your weight | pul yer WAYT | உங்கள் பங்கைச் செய் | Everyone must **pull their weight**. |\n| learn the ropes | lurn thuh ROHPS | அடிப்படைகளைக் கற்றுக்கொள் | I'm still **learning the ropes**. |\n\n### Accent: Friendly informal tone\nIdioms about people are often casual. Say them lightly.\n*மக்கள் பற்றிய மரபுத்தொடர்: இலகுவாக.*\n\n**Say slowly, then fast:**\n- \"She's a TEAM player.\"\n- \"He went the EXtra mile.\"\n\n✅ **Try it today:** Praise someone with an idiom.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 100,
+   "week": 20,
+   "weekday": "Friday",
+   "stage": "Stage 20: Idioms at work + natural rhythm",
+   "type": "study",
+   "title": "Idioms: decisions + Stress on the key idiom word",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| the ball is in your court | thuh BAWL iz in yer KORT | முடிவு உங்கள் கையில் | **The ball is in your court**. |\n| no-brainer | noh-BRAY-ner | மிக எளிதான முடிவு | It's a **no-brainer**. |\n| sleep on it | SLEEP on it | ஒரு நாள் யோசி | Let me **sleep on it**. |\n| on the fence | on thuh FENS | முடிவு செய்யாமல் | I'm still **on the fence**. |\n| call the shots | kawl thuh SHOTS | முடிவு எடு | The CEO **calls the shots**. |\n\n### Accent: Stress on the key idiom word\nStress the image word: \"BALL is in your COURT\".\n*மரபுத்தொடரின் முக்கியச் சொல்லுக்கு அழுத்தம்.*\n\n**Say slowly, then fast:**\n- \"the BALL is in your COURT\"\n- \"a NO-BRAINER\"\n- \"SLEEP on it\"\n\n✅ **Try it today:** Use \"sleep on it\" for a decision.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 20,
+   "weekday": "Saturday",
+   "stage": "Stage 20: Idioms at work + natural rhythm",
+   "type": "practice",
+   "title": "Week 20 practice: Idioms at work + natural rhythm",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 20 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 101,
+   "week": 21,
+   "weekday": "Monday",
+   "stage": "Stage 21: Words for storytelling + past tense rhythm",
+   "type": "study",
+   "title": "Starting a story + Story openers with pause",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| once | WUNS | ஒருமுறை | **Once**, our server crashed at night. |\n| a while ago | uh WYL uh-GOH | சில காலம் முன்பு | **A while ago**, I joined a startup. |\n| back then | bak THEN | அப்போது | **Back then**, I was a junior. |\n| remember | rih-MEM-ber | நினைவில் கொள் | I **remember** my first project. |\n| it all started | it awl STAR-tid | எல்லாம் தொடங்கியது | **It all started** with one bug. |\n\n### Accent: Story openers with pause\nStart with an opener, then pause to build interest.\n*கதையைத் தொடக்கச் சொல்லுடன் தொடங்கி நிறுத்துங்கள்.*\n\n**Say slowly, then fast:**\n- \"So,\n\n✅ **Try it today:**  last year…\";\"You won't believe this, \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 102,
+   "week": 21,
+   "weekday": "Tuesday",
+   "stage": "Stage 21: Words for storytelling + past tense rhythm",
+   "type": "study",
+   "title": "Building the story + Past forms: went, saw, took",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| suddenly | SUD-un-lee | திடீரென்று | **Suddenly**, the lights went off. |\n| meanwhile | MEEN-wyl | இதற்கிடையில் | **Meanwhile**, the client called. |\n| then | THEN | பிறகு | **Then** we found the problem. |\n| realise | REE-uh-lyz | உணர் | I **realised** it was a typo. |\n| turn out | turn OWT | ஆகிவிடு | It **turned out** to be simple. |\n\n### Accent: Past forms: went, saw, took\nIrregular pasts: say them clearly, no \"-ed\": went, took, saw, made.\n*ஒழுங்கற்ற இறந்தகால வினைகள்.*\n\n**Say slowly, then fast:**\n- went\n- took\n- thought (THAWT)\n\n✅ **Try it today:** Describe your last weekend in past tense.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 103,
+   "week": 21,
+   "weekday": "Wednesday",
+   "stage": "Stage 21: Words for storytelling + past tense rhythm",
+   "type": "study",
+   "title": "Describing people in stories + Adjective stress",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| helpful | HELP-ful | உதவிகரமான | He was very **helpful**. |\n| strict | STRIKT | கண்டிப்பான | My first boss was **strict**. |\n| generous | JEN-er-us | தாராளமான | She was **generous** with time. |\n| genius | JEE-nee-us | மேதை | He's a coding **genius**. |\n| humble | HUM-bul | அடக்கமான | She's very **humble**. |\n\n### Accent: Adjective stress\nStress the adjective for colour: \"a REALLY HELPful guy\".\n*பெயரடைக்கு அழுத்தம்.*\n\n**Say slowly, then fast:**\n- \"a SUPer FRIENDly manager\"\n- \"an AMazing team\"\n\n✅ **Try it today:** Describe your best manager.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 104,
+   "week": 21,
+   "weekday": "Thursday",
+   "stage": "Stage 21: Words for storytelling + past tense rhythm",
+   "type": "study",
+   "title": "The ending + Emphasis on the lesson",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| finally | FY-nuh-lee | இறுதியில் | **Finally**, it worked. |\n| in the end | in thee END | இறுதியில் | **In the end**, we shipped. |\n| lesson | LES-un | பாடம் | The **lesson** was clear. |\n| looking back | LOOK-ing bak | திரும்பிப் பார்க்கையில் | **Looking back**, it was funny. |\n| worth it | WURTH it | மதிப்புள்ளது | It was **worth it**. |\n\n### Accent: Emphasis on the lesson\nEnd with the lesson, slower and stressed.\n*கதையின் பாடத்தை மெதுவாகவும் அழுத்தமாகவும்.*\n\n**Say slowly, then fast:**\n- \"And THAT'S how I learned\n\n✅ **Try it today:**  to ALWAYS test.\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 105,
+   "week": 21,
+   "weekday": "Friday",
+   "stage": "Stage 21: Words for storytelling + past tense rhythm",
+   "type": "study",
+   "title": "Reacting to stories + Reaction sounds",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| seriously | SEER-ee-us-lee | உண்மையாகவா | **Seriously**? That's crazy! |\n| what happened next | wut HAP-und NEKST | பிறகு என்ன ஆனது | **What happened next**? |\n| I can imagine | ay kun ih-MAJ-in | புரிகிறது | **I can imagine**! |\n| that's hilarious | thats hih-LAIR-ee-us | ரொம்ப வேடிக்கை | **That's hilarious**! |\n| unbelievable | un-bih-LEE-vuh-bul | நம்பமுடியாத | That's **unbelievable**! |\n\n### Accent: Reaction sounds\nUse natural reactions: \"Oh no!\", \"Wow!\", \"Seriously?\" with expressive tone.\n*உணர்வுடன் எதிர்வினை.*\n\n**Say slowly, then fast:**\n- Oh NO!\n- WOW!\n- SERiously?\n\n✅ **Try it today:** React to a friend's story with two reactions.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 21,
+   "weekday": "Saturday",
+   "stage": "Stage 21: Words for storytelling + past tense rhythm",
+   "type": "practice",
+   "title": "Week 21 practice: Words for storytelling + past tense rhythm",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 21 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 106,
+   "week": 22,
+   "weekday": "Monday",
+   "stage": "Stage 22: Words for opinions and debates + intonation",
+   "type": "study",
+   "title": "Giving opinions + Opinion starters with fall-rise",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| in my opinion | in my uh-PIN-yun | என் கருத்தில் | **In my opinion**, it's too risky. |\n| personally | PUR-suh-nuh-lee | தனிப்பட்ட முறையில் | **Personally**, I prefer Python. |\n| I'd say | ayd SAY | நான் சொல்வேன் | **I'd say** it's worth it. |\n| as far as I know | az far az ay NOH | எனக்குத் தெரிந்தவரை | **As far as I know**, it's free. |\n| it seems to me | it SEEMZ tuh mee | எனக்குத் தோன்றுகிறது | **It seems to me** we need more data. |\n\n### Accent: Opinion starters with fall-rise\n\"In my opinion ↘↗, …\" the voice dips then rises slightly before the main idea.\n*கருத்துத் தொடக்கம்: இறங்கி ஏறும் குரல்.*\n\n**Say slowly, then fast:**\n- \"Personally ↘↗, …\"\n- \"In my view ↘↗, …\"\n\n✅ **Try it today:** Give one opinion with a starter.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 107,
+   "week": 22,
+   "weekday": "Tuesday",
+   "stage": "Stage 22: Words for opinions and debates + intonation",
+   "type": "study",
+   "title": "Supporting opinions + Linking \"because\" and \"since\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| because | bih-KUZ | ஏனென்றால் | I agree **because** it's faster. |\n| evidence | EV-ih-duns | சான்று | What's the **evidence**? |\n| for instance | fer IN-stuns | உதாரணமாக | **For instance**, Netflix uses it. |\n| that's why | thats WY | அதனால்தான் | **That's why** we chose it. |\n| data shows | DAY-tuh shohz | தரவு காட்டுகிறது | The **data shows** growth. |\n\n### Accent: Linking \"because\" and \"since\"\nbecause → bih-KUZ (quick), not \"bee-cause\" slowly.\n*because = \"பிகஸ்\" வேகமாக.*\n\n**Say slowly, then fast:**\n- bih-KUZ\n- \"since it's cheaper\"\n- \"that's why\"\n\n✅ **Try it today:** Give a reason using \"because\".\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 108,
+   "week": 22,
+   "weekday": "Wednesday",
+   "stage": "Stage 22: Words for opinions and debates + intonation",
+   "type": "study",
+   "title": "Disagreeing politely + Hedging softly",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| see it differently | see it DIF-runt-lee | வேறு மாதிரி பார்க்கிறேன் | I **see it differently**. |\n| not so sure | not soh SHOOR | உறுதியில்லை | I'm **not so sure**. |\n| with respect | with rih-SPEKT | மரியாதையுடன் | **With respect**, I disagree. |\n| on the contrary | on thuh KON-trair-ee | மாறாக | **On the contrary**, it's faster. |\n| point taken | poynt TAY-kun | உங்கள் கருத்தை ஏற்கிறேன் | **Point taken**. |\n\n### Accent: Hedging softly\nSoft disagreement: \"I'm not sure I agree…\" with gentle tone.\n*மென்மையாக மாறுபடுதல்.*\n\n**Say slowly, then fast:**\n- \"I see it differently.\"\n- \"I'm not so sure.\"\n- \"With respect, …\"\n\n✅ **Try it today:** Disagree politely once.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 109,
+   "week": 22,
+   "weekday": "Thursday",
+   "stage": "Stage 22: Words for opinions and debates + intonation",
+   "type": "study",
+   "title": "Persuading + Rhetorical questions",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| convince | kun-VINS | சம்மதிக்க வை | Let me **convince** you. |\n| benefit | BEN-ih-fit | பயன் | The main **benefit** is cost. |\n| worth considering | wurth kun-SID-er-ing | பரிசீலிக்கத் தகுந்தது | It's **worth considering**. |\n| imagine | ih-MAJ-in | கற்பனை செய் | **Imagine** no manual work. |\n| clearly | KLEER-lee | தெளிவாக | **Clearly**, it helps. |\n\n### Accent: Rhetorical questions\nUse a question to persuade: \"Wouldn't it be better if…?\" with rising tone.\n*சிந்திக்கத் தூண்டும் கேள்வி.*\n\n**Say slowly, then fast:**\n- \"Wouldn't that save time? ↗\"\n- \"Why not try it? ↗\"\n\n✅ **Try it today:** Persuade with one rhetorical question.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 110,
+   "week": 22,
+   "weekday": "Friday",
+   "stage": "Stage 22: Words for opinions and debates + intonation",
+   "type": "study",
+   "title": "Concluding a discussion + Summarising tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| overall | oh-ver-AWL | மொத்தத்தில் | **Overall**, it's a good idea. |\n| consensus | kun-SEN-sus | ஒருமித்த கருத்து | We reached a **consensus**. |\n| both sides | bohth SYDZ | இரு பக்கங்கள் | There are **both sides**. |\n| fair enough | fair ih-NUF | சரி, நியாயம் | **Fair enough**. |\n| agree to disagree | uh-GREE tuh dis-uh-GREE | ஒத்துக்கொள்ளாமல் ஒத்துக்கொள் | Let's **agree to disagree**. |\n\n### Accent: Summarising tone\nSummaries: steady, slower, falling.\n*சுருக்கம்: நிலையான, மெதுவான தொனி.*\n\n**Say slowly, then fast:**\n- \"So,\n\n✅ **Try it today:**  we agree that…\";\"Overall, \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 22,
+   "weekday": "Saturday",
+   "stage": "Stage 22: Words for opinions and debates + intonation",
+   "type": "practice",
+   "title": "Week 22 practice: Words for opinions and debates + intonation",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 22 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 111,
+   "week": 23,
+   "weekday": "Monday",
+   "stage": "Stage 23: Words for writing (blog and LinkedIn) + reading aloud",
+   "type": "study",
+   "title": "Blog openings + Reading aloud with expression",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| insight | IN-syt | நுண்ணறிவு | Here's one **insight** from this week. |\n| journey | JUR-nee | பயணம் | My AI **journey** started in May. |\n| share | SHAIR | பகிர் | I want to **share** a tip. |\n| lesson learned | LES-un lurnd | கற்ற பாடம் | One **lesson learned**: test early. |\n| behind the scenes | bih-HYND thuh SEENZ | பின்னணியில் | A look **behind the scenes**. |\n\n### Accent: Reading aloud with expression\nRead your own sentence aloud, stressing key words. It helps writing and speaking.\n*உங்கள் எழுத்தைச் சத்தமாக படியுங்கள்.*\n\n**Say slowly, then fast:**\n- \"Have you EVER wondered…?\"\n- \"Here's what I LEARNED.\"\n\n✅ **Try it today:** Write and read aloud one blog opening line.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 112,
+   "week": 23,
+   "weekday": "Tuesday",
+   "stage": "Stage 23: Words for writing (blog and LinkedIn) + reading aloud",
+   "type": "study",
+   "title": "Clear sentences + Short sentences, natural rhythm",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| concise | kun-SYS | சுருக்கமான | Keep it **concise**. |\n| straightforward | strayt-FOR-wurd | எளிமையான | The fix is **straightforward**. |\n| essentially | ih-SEN-shuh-lee | அடிப்படையில் | **Essentially**, it's a cache. |\n| step-by-step | step-by-STEP | படிப்படியாக | A **step-by-step** guide. |\n| practical | PRAK-tih-kul | நடைமுறை | Some **practical** tips. |\n\n### Accent: Short sentences, natural rhythm\nWrite short sentences. Read them aloud. Does it sound natural?\n*சிறு வாக்கியங்கள், இயல்பான ஓசை.*\n\n**Say slowly, then fast:**\n- \"I built it. It failed. I learned.\"\n\n✅ **Try it today:** Rewrite one long sentence into two short ones.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 113,
+   "week": 23,
+   "weekday": "Wednesday",
+   "stage": "Stage 23: Words for writing (blog and LinkedIn) + reading aloud",
+   "type": "study",
+   "title": "Technical posts + Tech words in sentences",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| implement | IM-plih-ment | செயல்படுத்து | I **implemented** RAG. |\n| leverage | LEV-er-ij | பயன்படுத்து | We **leverage** cloud tools. |\n| tutorial | too-TOR-ee-ul | பயிற்சி வழிகாட்டி | A short **tutorial**. |\n| under the hood | UN-der thuh HOOD | உள்ளே எப்படி இயங்குகிறது | What's **under the hood**? |\n| demo | DEM-oh | செய்முறை காட்சி | Watch the **demo**. |\n\n### Accent: Tech words in sentences\nRead tech terms aloud in full sentences to fix stress.\n*தொழில்நுட்பச் சொற்களை வாக்கியத்தில் படியுங்கள்.*\n\n**Say slowly, then fast:**\n- \"We de-PLOYED a new MOD-el.\"\n- \"The LA-ten-cy DROPPED.\"\n\n✅ **Try it today:** Write 3 sentences about a tool you used.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 114,
+   "week": 23,
+   "weekday": "Thursday",
+   "stage": "Stage 23: Words for writing (blog and LinkedIn) + reading aloud",
+   "type": "study",
+   "title": "LinkedIn posts + Energetic reading",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| thrilled | THRILD | மிக மகிழ்ச்சி | I'm **thrilled** to share… |\n| milestone | MYL-stohn | முக்கியக் கட்டம் | A personal **milestone**. |\n| grateful | GRAYT-ful | நன்றியுள்ள | **Grateful** to my team. |\n| connect | kuh-NEKT | இணை | Let's **connect**. |\n| thoughts | THAWTS | எண்ணங்கள் | What are your **thoughts**? |\n\n### Accent: Energetic reading\nRead a LinkedIn post aloud with energy, like telling a friend.\n*நண்பரிடம் சொல்வது போல் உற்சாகமாக.*\n\n**Say slowly, then fast:**\n- \"Excited to SHARE…\"\n- \"Big NEWS!\"\n\n✅ **Try it today:** Draft one LinkedIn post.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 115,
+   "week": 23,
+   "weekday": "Friday",
+   "stage": "Stage 23: Words for writing (blog and LinkedIn) + reading aloud",
+   "type": "study",
+   "title": "Ending posts + Call-to-action tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| takeaway | TAYK-uh-way | முக்கியக் கருத்து | My main **takeaway**… |\n| feel free | feel FREE | தயங்காமல் | **Feel free** to comment. |\n| follow | FOL-oh | பின்தொடர் | **Follow** for more. |\n| curious | KYOOR-ee-us | ஆர்வமுள்ள | I'm **curious** about your view. |\n| stay tuned | stay TOOND | காத்திருங்கள் | **Stay tuned** for part 2. |\n\n### Accent: Call-to-action tone\nEnd with a friendly question, rising tone.\n*நட்பான கேள்வியுடன் முடியுங்கள்.*\n\n**Say slowly, then fast:**\n- \"What do YOU think? ↗\"\n- \"Have you tried this? ↗\"\n\n✅ **Try it today:** End your post with a question.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 23,
+   "weekday": "Saturday",
+   "stage": "Stage 23: Words for writing (blog and LinkedIn) + reading aloud",
+   "type": "practice",
+   "title": "Week 23 practice: Words for writing (blog and LinkedIn) + reading aloud",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 23 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 116,
+   "week": 24,
+   "weekday": "Monday",
+   "stage": "Stage 24: Words for phone and video calls + clear speech",
+   "type": "study",
+   "title": "Starting a call + Clear \"can you hear me?\"",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| mute | MYOOT | ஒலியடக்கு | You're on **mute**. |\n| hear | HEER | கேள் | Can you **hear** me? |\n| join | JOYN | சேர் | Thanks for **joining**. |\n| camera | KAM-ruh | கேமரா | Can you turn on your **camera**? |\n| screen | SKREEN | திரை | Can you see my **screen**? |\n\n### Accent: Clear \"can you hear me?\"\nSpeak a little slower and louder on calls; finish consonants.\n*அழைப்பில் சற்று மெதுவாகவும் தெளிவாகவும்.*\n\n**Say slowly, then fast:**\n- \"Can you HEAR me?\"\n- \"You're on MUTE.\"\n- \"Can you SEE my screen?\"\n\n✅ **Try it today:** Start a call with clear phrases.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 117,
+   "week": 24,
+   "weekday": "Tuesday",
+   "stage": "Stage 24: Words for phone and video calls + clear speech",
+   "type": "study",
+   "title": "Connection problems + Spelling with letters",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| breaking up | BRAY-king up | அழைப்பு உடைகிறது | You're **breaking up**. |\n| lag | LAG | தாமதம் | There's a **lag**. |\n| drop | DROP | துண்டி | The call **dropped**. |\n| reconnect | ree-kuh-NEKT | மீண்டும் இணை | I'll **reconnect**. |\n| spell | SPEL | எழுத்துக்கூட்டு | Can you **spell** that? |\n\n### Accent: Spelling with letters\nSpell names with words: \"S for Sugar, A for Apple\".\n*பெயர்களை எழுத்துக்கு எழுத்து.*\n\n**Say slowly, then fast:**\n- S as in Sam\n- T as in Tom\n- \"Sathish: S-A-T-H-I-S-H\"\n\n✅ **Try it today:** Spell your name clearly on a call.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 118,
+   "week": 24,
+   "weekday": "Wednesday",
+   "stage": "Stage 24: Words for phone and video calls + clear speech",
+   "type": "study",
+   "title": "Interrupting politely + Polite interruption tone",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| jump in | jump IN | இடைமறி | Sorry to **jump in**. |\n| interrupt | in-tuh-RUPT | குறுக்கிடு | Sorry to **interrupt**. |\n| add | AD | சேர் | Can I **add** something? |\n| go ahead | goh uh-HED | தொடருங்கள் | Please, **go ahead**. |\n| finish | FIN-ish | முடி | Let me **finish**. |\n\n### Accent: Polite interruption tone\nSoft: \"Sorry to jump in…\" then pause.\n*மெதுவாக இடைமறித்தல்.*\n\n**Say slowly, then fast:**\n- \"Sorry to interrupt,\n\n✅ **Try it today:** …\";\"Can I add something?\"\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 119,
+   "week": 24,
+   "weekday": "Thursday",
+   "stage": "Stage 24: Words for phone and video calls + clear speech",
+   "type": "study",
+   "title": "Leaving messages + Numbers in phone messages",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| message | MES-ij | செய்தி | Can I leave a **message**? |\n| call back | kawl BAK | திரும்ப அழை | Please **call** me **back**. |\n| voicemail | VOYS-mayl | குரல் அஞ்சல் | I left a **voicemail**. |\n| reach | REECH | தொடர்பு கொள் | You can **reach** me at… |\n| available | uh-VAY-luh-bul | கிடைக்கும் | I'm **available** after 5. |\n\n### Accent: Numbers in phone messages\nSay phone numbers in groups: 050 \n* 123 *\n\n**Say slowly, then fast:**\n- 4567.\n\n✅ **Try it today:** தொலைபேசி எண்களைக் குழுக்களாக.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 120,
+   "week": 24,
+   "weekday": "Friday",
+   "stage": "Stage 24: Words for phone and video calls + clear speech",
+   "type": "study",
+   "title": "Ending a call + Warm closing",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| talk soon | tawk SOON | விரைவில் பேசுவோம் | **Talk soon**! |\n| recap | REE-kap | சுருக்கம் | Quick **recap**. |\n| send over | send OH-ver | அனுப்பு | I'll **send over** the notes. |\n| productive | pruh-DUK-tiv | பயனுள்ள | That was **productive**. |\n| have a good one | hav uh GOOD wun | நல்ல நாளாக இருக்கட்டும் | **Have a good one**! |\n\n### Accent: Warm closing\nClose with a warm falling tone.\n*அன்பான முடிவு.*\n\n**Say slowly, then fast:**\n- \"Thanks, talk soon! ↘\"\n- \"Have a good one! ↘\"\n\n✅ **Try it today:** End a call warmly.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 24,
+   "weekday": "Saturday",
+   "stage": "Stage 24: Words for phone and video calls + clear speech",
+   "type": "practice",
+   "title": "Week 24 practice: Words for phone and video calls + clear speech",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 24 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 121,
+   "week": 25,
+   "weekday": "Monday",
+   "stage": "Stage 25: Words for big conversations + fluency",
+   "type": "study",
+   "title": "Talking about goals + Fluency: fillers that sound natural",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| ambition | am-BISH-un | லட்சியம் | My **ambition** is to lead AI teams. |\n| long-term | long-TURM | நீண்டகால | My **long-term** goal is AI. |\n| career | kuh-REER | தொழில் | I'm changing my **career**. |\n| transition | tran-ZISH-un | மாற்றம் | I'm in a **transition**. |\n| pursue | per-SOO | தொடர்ந்து முயல் | I want to **pursue** ML. |\n\n### Accent: Fluency: fillers that sound natural\nUse \"well\", \"you know\", \"I mean\" sparingly to think, instead of \"ahh\".\n*\"ஆ\" விட \"well\", \"I mean\".*\n\n**Say slowly, then fast:**\n- \"Well,\n\n✅ **Try it today:**  I think…\";\"I mean, \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 122,
+   "week": 25,
+   "weekday": "Tuesday",
+   "stage": "Stage 25: Words for big conversations + fluency",
+   "type": "study",
+   "title": "Talking about values + Stress for sincerity",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| value | VAL-yoo | மதிப்பு | I **value** honesty. |\n| integrity | in-TEG-rih-tee | நேர்மை | **Integrity** matters. |\n| balance | BAL-uns | சமநிலை | I want **balance**. |\n| priority | pry-OR-ih-tee | முன்னுரிமை | Family is my **priority**. |\n| meaningful | MEE-ning-ful | அர்த்தமுள்ள | I want **meaningful** work. |\n\n### Accent: Stress for sincerity\nStress the value word: \"FAMily matters most to me.\"\n*மதிப்புச் சொல்லுக்கு அழுத்தம்.*\n\n**Say slowly, then fast:**\n- \"HONesty is key.\"\n- \"I value LEARNing.\"\n\n✅ **Try it today:** Tell someone what you value.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 123,
+   "week": 25,
+   "weekday": "Wednesday",
+   "stage": "Stage 25: Words for big conversations + fluency",
+   "type": "study",
+   "title": "Talking about culture + Names of places and festivals",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| tradition | truh-DISH-un | பாரம்பரியம் | It's a family **tradition**. |\n| festival | FES-tih-vul | திருவிழா | Pongal is a harvest **festival**. |\n| heritage | HAIR-ih-tij | மரபு | I'm proud of my **heritage**. |\n| diverse | dy-VURS | பன்முகமான | Dubai is very **diverse**. |\n| custom | KUS-tum | வழக்கம் | It's a local **custom**. |\n\n### Accent: Names of places and festivals\nSay your culture's words proudly, then explain in English.\n*உங்கள் கலாச்சாரச் சொற்களை பெருமையுடன்.*\n\n**Say slowly, then fast:**\n- \"PON-gal is a harvest festival.\"\n- \"I'm from TAM-il NAA-du.\"\n\n✅ **Try it today:** Explain one Tamil festival in English.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 124,
+   "week": 25,
+   "weekday": "Thursday",
+   "stage": "Stage 25: Words for big conversations + fluency",
+   "type": "study",
+   "title": "Talking about the future + \"Will\" vs \"going to\" rhythm",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| predict | prih-DIKT | கணி | I **predict** AI will grow. |\n| likely | LYK-lee | வாய்ப்புள்ள | It's **likely** to change. |\n| in the future | in thuh FYOO-cher | எதிர்காலத்தில் | **In the future**, I'll lead. |\n| eventually | ih-VEN-choo-uh-lee | இறுதியில் | **Eventually**, I'll move to AI. |\n| opportunity | op-er-TOO-nih-tee | வாய்ப்பு | A great **opportunity**. |\n\n### Accent: \"Will\" vs \"going to\" rhythm\n\"I'll\" (quick) for decisions now; \"I'm gonna\" for plans.\n*I'll = உடனடி முடிவு; going to = திட்டம்.*\n\n**Say slowly, then fast:**\n- \"I'll call you.\"\n- \"I'm going to learn Arabic.\"\n\n✅ **Try it today:** Share a plan using \"going to\".\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 125,
+   "week": 25,
+   "weekday": "Friday",
+   "stage": "Stage 25: Words for big conversations + fluency",
+   "type": "study",
+   "title": "Deep conversation + Listening and follow-ups",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| what made you | WUT mayd yoo | உங்களை எது தூண்டியது | **What made you** choose Dubai? |\n| how come | how KUM | ஏன் அப்படி | **How come**? |\n| tell me more | tel mee MOR | மேலும் சொல்லுங்கள் | **Tell me more**. |\n| fascinating | FAS-ih-nay-ting | வியப்பூட்டும் | That's **fascinating**. |\n| relate | rih-LAYT | தொடர்புபடுத்திக்கொள் | I can **relate**. |\n\n### Accent: Listening and follow-ups\nAsk follow-up questions; it keeps conversations going.\n*தொடர் கேள்விகள் கேளுங்கள்.*\n\n**Say slowly, then fast:**\n- \"What made you decide that?\"\n- \"How did that feel?\"\n\n✅ **Try it today:** Ask two follow-up questions today.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 25,
+   "weekday": "Saturday",
+   "stage": "Stage 25: Words for big conversations + fluency",
+   "type": "practice",
+   "title": "Week 25 practice: Words for big conversations + fluency",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": false,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 25 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  },
+  {
+   "day": 126,
+   "week": 26,
+   "weekday": "Monday",
+   "stage": "Stage 26: Final review + your confident voice",
+   "type": "study",
+   "title": "Review: all accent sounds + All key sounds",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| pronunciation | pruh-nun-see-AY-shun | உச்சரிப்பு | My **pronunciation** is better. |\n| accent | AK-sent | உச்சரிப்பு முறை | I'm working on my **accent**. |\n| clear | KLEER | தெளிவான | Speak **clear** and slow. |\n| fluent | FLOO-unt | சரளமான | I'm becoming **fluent**. |\n| practise | PRAK-tis | பயிற்சி செய் | I **practise** every day. |\n\n### Accent: All key sounds\nGo through V/W, TH, Z, R/L, ship/sheep, schwa.\n*எல்லா முக்கிய ஒலிகளையும் மீண்டும்.*\n\n**Say slowly, then fast:**\n- \"Very well, we'll visit.\"\n- \"Three things, thanks.\"\n- \"Zero risk, really.\"\n\n✅ **Try it today:** Record all practice sentences.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 127,
+   "week": 26,
+   "weekday": "Tuesday",
+   "stage": "Stage 26: Final review + your confident voice",
+   "type": "study",
+   "title": "Review: work words + Stress review",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| priority | pry-OR-ih-tee | முன்னுரிமை | It's a **priority**. |\n| deliver | dih-LIV-er | வழங்கு | We **delivered**. |\n| architecture | AR-kih-tek-cher | கட்டமைப்பு | The **architecture** is clean. |\n| stakeholder | STAYK-hohl-der | பங்குதாரர் | Update the **stakeholders**. |\n| outcome | OWT-kum | விளைவு | A great **outcome**. |\n\n### Accent: Stress review\nClap the stress for each word.\n*அழுத்த மறுபயிற்சி.*\n\n**Say slowly, then fast:**\n- uh-JEN-duh\n- pry-OR-ih-tee\n- skay-luh-BIL-ih-tee\n\n✅ **Try it today:** Use 5 work words in a meeting.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 128,
+   "week": 26,
+   "weekday": "Wednesday",
+   "stage": "Stage 26: Final review + your confident voice",
+   "type": "study",
+   "title": "Review: conversation + Natural rhythm review",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| small talk | SMAWL tawk | சாதாரணப் பேச்சு | I'm good at **small talk** now. |\n| conversation | kon-ver-SAY-shun | உரையாடல் | A good **conversation**. |\n| naturally | NACH-ruh-lee | இயல்பாக | Speak **naturally**. |\n| listen | LIS-un | கேள் | **Listen** first. |\n| respond | rih-SPOND | பதில் அளி | **Respond** calmly. |\n\n### Accent: Natural rhythm review\nRead a dialogue aloud with linking and weak words.\n*இணைப்பு, மெல்லிய சொற்களுடன் உரையாடல்.*\n\n**Say slowly, then fast:**\n- \"What do you think of it?\"\n- \"I'd love to, but I can't.\"\n\n✅ **Try it today:** Have a 5-minute English conversation.\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 129,
+   "week": 26,
+   "weekday": "Thursday",
+   "stage": "Stage 26: Final review + your confident voice",
+   "type": "study",
+   "title": "Review: presenting + Presentation rehearsal",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| confidently | KON-fih-dunt-lee | தன்னம்பிக்கையுடன் | Speak **confidently**. |\n| engage | in-GAYJ | ஈடுபடுத்து | **Engage** your audience. |\n| deliver a talk | dih-LIV-er uh TAWK | உரை வழங்கு | I **delivered a talk**. |\n| rehearse | rih-HURS | ஒத்திகை பார் | **Rehearse** twice. |\n| impress | im-PRES | கவர் | You'll **impress** them. |\n\n### Accent: Presentation rehearsal\nGive a 3-minute talk using chunking, stress and pauses.\n*3 நிமிட உரை பயிற்சி.*\n\n**Say slowly, then fast:**\n- \"Today\n\n✅ **Try it today:**  I'll show you…\";\"To sum up \n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": 130,
+   "week": 26,
+   "weekday": "Friday",
+   "stage": "Stage 26: Final review + your confident voice",
+   "type": "study",
+   "title": "Your confident voice + Your voice, your way",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "New words",
+     "minutes": 8
+    },
+    {
+     "name": "Accent practice",
+     "minutes": 9
+    },
+    {
+     "name": "Try it today",
+     "minutes": 3
+    }
+   ],
+   "milestone": false,
+   "content": "### New words\n| Word | Say it | பொருள் | Example |\n| --- | --- | --- | --- |\n| proud | PROWD | பெருமை | I'm **proud** of my progress. |\n| growth | GROHTH | வளர்ச்சி | Look at my **growth**. |\n| consistent | kun-SIS-tunt | தொடர்ச்சியான | I was **consistent**. |\n| milestone | MYL-stohn | முக்கியக் கட்டம் | Six months: a **milestone**. |\n| keep going | keep GOH-ing | தொடருங்கள் | **Keep going**! |\n\n### Accent: Your voice, your way\nYou don't need a \"perfect\" accent. Clear sounds, right stress and calm pace are enough.\n*சரியான உச்சரிப்பு தேவையில்லை; தெளிவும் அமைதியும் போதும்.*\n\n**Say slowly, then fast:**\n- \"I speak clearly.\"\n- \"I am confident.\"\n- \"I'm proud of my progress.\"\n\n✅ **Try it today:** Compare today's recording with Week 1. Celebrate!\n*இன்று இதைப் பயன்படுத்துங்கள்.*"
+  },
+  {
+   "day": null,
+   "week": 26,
+   "weekday": "Saturday",
+   "stage": "Stage 26: Final review + your confident voice",
+   "type": "practice",
+   "title": "Week 26 practice: Final review + your confident voice",
+   "minutes": 20,
+   "blocks": [
+    {
+     "name": "Word game",
+     "minutes": 6
+    },
+    {
+     "name": "Sound check",
+     "minutes": 8
+    },
+    {
+     "name": "One-minute talk",
+     "minutes": 6
+    }
+   ],
+   "milestone": true,
+   "content": "1. **Word game (6 min):** cover the English words. Read the Tamil meaning and say the English word. Make a new sentence.\n   *தமிழ் பொருளைப் பார்த்து ஆங்கிலச் சொல்லைச் சொல்லுங்கள்.*\n2. **Sound check (8 min):** say all Week 26 practice sentences. Record yourself and compare with YouGlish.\n   *பதிவு செய்து கேளுங்கள்.*\n3. **One-minute talk (6 min):** talk for one minute using at least 5 new words. Record it.\n   *ஒரு நிமிடம் பேசிப் பதிவு செய்யுங்கள்.*\n\n⭐ Star the words you use easily. Repeat the rest next week."
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+{
+  "slug": "system-design",
+  "title": "System Design",
+  "tagline": "45 minutes a day for 14 days · Very High priority",
+  "description": "Learn to design an end-to-end enterprise application, from requirements through deployment. Running project: Enterprise Banking Application. Complete HLD with component, integration, deployment and data-flow diagrams, plus key ADRs. Outcome: Portfolio Project 1: Enterprise Banking Architecture.",
+  "order": 2,
+  "minutesPerDay": 45
+}
