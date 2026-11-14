@@ -121,6 +121,12 @@ export async function parseStatement(buffer, password) {
 
     let amount = num(tail[1]);
     let direction = /^cr$/i.test(tail[2] || '') ? 'in' : 'out';
+    // A separate Cr/Dr column printed before the amount: "PAYMENT RECEIVED, THANK YOU CR 4,415.00".
+    const marker = !tail[2] && description.match(/\s(CR|DR)$/i);
+    if (marker) {
+      description = description.slice(0, marker.index).trim();
+      direction = /^cr$/i.test(marker[1]) ? 'in' : 'out';
+    }
     const cell = cols && cells.find((c) => c.str === tail[1]);
     if (cell) {
       // Debit / Credit columns: the amount's column says which way it went.
