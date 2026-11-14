@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { Certification, Phase, Profile } from './models.js';
 import { LearnCourse, LearnPref, LearnProgress, LearnSession } from './learnModels.js';
-import { PlanDay, PlanItem, PlanLog, PlannerSettings, PushSubscription } from './plannerModels.js';
+import { PlanDay, PlanItem, PlanLog, PlannerSettings, PushDevice, PushSubscription } from './plannerModels.js';
 import {
   addDays, AREAS, careerCandidates, DATE_RE, DEFAULT_SETTINGS, itemCandidates, localDate, planDay, TIME_RE, toMin, validTz,
 } from './plannerCore.js';
@@ -208,6 +208,21 @@ router.post('/push/subscribe', ah(async (req, res) => {
 router.delete('/push/subscribe', ah(async (req, res) => {
   const endpoint = req.body?.endpoint;
   if (typeof endpoint === 'string') await PushSubscription.deleteOne({ owner: req.user.email, endpoint });
+  res.status(204).end();
+}));
+
+// The iOS/Android app registers its Firebase token here (instead of a Web Push subscription).
+router.post('/push/device', ah(async (req, res) => {
+  const { token, platform } = req.body || {};
+  if (typeof token !== 'string' || token.length < 20 || token.length > 4096) return bad(res, 'Invalid device token');
+  if (!['ios', 'android'].includes(platform)) return bad(res, 'platform must be ios or android');
+  await PushDevice.findOneAndUpdate({ token }, { $set: { owner: req.user.email, platform } }, { ...opts, upsert: true });
+  res.status(204).end();
+}));
+
+router.delete('/push/device', ah(async (req, res) => {
+  const token = req.body?.token;
+  if (typeof token === 'string') await PushDevice.deleteOne({ owner: req.user.email, token });
   res.status(204).end();
 }));
 

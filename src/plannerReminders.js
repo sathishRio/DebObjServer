@@ -1,27 +1,35 @@
 import * as webpush from 'web-push';
-import { PlannerSettings, PushSubscription } from './plannerModels.js';
+import { PlannerSettings, PushDevice, PushSubscription } from './plannerModels.js';
+import { fcmConfigured, sendFcm } from './fcm.js';
 import { buildToday } from './planner.js';
 import { reminderDue, reminderMessage } from './plannerCore.js';
 
 // Daily "plan your day" push reminder. Runs inside the API process every 15 minutes (the host keeps
-// Node running). Needs VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY and VAPID_SUBJECT in .env; off otherwise.
+// Node running). Browsers get Web Push (VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT); the iOS/Android
+// app gets Firebase Cloud Messaging (FIREBASE_SERVICE_ACCOUNT). Either one turns reminders on.
 
 const EVERY = 15 * 60 * 1000;
 
 export const vapidPublicKey = () => process.env.VAPID_PUBLIC_KEY || '';
-const configured = () => !!(process.env.VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY);
+const webConfigured = () => !!(process.env.VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY);
+const configured = () => webConfigured() || fcmConfigured();
 
 function setup() {
-  if (!configured()) return false;
+  if (!webConfigured()) return false;
   webpush.setVapidDetails(process.env.VAPID_SUBJECT || 'mailto:admin@devobj.com', process.env.VAPID_PUBLIC_KEY, process.env.VAPID_PRIVATE_KEY);
   return true;
 }
 
-// Sends to every device of one user. Expired subscriptions (404/410) are removed.
+// Sends to every device of one user: browsers by Web Push, app installs by FCM.
+// Subscriptions and tokens the push services reject for good are removed.
 export async function sendToUser(owner, message) {
-  if (!setup()) throw new Error('Push is not configured on the server (VAPID keys).');
-  const subs = await PushSubscription.find({ owner }).lean();
+  if (!configured()) throw new Error('Push is not configured on the server (VAPID keys or FIREBASE_SERVICE_ACCOUNT).');
+  const [subs, devices] = await Promise.all([
+    webConfigured() ? PushSubscription.find({ owner }).lean() : [],
+    fcmConfigured() ? PushDevice.find({ owner }).lean() : [],
+  ]);
   let sent = 0;
+  if (subs.length) setup();
   for (const s of subs) {
     try {
       await webpush.sendNotification({ endpoint: s.endpoint, keys: s.keys }, JSON.stringify({ ...message, url: '/#/planner' }), { TTL: 3 * 3600 });
@@ -31,7 +39,16 @@ export async function sendToUser(owner, message) {
       else console.warn(`Push to ${owner} failed: ${e.statusCode || e.code || e.message || "unknown error"}`);
     }
   }
-  return { devices: subs.length, sent };
+  if (devices.length) {
+    try {
+      const r = await sendFcm(devices.map((d) => d.token), { ...message, url: '/#/planner' });
+      sent += r.sent;
+      if (r.dead.length) await PushDevice.deleteMany({ token: { $in: r.dead } });
+    } catch (e) {
+      console.warn(`App push to ${owner} failed: ${e.message}`);
+    }
+  }
+  return { devices: subs.length + devices.length, sent };
 }
 
 export async function runReminders(now = new Date()) {
@@ -56,10 +73,10 @@ export async function runReminders(now = new Date()) {
 
 export function startReminders() {
   if (!configured()) {
-    console.log('Planner reminders are off: set VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY in .env to turn them on.');
+    console.log('Planner reminders are off: set VAPID keys (browsers) and/or FIREBASE_SERVICE_ACCOUNT (app) in .env.');
     return;
   }
-  setup();
+  if (webConfigured()) setup();
   const tick = () => runReminders().catch((e) => console.warn(`Reminder run failed: ${e.message}`));
   setTimeout(tick, 30 * 1000); // shortly after start
   setInterval(tick, EVERY);

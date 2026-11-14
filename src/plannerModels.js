@@ -93,7 +93,19 @@ const pushSchema = new Schema(
 );
 pushSchema.set('toJSON', hideOwner);
 
+// One native app install (iOS/Android) that turned reminders on: its Firebase Cloud Messaging token.
+const deviceSchema = new Schema(
+  {
+    owner,
+    token: { type: String, required: true, unique: true, maxlength: 4096 },
+    platform: { type: String, enum: ['ios', 'android'], required: true },
+  },
+  { timestamps: true }
+);
+deviceSchema.set('toJSON', hideOwner);
+
 export const PushSubscription = model('PushSubscription', pushSchema);
+export const PushDevice = model('PushDevice', deviceSchema);
 export const PlannerSettings = model('PlannerSettings', settingsSchema);
 export const PlanItem = model('PlanItem', itemSchema);
 export const PlanLog = model('PlanLog', logSchema);
