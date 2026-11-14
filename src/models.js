@@ -356,6 +356,8 @@ const transactionSchema = new Schema(
     note: { type: String, default: '', maxlength: 200 },
     // Bank debit paid out of the account's hold (e.g. the rent going out): it reduces the hold that month.
     fromHold: { type: Boolean, default: false },
+    // Cashback only: the expense category it gives money back on (lowers that category's spend).
+    offsets: { type: String, default: '', maxlength: 60 },
     // The fixed items or loans this line pays ('fixed:<id>' / 'liability:<id>'): it replaces their planned amounts that month.
     linkTo: { type: [{ type: String, maxlength: 80 }], default: [] },
     source: { type: String, enum: ['upload', 'gmail', 'manual'], default: 'upload' },

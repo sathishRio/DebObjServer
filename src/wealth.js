@@ -32,7 +32,7 @@ const COLLECTIONS = {
   fixed: { Model: FixedItem, fields: ['kind', 'category', 'amount', 'amountMax', 'currency', 'every', 'spread', 'accountId', 'startMonth', 'endMonth', 'note', 'checklist', 'checkedMonths'], what: 'Fixed item' },
   transfers: { Model: Transfer, fields: ['fromId', 'toId', 'amount', 'currency', 'monthly', 'startMonth', 'endMonth', 'note'], what: 'Transfer' },
   budgets: { Model: Budget, fields: ['category', 'amount', 'currency'], what: 'Budget' },
-  transactions: { Model: Transaction, fields: ['date', 'description', 'amount', 'direction', 'category', 'note', 'fromHold', 'linkTo'], what: 'Transaction' },
+  transactions: { Model: Transaction, fields: ['date', 'description', 'amount', 'direction', 'category', 'note', 'fromHold', 'offsets', 'linkTo'], what: 'Transaction' },
   sources: { Model: MailSource, fields: ['account', 'subject', 'sender', 'password'], what: 'Statement email' },
   rules: { Model: TagRule, fields: ['key', 'category'], what: 'Tag rule' },
   goals: {
@@ -306,7 +306,7 @@ async function rulesFor(vault) {
 
 // Built-in category lists, used until the user sets their own. Same as web/src/views/wealth/calc.js.
 const INCOME_CATEGORIES = ['Salary', 'Bonus', 'Business', 'Rental', 'Interest & dividends', 'Other income'];
-const EXPENSE_CATEGORIES = ['Housing', 'Utilities', 'Groceries', 'Dining', 'Transport', 'Insurance', 'Health', 'Education', 'Shopping', 'Travel', 'Entertainment', 'Family support', 'Loan EMI', 'Other'];
+const EXPENSE_CATEGORIES = ['Housing', 'Utilities', 'Groceries', 'Dining', 'Transport', 'Vehicle license', 'Insurance', 'Health', 'Education', 'Shopping', 'Travel', 'Entertainment', 'Family support', 'Loan EMI', 'Other'];
 
 // Lines added by hand to an account that no statement line has replaced yet (imported lines have a key).
 async function openManualLines(vault, account) {
