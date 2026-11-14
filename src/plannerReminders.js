@@ -13,6 +13,7 @@ const EVERY = 15 * 60 * 1000;
 export const vapidPublicKey = () => process.env.VAPID_PUBLIC_KEY || '';
 const webConfigured = () => !!(process.env.VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY);
 const configured = () => webConfigured() || fcmConfigured();
+export const pushConfigured = configured;
 
 function setup() {
   if (!webConfigured()) return false;
@@ -32,7 +33,7 @@ export async function sendToUser(owner, message) {
   if (subs.length) setup();
   for (const s of subs) {
     try {
-      await webpush.sendNotification({ endpoint: s.endpoint, keys: s.keys }, JSON.stringify({ ...message, url: '/#/planner' }), { TTL: 3 * 3600 });
+      await webpush.sendNotification({ endpoint: s.endpoint, keys: s.keys }, JSON.stringify({ url: '/#/planner', title: message.title, body: message.body, ...(message.url ? { url: message.url } : {}) }), { TTL: 3 * 3600 });
       sent += 1;
     } catch (e) {
       if (e.statusCode === 404 || e.statusCode === 410) await PushSubscription.deleteOne({ _id: s._id });
@@ -41,7 +42,7 @@ export async function sendToUser(owner, message) {
   }
   if (devices.length) {
     try {
-      const r = await sendFcm(devices.map((d) => d.token), { ...message, url: '/#/planner' });
+      const r = await sendFcm(devices, { url: '/#/planner', ...message });
       sent += r.sent;
       if (r.dead.length) await PushDevice.deleteMany({ token: { $in: r.dead } });
     } catch (e) {

@@ -141,21 +141,25 @@ router.post('/log', ah(async (req, res) => {
   const { ref, status } = req.body || {};
   if (!REF_RE.test(ref || '')) return bad(res, 'Unknown plan item');
   if (!['done', 'skipped'].includes(status)) return bad(res, 'status must be done or skipped');
-  let { area, title = '', minutes = 0 } = req.body;
+  const log = await logPlan(owner, date, ref, status, req.body);
+  return log ? res.json(log) : res.status(404).json({ error: 'Item not found' });
+}));
+
+// Marks one plan item done or skipped for a day (also used by Notifications). Null if the item is gone.
+export async function logPlan(owner, date, ref, status, { area, title = '', minutes = 0 } = {}) {
   if (ref.startsWith('item:')) {
     const item = await PlanItem.findOne({ _id: ref.slice(5), owner });
-    if (!item) return res.status(404).json({ error: 'Item not found' });
+    if (!item) return null;
     ({ area, title, minutes } = item);
     // One-off items are finished for good; routines come back on their next day.
     if (status === 'done' && item.repeat === 'none') await PlanItem.updateOne({ _id: item._id }, { completedAt: new Date() });
   } else area = 'learning';
-  const log = await PlanLog.findOneAndUpdate(
+  return PlanLog.findOneAndUpdate(
     { owner, date, ref },
     { $set: { area, title: String(title).slice(0, 200), minutes: status === 'done' ? Number(minutes) || 0 : 0, status } },
     { ...opts, upsert: true }
   );
-  res.json(log);
-}));
+}
 
 router.delete('/log', ah(async (req, res) => {
   const owner = req.user.email;

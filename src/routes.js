@@ -79,7 +79,7 @@ async function resolveObjective(parentId, task) {
 
 // An objective is done exactly when all of its actions are; it reopens when one is reopened.
 // Returns the objective if its status changed, so the client can update it too.
-async function syncObjective(parentId) {
+export async function syncObjective(parentId) {
   if (!parentId) return null;
   const objective = await Task.findById(parentId);
   if (!objective) return null;
