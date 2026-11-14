@@ -60,6 +60,7 @@ const MONTHS = { JAN: 1, FEB: 2, MAR: 3, APR: 4, MAY: 5, JUN: 6, JUL: 7, AUG: 8,
 const DATE_RE = /^(\d{1,2})[/\-. ](\d{1,2}|[A-Za-z]{3})[/\-. ](\d{2,4})\b/;
 const AMOUNT = String.raw`-?\d{1,3}(?:,\d{3})*(?:\.\d{2})|-?\d+\.\d{2}`;
 const TAIL_RE = new RegExp(String.raw`\s((?:${AMOUNT}))(?:\s*(CR|DR|Cr|Dr))?(?:\s+((?:${AMOUNT}))(?:\s*(CR|DR|Cr|Dr))?)?\s*$`);
+const LOCAL_RE = /\s([A-Z]{3})\s+(-?\d[\d,]*(?:\.\d+)?)\s+(-?\d[\d,]*(?:\.\d+)?)\s*$/;
 const SKIP_RE = /(PREVIOUS|OPENING|NEW|CLOSING)\s+BALANCE|BALANCE\s+(B\/F|C\/F|BROUGHT|CARRIED)|TOTAL/i;
 
 const toIso = (m) => {
@@ -85,7 +86,14 @@ export async function parseStatement(buffer, password) {
   let cols = null;
   // Description lines wrapped below a transaction are added to it until the next row.
   let wrapping = false;
+  // "Currency | Amount | Local Currency" cards (Mashreq / Noon): the signed local amount decides the way.
+  let localCols = false;
   for (const { text: line, cells } of lines) {
+    if (cells.some((c) => /^amount$/i.test(c.str)) && cells.some((c) => /^local currency$/i.test(c.str))) {
+      localCols = true;
+      wrapping = false;
+      continue;
+    }
     const debit = cells.find((c) => /^(debit|withdrawals?)\b/i.test(c.str));
     const credit = cells.find((c) => /^(credit|deposits?)\b/i.test(c.str));
     if (debit && credit) {
@@ -111,6 +119,16 @@ export async function parseStatement(buffer, password) {
     }
     wrapping = false;
     const date = toIso(d);
+    // "02 Nov 2026 NOON MINUTES LLC DUBAI 784 AED 526.52 -526.52": currency, amount, signed local amount.
+    const local = localCols && line.match(LOCAL_RE);
+    if (date && local) {
+      const description = line.slice(d[0].length, local.index).trim();
+      const value = num(local[3]);
+      if (!description || SKIP_RE.test(description) || !value) continue;
+      out.push({ date, description: description.slice(0, 200), amount: Math.abs(value), direction: value < 0 ? 'out' : 'in' });
+      wrapping = true;
+      continue;
+    }
     const tail = line.match(TAIL_RE);
     if (!date || !tail) continue;
     let description = line.slice(d[0].length, tail.index).trim();
