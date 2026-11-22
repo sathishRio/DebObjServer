@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "planName": "6-Month Recomp & Weight Loss Plan",
+    "version": "1.0",
+    "createdOn": "2026-11-15",
+    "startDate": "2026-11-16",
+    "endDate": "2027-05-16",
+    "durationWeeks": 26,
+    "units": { "weight": "kg", "height": "cm", "waist": "cm", "energy": "kcal", "macros": "g", "water": "L" }
+  },
+  "user": {
+    "name": "Sathish",
+    "heightCm": 176,
+    "startWeightKg": 82.3,
+    "targetWeightKg": 75.0,
+    "startBmi": 26.6,
+    "targetBmi": 24.2,
+    "goal": "recomp_fat_loss",
+    "experience": "beginner",
+    "trainingDaysPerWeek": 4,
+    "sessionMinutes": 60,
+    "dietStyle": "south_indian_with_english_breakfast_and_snack",
+    "vegDays": ["tuesday", "thursday"],
+    "proteinPowder": false,
+    "wakeTime": "06:30",
+    "workHours": "08:00-17:00",
+    "gymTime": "17:30",
+    "sleepTargetHours": 8,
+    "lightsOut": "22:30"
+  },
+  "phases": [
+    { "id": "foundation", "name": "Foundation", "weeks": [1, 8], "calories": 2200, "proteinG": 150, "fatG": 65, "carbsG": 250, "waterL": 3.5, "stepsPerDay": 7000, "training": "Workouts as written. Learn form. Add weight when you hit the top of the rep range on all sets.", "cardio": "10 min incline walk after each session; Wed walk 30 min; Sat light cardio 30-45 min" },
+    { "id": "deload_1", "name": "Deload", "weeks": [9, 9], "calories": 2200, "proteinG": 150, "fatG": 65, "carbsG": 250, "waterL": 3.5, "stepsPerDay": 7000, "training": "Same exercises and weights, half the sets.", "cardio": "Same as foundation" },
+    { "id": "build", "name": "Build", "weeks": [10, 16], "calories": 2100, "proteinG": 150, "fatG": 60, "carbsG": 240, "waterL": 3.5, "stepsPerDay": 8000, "training": "Add 1 set to the first 2 exercises of every session (4 sets).", "cardio": "Wed walk 40 min" },
+    { "id": "deload_2", "name": "Deload", "weeks": [17, 17], "calories": 2100, "proteinG": 150, "fatG": 60, "carbsG": 240, "waterL": 3.5, "stepsPerDay": 8000, "training": "Half the sets.", "cardio": "Same as build" },
+    { "id": "cut_strengthen", "name": "Cut & Strengthen", "weeks": [18, 25], "calories": 2000, "proteinG": 150, "fatG": 60, "carbsG": 215, "waterL": 3.5, "stepsPerDay": 9000, "training": "Keep 4 sets on main lifts. Add 15 min bike intervals (30 s fast / 60 s easy) after Lower A and Lower B. Cut lunch rice to 3/4 cup.", "cardio": "Intervals 2x/week + Wed walk 40 min" },
+    { "id": "finish", "name": "Finish & Test", "weeks": [26, 26], "calories": 2000, "proteinG": 150, "fatG": 60, "carbsG": 215, "waterL": 3.5, "stepsPerDay": 9000, "training": "Test best weights on bench, squat, RDL, lat pulldown. Compare with week 1.", "cardio": "Normal" }
+  ],
+  "specialPeriods": [
+    { "id": "ramadan_2027", "approxStart": "2027-02-08", "approxEnd": "2027-03-09", "weeks": [13, 17], "note": "If fasting: train after Iftar or lighter, keep protein at 150 g between Iftar and Suhoor, aim to maintain weight. Ignore if not fasting." }
+  ],
+  "warmup": {
+    "durationMin": 7,
+    "steps": ["5 min bike or brisk walk", "Arm circles 10 each way", "Leg swings 10 each leg", "1-2 light warm-up sets of the first exercise"]
+  },
+  "progressionRules": {
+    "upperBodyIncrementKg": 2.5,
+    "lowerBodyIncrementKg": 5,
+    "rule": "When all sets reach the top of the rep range with good form, increase weight next session.",
+    "effort": "Stop each set 1-2 reps before failure.",
+    "restSeconds": { "compound": [120, 180], "accessory": [60, 90] }
+  },
+  "workouts": {
+    "upper_a": {
+      "name": "Upper A - Strength",
+      "focus": ["chest", "back", "shoulders", "arms"],
+      "finisher": "10 min incline walk",
+      "exercises": [
+        { "name": "Barbell or Dumbbell Bench Press", "sets": 3, "reps": "6-8", "type": "compound" },
+        { "name": "Lat Pulldown", "sets": 3, "reps": "8-10", "type": "compound" },
+        { "name": "Seated Dumbbell Shoulder Press", "sets": 3, "reps": "8-10", "type": "compound" },
+        { "name": "Seated Cable Row", "sets": 3, "reps": "8-10", "type": "compound" },
+        { "name": "Dumbbell Bicep Curl", "sets": 2, "reps": "10-12", "type": "accessory" },
+        { "name": "Triceps Rope Pushdown", "sets": 2, "reps": "10-12", "type": "accessory" }
+      ]
+    },
+    "lower_a": {
+      "name": "Lower A - Strength",
+      "focus": ["quads", "hamstrings", "glutes", "calves", "core"],
+      "finisher": "10 min incline walk (weeks 18-25: 15 min bike intervals)",
+      "exercises": [
+        { "name": "Goblet Squat / Barbell Back Squat", "sets": 3, "reps": "6-8", "type": "compound" },
+        { "name": "Romanian Deadlift", "sets": 3, "reps": "8-10", "type": "compound" },
+        { "name": "Leg Press", "sets": 3, "reps": "10-12", "type": "compound" },
+        { "name": "Lying Leg Curl", "sets": 2, "reps": "10-12", "type": "accessory" },
+        { "name": "Standing Calf Raise", "sets": 3, "reps": "12-15", "type": "accessory" },
+        { "name": "Plank", "sets": 3, "reps": "30-45s", "type": "core" }
+      ]
+    },
+    "upper_b": {
+      "name": "Upper B - Hypertrophy",
+      "focus": ["chest", "back", "shoulders", "arms"],
+      "finisher": "10 min incline walk",
+      "exercises": [
+        { "name": "Incline Dumbbell Press", "sets": 3, "reps": "8-12", "type": "compound" },
+        { "name": "One-Arm Dumbbell Row", "sets": 3, "reps": "10-12 each", "type": "compound" },
+        { "name": "Machine Chest Press or Push-ups", "sets": 2, "reps": "10-15", "type": "compound" },
+        { "name": "Assisted Pull-up or Close-grip Pulldown", "sets": 3, "reps": "8-12", "type": "compound" },
+        { "name": "Dumbbell Lateral Raise", "sets": 3, "reps": "12-15", "type": "accessory" },
+        { "name": "Face Pull", "sets": 2, "reps": "12-15", "type": "accessory" },
+        { "name": "Hammer Curl + Overhead Triceps Extension", "sets": 2, "reps": "12 each", "type": "accessory" }
+      ]
+    },
+    "lower_b": {
+      "name": "Lower B - Hypertrophy",
+      "focus": ["quads", "glutes", "hamstrings", "calves", "core"],
+      "finisher": "10 min incline walk (weeks 18-25: 15 min bike intervals)",
+      "exercises": [
+        { "name": "Bulgarian Split Squat or Walking Lunge", "sets": 3, "reps": "10 each leg", "type": "compound" },
+        { "name": "Hip Thrust", "sets": 3, "reps": "10-12", "type": "compound" },
+        { "name": "Leg Extension", "sets": 3, "reps": "12-15", "type": "accessory" },
+        { "name": "Seated Leg Curl", "sets": 3, "reps": "12-15", "type": "accessory" },
+        { "name": "Seated Calf Raise", "sets": 3, "reps": "15", "type": "accessory" },
+        { "name": "Hanging Knee Raise or Cable Crunch", "sets": 3, "reps": "12", "type": "core" }
+      ]
+    }
+  },
+  "dailyHabits": {
+    "wake": "06:30",
+    "waterOnWakingMl": 500,
+    "waterTotalL": 3.5,
+    "oilMaxTspPerDay": 3,
+    "sleep": "22:30-06:30"
+  },
+  "portionGuide": {
+    "rice": "1 cup cooked (fist size); 3/4 cup in weeks 18-26",
+    "chapati": "1 medium, no ghee on top",
+    "meatFish": "150 g raw (palm size)",
+    "oil": "1 tsp per dish",
+    "coconut": "1-2 tbsp max per dish"
+  },
+  "weeklySchedule": [
+    {
+      "day": "monday",
+      "dayType": "training",
+      "isVegDay": false,
+      "workoutId": "upper_a",
+      "recovery": { "type": "active", "items": ["10 min stretching after gym", "Sleep 8 h"] },
+      "meals": [
+        { "slot": "breakfast", "time": "06:45", "cuisine": "english", "items": "3 scrambled eggs + 2 egg whites, 2 slices wholemeal toast, grilled tomato" },
+        { "slot": "mid_morning", "time": "10:30", "cuisine": "south_indian", "items": "Buttermilk (moru) + guava" },
+        { "slot": "lunch", "time": "13:00", "cuisine": "south_indian", "items": "Chicken chettinad (less oil), 1 cup rice, beans poriyal, rasam" },
+        { "slot": "evening_snack", "time": "16:30", "cuisine": "english", "items": "Tuna sandwich on wholemeal bread with cucumber" },
+        { "slot": "post_workout", "time": "18:45", "cuisine": "any", "items": "Milk 250 ml + banana + Greek yogurt 150 g" },
+        { "slot": "dinner", "time": "20:30", "cuisine": "south_indian", "items": "2 chapatis, Kerala fish curry (light coconut), cabbage thoran" }
+      ]
+    },
+    {
+      "day": "tuesday",
+      "dayType": "training",
+      "isVegDay": true,
+      "workoutId": "lower_a",
+      "recovery": { "type": "active", "items": ["10 min stretching (hips, hamstrings)", "Sleep 8 h"] },
+      "meals": [
+        { "slot": "breakfast", "time": "06:45", "cuisine": "english", "items": "Overnight oats with milk + 150 g Greek yogurt, berries, 1 tbsp chia" },
+        { "slot": "mid_morning", "time": "10:30", "cuisine": "south_indian", "items": "Curd + apple" },
+        { "slot": "lunch", "time": "13:00", "cuisine": "south_indian", "items": "Sambar rice (1 cup) with extra dal, 100 g paneer tikka, carrot salad" },
+        { "slot": "evening_snack", "time": "16:30", "cuisine": "english", "items": "Greek yogurt + 2 tbsp granola + honey drizzle" },
+        { "slot": "post_workout", "time": "18:45", "cuisine": "any", "items": "Milk 250 ml + banana + roasted chana 30 g" },
+        { "slot": "dinner", "time": "20:30", "cuisine": "south_indian", "items": "3 idlis + sambar + tofu pepper stir-fry (100 g), mint chutney" }
+      ]
+    },
+    {
+      "day": "wednesday",
+      "dayType": "rest",
+      "isVegDay": false,
+      "workoutId": null,
+      "recovery": { "type": "active_rest", "items": ["30-40 min brisk walk at 18:00", "10 min full-body stretching", "Sleep 8 h"] },
+      "meals": [
+        { "slot": "breakfast", "time": "06:45", "cuisine": "english", "items": "2 poached eggs on wholemeal toast + 1/2 tin baked beans + mushrooms" },
+        { "slot": "mid_morning", "time": "10:30", "cuisine": "south_indian", "items": "Buttermilk + orange" },
+        { "slot": "lunch", "time": "13:00", "cuisine": "south_indian", "items": "Tawa fish fry (little oil), 1 cup rice, keerai kootu, rasam" },
+        { "slot": "evening_snack", "time": "16:30", "cuisine": "english", "items": "Chicken & salad wrap (wholemeal tortilla)" },
+        { "slot": "post_workout", "time": "18:45", "cuisine": "any", "items": "Milk 250 ml + banana" },
+        { "slot": "dinner", "time": "20:30", "cuisine": "south_indian", "items": "2 ragi dosas + chicken pepper fry (100 g), coconut chutney (1 tbsp)" }
+      ]
+    },
+    {
+      "day": "thursday",
+      "dayType": "training",
+      "isVegDay": true,
+      "workoutId": "upper_b",
+      "recovery": { "type": "active", "items": ["10 min stretching (chest, shoulders)", "Sleep 8 h"] },
+      "meals": [
+        { "slot": "breakfast", "time": "06:45", "cuisine": "english", "items": "Paneer & spinach scramble (100 g paneer) on 2 slices wholemeal toast + 200 ml milk" },
+        { "slot": "mid_morning", "time": "10:30", "cuisine": "south_indian", "items": "Curd + papaya" },
+        { "slot": "lunch", "time": "13:00", "cuisine": "south_indian", "items": "Soya chunk kuzhambu (50 g dry soya), 1 cup rice, avial, curd" },
+        { "slot": "evening_snack", "time": "16:30", "cuisine": "english", "items": "Hummus (3 tbsp) + wholemeal pitta + carrot & cucumber sticks" },
+        { "slot": "post_workout", "time": "18:45", "cuisine": "any", "items": "Milk 250 ml + banana + roasted chana 30 g" },
+        { "slot": "dinner", "time": "20:30", "cuisine": "south_indian", "items": "2 chapatis, chana masala, tofu bhurji (100 g), salad" }
+      ]
+    },
+    {
+      "day": "friday",
+      "dayType": "training",
+      "isVegDay": false,
+      "workoutId": "lower_b",
+      "recovery": { "type": "active", "items": ["10 min stretching (quads, glutes)", "Foam roll legs 5 min", "Sleep 8 h"] },
+      "meals": [
+        { "slot": "breakfast", "time": "06:45", "cuisine": "english", "items": "Porridge (oats + milk) with 2 boiled eggs on the side, banana slices, almonds" },
+        { "slot": "mid_morning", "time": "10:30", "cuisine": "south_indian", "items": "Buttermilk + pear" },
+        { "slot": "lunch", "time": "13:00", "cuisine": "south_indian", "items": "Lemon rice (1 cup) with peanuts, air-fried chicken 65, cucumber raita" },
+        { "slot": "evening_snack", "time": "16:30", "cuisine": "english", "items": "Paneer / cottage cheese on toast with black pepper" },
+        { "slot": "post_workout", "time": "18:45", "cuisine": "any", "items": "Milk 250 ml + banana + 2 boiled eggs" },
+        { "slot": "dinner", "time": "20:30", "cuisine": "south_indian", "items": "2 pesarattu (moong dosa), ginger chutney, grilled fish (100 g)" }
+      ]
+    },
+    {
+      "day": "saturday",
+      "dayType": "active_recovery",
+      "isVegDay": false,
+      "workoutId": null,
+      "recovery": { "type": "light_cardio", "items": ["07:30 - 30-45 min cycling, swimming, badminton or family walk", "Treat meal allowed at dinner"] },
+      "meals": [
+        { "slot": "breakfast", "time": "08:30", "cuisine": "english", "items": "Lean full English: 2 eggs, 2 grilled chicken/turkey sausages, grilled tomato, mushrooms, 1/2 tin beans, 1 toast" },
+        { "slot": "mid_morning", "time": "11:00", "cuisine": "any", "items": "Fruit + 10 almonds" },
+        { "slot": "lunch", "time": "13:00", "cuisine": "south_indian", "items": "Prawn masala, 1 cup rice, beetroot poriyal, rasam" },
+        { "slot": "evening_snack", "time": "16:30", "cuisine": "english", "items": "Smoothie: milk, Greek yogurt, banana, 1 tsp peanut butter" },
+        { "slot": "dinner", "time": "20:00", "cuisine": "south_indian", "items": "Treat meal: 1 plate biryani + raita + salad (skip extra gravy)", "isTreatMeal": true }
+      ]
+    },
+    {
+      "day": "sunday",
+      "dayType": "rest",
+      "isVegDay": false,
+      "workoutId": null,
+      "recovery": { "type": "full_rest", "items": ["Weekly weigh-in review", "Meal prep at 16:00: boil eggs, marinate chicken, soak chana/rajma, cut vegetables", "Plan next week's weights", "Sleep 8 h"] },
+      "meals": [
+        { "slot": "breakfast", "time": "08:30", "cuisine": "english", "items": "Smoked salmon or tuna + scrambled eggs on 1 slice toast" },
+        { "slot": "mid_morning", "time": "11:00", "cuisine": "south_indian", "items": "Curd + apple" },
+        { "slot": "lunch", "time": "13:00", "cuisine": "south_indian", "items": "Sambar, 1 cup rice, keerai poriyal, egg curry (2 eggs), curd" },
+        { "slot": "evening_snack", "time": "16:30", "cuisine": "english", "items": "Greek yogurt + mixed berries" },
+        { "slot": "dinner", "time": "20:30", "cuisine": "south_indian", "items": "Tomato soup + 2 wheat dosas + chicken/paneer salad" }
+      ]
+    }
+  ],
+  "swaps": [
+    { "from": "Parotta", "to": "Chapati" },
+    { "from": "White rice dosa", "to": "Ragi / pesarattu / oats dosa" },
+    { "from": "Deep-fried fish", "to": "Tawa or air-fried fish" },
+    { "from": "Coconut-heavy gravy", "to": "Tomato/onion base gravy" },
+    { "from": "Ghee on rice", "to": "Skip, or 1/2 tsp on weekends" },
+    { "from": "Vada / bajji", "to": "Once-a-week treat only" }
+  ],
+  "vegSubstitutes": ["100 g paneer", "100 g tofu", "50 g dry soya chunks", "Extra bowl of dal + 1 cup Greek yogurt", "30 g roasted chana"],
+  "tracking": {
+    "weighInDays": ["monday", "wednesday", "friday"],
+    "weighInRule": "Morning, after toilet, before food. Weekly value = average of the 3 weigh-ins.",
+    "waistEveryWeeks": 2,
+    "photoEveryWeeks": 4,
+    "onTrackToleranceKg": 0.5,
+    "adjustmentRules": [
+      { "condition": "2 consecutive weeks more than 0.5 kg above target", "action": "Reduce 150 kcal/day (drop evening rice or 1 dinner chapati) or add 2,000 steps/day" },
+      { "condition": "More than 1 kg ahead of target and feeling tired or losing strength", "action": "Add 150 kcal/day" },
+      { "condition": "Weight jumps 0.5-1 kg in a day", "action": "Ignore - water/salt. Follow the weekly average trend." }
+    ],
+    "weekly": [
+      { "week": 0, "weekEnding": "2026-11-15", "phase": "start", "targetKg": 82.3, "weighIns": [], "actualAvgKg": 82.3, "waistCm": null, "photo": true, "notes": "Starting point" },
+      { "week": 1, "weekEnding": "2026-11-22", "phase": "foundation", "targetKg": 82.0, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 2, "weekEnding": "2026-11-29", "phase": "foundation", "targetKg": 81.7, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 3, "weekEnding": "2026-12-06", "phase": "foundation", "targetKg": 81.5, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 4, "weekEnding": "2026-12-13", "phase": "foundation", "targetKg": 81.2, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": true, "notes": "" },
+      { "week": 5, "weekEnding": "2026-12-20", "phase": "foundation", "targetKg": 80.9, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 6, "weekEnding": "2026-12-27", "phase": "foundation", "targetKg": 80.6, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 7, "weekEnding": "2027-01-03", "phase": "foundation", "targetKg": 80.3, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 8, "weekEnding": "2027-01-10", "phase": "foundation", "targetKg": 80.1, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": true, "notes": "" },
+      { "week": 9, "weekEnding": "2027-01-17", "phase": "deload_1", "targetKg": 79.8, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "Deload week" },
+      { "week": 10, "weekEnding": "2027-01-24", "phase": "build", "targetKg": 79.5, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 11, "weekEnding": "2027-01-31", "phase": "build", "targetKg": 79.2, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 12, "weekEnding": "2027-02-07", "phase": "build", "targetKg": 78.9, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": true, "notes": "" },
+      { "week": 13, "weekEnding": "2027-02-14", "phase": "build", "targetKg": 78.6, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "Ramadan approx. starts" },
+      { "week": 14, "weekEnding": "2027-02-21", "phase": "build", "targetKg": 78.4, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 15, "weekEnding": "2027-02-28", "phase": "build", "targetKg": 78.1, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 16, "weekEnding": "2027-03-07", "phase": "build", "targetKg": 77.8, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": true, "notes": "" },
+      { "week": 17, "weekEnding": "2027-03-14", "phase": "deload_2", "targetKg": 77.5, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "Deload week" },
+      { "week": 18, "weekEnding": "2027-03-21", "phase": "cut_strengthen", "targetKg": 77.2, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 19, "weekEnding": "2027-03-28", "phase": "cut_strengthen", "targetKg": 77.0, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 20, "weekEnding": "2027-04-04", "phase": "cut_strengthen", "targetKg": 76.7, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": true, "notes": "" },
+      { "week": 21, "weekEnding": "2027-04-11", "phase": "cut_strengthen", "targetKg": 76.4, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 22, "weekEnding": "2027-04-18", "phase": "cut_strengthen", "targetKg": 76.1, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 23, "weekEnding": "2027-04-25", "phase": "cut_strengthen", "targetKg": 75.8, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 24, "weekEnding": "2027-05-02", "phase": "cut_strengthen", "targetKg": 75.6, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": true, "notes": "" },
+      { "week": 25, "weekEnding": "2027-05-09", "phase": "cut_strengthen", "targetKg": 75.3, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": false, "notes": "" },
+      { "week": 26, "weekEnding": "2027-05-16", "phase": "finish", "targetKg": 75.0, "weighIns": [], "actualAvgKg": null, "waistCm": null, "photo": true, "notes": "Final weigh-in + strength test" }
+    ],
+    "monthly": [
+      { "month": 1, "weeks": [1, 4], "from": "2026-11-16", "to": "2026-12-13", "startTargetKg": 82.3, "endTargetKg": 81.2, "targetLossKg": 1.1, "actualEndKg": null, "actualLossKg": null, "waistEndCm": null, "review": "" },
+      { "month": 2, "weeks": [5, 8], "from": "2026-12-14", "to": "2027-01-10", "startTargetKg": 81.2, "endTargetKg": 80.1, "targetLossKg": 1.1, "actualEndKg": null, "actualLossKg": null, "waistEndCm": null, "review": "" },
+      { "month": 3, "weeks": [9, 12], "from": "2027-01-11", "to": "2027-02-07", "startTargetKg": 80.1, "endTargetKg": 78.9, "targetLossKg": 1.2, "actualEndKg": null, "actualLossKg": null, "waistEndCm": null, "review": "" },
+      { "month": 4, "weeks": [13, 16], "from": "2027-02-08", "to": "2027-03-07", "startTargetKg": 78.9, "endTargetKg": 77.8, "targetLossKg": 1.1, "actualEndKg": null, "actualLossKg": null, "waistEndCm": null, "review": "" },
+      { "month": 5, "weeks": [17, 20], "from": "2027-03-08", "to": "2027-04-04", "startTargetKg": 77.8, "endTargetKg": 76.7, "targetLossKg": 1.1, "actualEndKg": null, "actualLossKg": null, "waistEndCm": null, "review": "" },
+      { "month": 6, "weeks": [21, 26], "from": "2027-04-05", "to": "2027-05-16", "startTargetKg": 76.7, "endTargetKg": 75.0, "targetLossKg": 1.7, "actualEndKg": null, "actualLossKg": null, "waistEndCm": null, "review": "" }
+    ],
+    "computedFieldsForApp": {
+      "actualAvgKg": "mean(weighIns[].kg)",
+      "deltaVsTargetKg": "actualAvgKg - targetKg",
+      "status": "deltaVsTargetKg <= 0.5 ? 'on_track' : 'behind'",
+      "totalLostKg": "user.startWeightKg - latest actualAvgKg",
+      "progressPercent": "totalLostKg / (user.startWeightKg - user.targetWeightKg) * 100",
+      "monthlyActualLossKg": "previous month actualEndKg - actualEndKg",
+      "currentBmi": "actualAvgKg / (heightCm/100)^2"
+    },
+    "weighInEntrySchema": { "date": "YYYY-MM-DD", "kg": "number" },
+    "workoutLogEntrySchema": { "date": "YYYY-MM-DD", "workoutId": "string", "exercise": "string", "sets": [{ "kg": "number", "reps": "number" }], "notes": "string" }
+  },
+  "tips": [
+    "Learn form first: film your sets or book one trainer session for squat, bench and RDL.",
+    "Consistency beats intensity: 4 sessions every week for 26 weeks is the win.",
+    "No protein powder needed - food covers ~150 g protein. If progress stalls add 1 cup curd or 2 egg whites daily.",
+    "Optional: creatine monohydrate 3-5 g/day, vitamin D (check with a doctor).",
+    "Check with a doctor before starting if you have any injury or medical condition."
+  ]
+}
