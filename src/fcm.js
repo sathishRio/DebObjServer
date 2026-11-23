@@ -61,14 +61,20 @@ function messageFor(device, { title, body, url = '/#/planner', alert }) {
 
 // Sends one notification to many devices ({ token, platform }). Returns { sent, dead: [tokens to delete] }.
 export async function sendFcm(devices, message) {
-  if (!devices.length) return { sent: 0, dead: [] };
+  if (!devices.length) return { sent: 0, dead: [], errors: [], results: [] };
   const m = await getMessaging();
   const res = await m.sendEach(devices.map((d) => messageFor(d, message)));
   const dead = [];
+  const errors = [];
+  const results = []; // one per device, in order: { ok, error? }
   res.responses.forEach((r, i) => {
-    if (r.success) return;
-    if (DEAD.has(r.error?.code)) dead.push(devices[i].token);
-    else console.warn(`FCM send failed: ${r.error?.code || r.error?.message || 'unknown error'}`);
+    if (r.success) return results.push({ ok: true });
+    const why = r.error?.code || r.error?.message || 'unknown error';
+    errors.push(`${devices[i].platform} ${why}`);
+    const gone = DEAD.has(r.error?.code);
+    results.push({ ok: false, error: gone ? `${why} (device removed)` : why });
+    if (gone) dead.push(devices[i].token);
+    else console.warn(`FCM send failed: ${why}`);
   });
-  return { sent: res.successCount, dead };
+  return { sent: res.successCount, dead, errors, results };
 }

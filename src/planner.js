@@ -220,6 +220,9 @@ router.post('/push/device', ah(async (req, res) => {
   const { token, platform } = req.body || {};
   if (typeof token !== 'string' || token.length < 20 || token.length > 4096) return bad(res, 'Invalid device token');
   if (!['ios', 'android'].includes(platform)) return bad(res, 'platform must be ios or android');
+  // Without Firebase credentials nothing can ever reach the app: say so instead of saving a dead token.
+  const { fcmConfigured } = await import('./fcm.js');
+  if (!fcmConfigured()) return res.status(503).json({ error: 'App notifications are not set up on the server yet (FIREBASE_SERVICE_ACCOUNT).' });
   await PushDevice.findOneAndUpdate({ token }, { $set: { owner: req.user.email, platform } }, { ...opts, upsert: true });
   res.status(204).end();
 }));
@@ -234,6 +237,7 @@ router.post('/push/test', ah(async (req, res) => {
   try {
     const r = await (await reminders()).sendToUser(req.user.email, { title: 'Reminders are on', body: 'This is how your daily plan reminder will look.' });
     if (!r.devices) return bad(res, 'No device is subscribed yet.');
+    if (!r.sent) return res.status(502).json({ error: `The test could not be delivered${r.errors?.length ? `: ${r.errors.join('; ')}` : '.'}`, ...r });
     res.json(r);
   } catch (e) {
     res.status(503).json({ error: e.message });

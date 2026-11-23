@@ -3,11 +3,11 @@ import { Router } from 'express';
 import mongoose from 'mongoose';
 import { Task } from './models.js';
 import { syncObjective } from './routes.js';
-import { PlannerSettings } from './plannerModels.js';
+import { PlannerSettings, PushDevice, PushSubscription } from './plannerModels.js';
 import { localClock } from './plannerCore.js';
 import { armKey, parseMinutes, planKey, planNotice, taskNotices, utcMsOf } from './notifyCore.js';
 import { buildToday, logPlan } from './planner.js';
-import { pushConfigured, sendToUser } from './plannerReminders.js';
+import { pushConfigured, pushStatus, sendToUser } from './plannerReminders.js';
 
 // Notifications built from tasks every minute: kept as an inbox (web #/notifications) and pushed
 // to the user's phones (FCM) and browsers (Web Push) when push is configured. Alerts repeat every
@@ -250,6 +250,111 @@ router.get('/', ah(async (req, res) => {
     Notification.countDocuments({ owner, readAt: null }),
   ]);
   res.json({ items, unread });
+}));
+
+/* ---------- Push test screen (hub #/push-test) ---------- */
+
+// "Chrome on Windows" from a user agent, for the device list.
+function browserLabel(ua = '') {
+  const browser = /Edg\//.test(ua) ? 'Edge' : /OPR\//.test(ua) ? 'Opera' : /Firefox\//.test(ua) ? 'Firefox'
+    : /Chrome\//.test(ua) ? 'Chrome' : /Safari\//.test(ua) ? 'Safari' : 'Browser';
+  const os = /iPhone|iPad|iPod/.test(ua) ? 'iOS' : /Android/.test(ua) ? 'Android' : /Mac OS X/.test(ua) ? 'Mac'
+    : /Windows/.test(ua) ? 'Windows' : /Linux/.test(ua) ? 'Linux' : '';
+  return os ? `${browser} on ${os}` : browser;
+}
+const tail = (s) => String(s).slice(-12); // lets a device spot itself without the server sending whole tokens
+const isId = (s) => /^[0-9a-f]{24}$/.test(String(s || ''));
+
+// Kinds to try: a plain notification, or an alert with Done / Skip / Remind me (and a timer for timed kinds).
+const TEST_KINDS = {
+  plain: { kind: 'digest', title: 'Test notification', body: 'Plain notification, no buttons.' },
+  reminder: { kind: 'reminder', title: 'Test reminder', body: 'Try Done, Skip or Remind me.' },
+  due_soon: { kind: 'due_soon', title: 'Test: due in 10 minutes', body: 'Shows a timer counting down to the due time.', dueIn: 10 },
+  overdue: { kind: 'overdue', title: 'Test: overdue', body: 'Shows how long ago it was due.', dueIn: -5 },
+  plan: { kind: 'plan', title: 'Test: plan item now', body: 'Free-time item, ends in 30 minutes.', endsIn: 30 },
+};
+// Send results by notification id, for the screen to read back after a delayed send. Lost on restart; that's fine.
+const testRuns = new Map();
+const keepRun = (id, run) => {
+  testRuns.set(id, run);
+  if (testRuns.size > 50) testRuns.delete(testRuns.keys().next().value);
+};
+
+router.get('/test/status', ah(async (req, res) => {
+  const owner = req.user.email;
+  const [subs, devices] = await Promise.all([
+    PushSubscription.find({ owner }).sort({ updatedAt: -1 }).lean(),
+    PushDevice.find({ owner }).sort({ updatedAt: -1 }).lean(),
+  ]);
+  res.json({
+    ...pushStatus(),
+    devices: [
+      ...devices.map((d) => ({ id: String(d._id), type: d.platform, label: d.platform === 'ios' ? 'iPhone / iPad app' : 'Android app', tail: tail(d.token), since: d.createdAt, seen: d.updatedAt })),
+      ...subs.map((s) => ({ id: String(s._id), type: 'web', label: browserLabel(s.device), tail: tail(s.endpoint), since: s.createdAt, seen: s.updatedAt })),
+    ],
+  });
+}));
+
+// POST { kind, deviceId? (one device; all when empty), title?, body?, delay? (seconds, 0–300) }
+router.post('/test', ah(async (req, res) => {
+  const owner = req.user.email;
+  const { kind = 'reminder', deviceId, title, body } = req.body || {};
+  const t = TEST_KINDS[kind];
+  if (!t) return res.status(400).json({ error: `kind must be one of ${Object.keys(TEST_KINDS).join(', ')}` });
+  if (deviceId && !isId(deviceId)) return res.status(400).json({ error: 'Invalid device' });
+  const delay = Math.max(0, Math.min(300, Math.round(Number(req.body?.delay) || 0)));
+  const { web, app } = pushStatus();
+  if (!web && !app) return res.status(503).json({ error: 'Push is not set up on the server (VAPID keys or FIREBASE_SERVICE_ACCOUNT).' });
+
+  const now = Date.now();
+  const n = {
+    key: `test:${now}`, kind: t.kind, url: '/#/push-test',
+    title: String(title || t.title).slice(0, 300), body: String(body ?? t.body).slice(0, 1000),
+  };
+  const doc = await Notification.create({ owner, ...n, sentAt: new Date(now + delay * 1000) });
+  const id = String(doc._id);
+  const alert = kind === 'plain' ? undefined : {
+    id, sig: sign(id), kind: t.kind,
+    ...(t.dueIn != null ? { dueAt: now + (delay + t.dueIn * 60) * 1000 } : {}),
+    ...(t.endsIn != null ? { endsAt: now + (delay + t.endsIn * 60) * 1000 } : {}),
+  };
+  const send = async () => {
+    try {
+      const r = await sendToUser(owner, { title: n.title, body: n.body, url: n.url, alert }, { only: deviceId || undefined });
+      await Notification.updateOne({ _id: doc._id }, { pushed: r.sent });
+      keepRun(id, { state: 'sent', sent: r.sent, devices: r.devices, results: r.results });
+    } catch (e) {
+      keepRun(id, { state: 'failed', error: e.message, results: [] });
+    }
+  };
+  if (delay) {
+    keepRun(id, { state: 'waiting', sendAt: now + delay * 1000, results: [] });
+    setTimeout(send, delay * 1000);
+  } else await send();
+  res.json({ id, ...testRuns.get(id) });
+}));
+
+// The send results and what was pressed on the phone (Done / Skip / Remind me).
+router.get('/test/:id', ah(async (req, res) => {
+  if (!isId(req.params.id)) return notFound(res);
+  const n = await Notification.findOne({ _id: req.params.id, owner: req.user.email }).lean();
+  if (!n) return notFound(res);
+  res.json({
+    id: req.params.id,
+    ...(testRuns.get(req.params.id) || { state: 'unknown', results: [] }),
+    pressed: n.done ? 'done' : n.skipped ? 'skip' : n.snoozedUntil ? 'snooze' : null,
+    snoozedUntil: n.snoozedUntil,
+  });
+}));
+
+// Drop a stale device or browser from this account.
+router.delete('/test/devices/:id', ah(async (req, res) => {
+  if (!isId(req.params.id)) return res.status(204).end();
+  await Promise.all([
+    PushDevice.deleteOne({ _id: req.params.id, owner: req.user.email }),
+    PushSubscription.deleteOne({ _id: req.params.id, owner: req.user.email }),
+  ]);
+  res.status(204).end();
 }));
 
 router.get('/unread', ah(async (req, res) => res.json({ unread: await Notification.countDocuments({ owner: req.user.email, readAt: null }) })));

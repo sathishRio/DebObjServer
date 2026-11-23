@@ -21,35 +21,51 @@ function setup() {
   return true;
 }
 
-// Sends to every device of one user: browsers by Web Push, app installs by FCM.
-// Subscriptions and tokens the push services reject for good are removed.
-export async function sendToUser(owner, message) {
+// What is set up, for the push test screen.
+export const pushStatus = () => ({ web: webConfigured(), app: fcmConfigured() });
+
+// Sends to every device of one user (or just `only`: one PushSubscription / PushDevice id): browsers
+// by Web Push, app installs by FCM. Subscriptions and tokens the push services reject for good are removed.
+// Returns totals, the reasons sends failed, and one result per device ({ id, ok, error }).
+export async function sendToUser(owner, message, { only } = {}) {
   if (!configured()) throw new Error('Push is not configured on the server (VAPID keys or FIREBASE_SERVICE_ACCOUNT).');
+  const scope = only ? { owner, _id: only } : { owner };
   const [subs, devices] = await Promise.all([
-    webConfigured() ? PushSubscription.find({ owner }).lean() : [],
-    fcmConfigured() ? PushDevice.find({ owner }).lean() : [],
+    webConfigured() ? PushSubscription.find(scope).lean() : [],
+    fcmConfigured() ? PushDevice.find(scope).lean() : [],
   ]);
   let sent = 0;
+  const errors = []; // why sends failed, for the test button (the daily job only logs them)
+  const results = [];
   if (subs.length) setup();
   for (const s of subs) {
     try {
       await webpush.sendNotification({ endpoint: s.endpoint, keys: s.keys }, JSON.stringify({ url: '/#/planner', title: message.title, body: message.body, ...(message.url ? { url: message.url } : {}) }), { TTL: 3 * 3600 });
       sent += 1;
+      results.push({ id: String(s._id), ok: true });
     } catch (e) {
-      if (e.statusCode === 404 || e.statusCode === 410) await PushSubscription.deleteOne({ _id: s._id });
-      else console.warn(`Push to ${owner} failed: ${e.statusCode || e.code || e.message || "unknown error"}`);
+      const gone = e.statusCode === 404 || e.statusCode === 410;
+      const why = gone ? 'subscription expired (removed)' : e.statusCode || e.code || e.message || 'unknown error';
+      if (gone) await PushSubscription.deleteOne({ _id: s._id });
+      else console.warn(`Push to ${owner} failed: ${why}`);
+      errors.push(`browser: ${why}`);
+      results.push({ id: String(s._id), ok: false, error: String(why) });
     }
   }
   if (devices.length) {
     try {
       const r = await sendFcm(devices, { url: '/#/planner', ...message });
       sent += r.sent;
+      errors.push(...r.errors.map((x) => `app: ${x}`));
+      r.results.forEach((x, i) => results.push({ id: String(devices[i]._id), ...x }));
       if (r.dead.length) await PushDevice.deleteMany({ token: { $in: r.dead } });
     } catch (e) {
+      errors.push(`app: ${e.message}`);
+      devices.forEach((d) => results.push({ id: String(d._id), ok: false, error: e.message }));
       console.warn(`App push to ${owner} failed: ${e.message}`);
     }
   }
-  return { devices: subs.length + devices.length, sent };
+  return { devices: subs.length + devices.length, sent, errors, results };
 }
 
 export async function runReminders(now = new Date()) {
