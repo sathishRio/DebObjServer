@@ -3,14 +3,14 @@ import { Router } from 'express';
 import mongoose from 'mongoose';
 import { Task } from './models.js';
 import { syncObjective } from './routes.js';
-import { PlannerSettings, PushDevice, PushSubscription } from './plannerModels.js';
+import { PlannerSettings, PushDevice } from './plannerModels.js';
 import { localClock } from './plannerCore.js';
 import { armKey, parseMinutes, planKey, planNotice, taskNotices, utcMsOf } from './notifyCore.js';
 import { buildToday, logPlan } from './planner.js';
 import { pushConfigured, pushStatus, sendToUser } from './plannerReminders.js';
 
 // Notifications built from tasks every minute: kept as an inbox (web #/notifications) and pushed
-// to the user's phones (FCM) and browsers (Web Push) when push is configured. Alerts repeat every
+// to the user's phone app (FCM) when push is configured. Alerts repeat every
 // 15 minutes until the task is done or skipped (see notifyCore.js); snooze sets the next one.
 // Hub "Today" plan items alert the same way while they are scheduled in free time right now.
 
@@ -252,16 +252,8 @@ router.get('/', ah(async (req, res) => {
   res.json({ items, unread });
 }));
 
-/* ---------- Push test screen (hub #/push-test) ---------- */
+/* ---------- Push test screen (task.devobj.com #/push-test): phone app installs only ---------- */
 
-// "Chrome on Windows" from a user agent, for the device list.
-function browserLabel(ua = '') {
-  const browser = /Edg\//.test(ua) ? 'Edge' : /OPR\//.test(ua) ? 'Opera' : /Firefox\//.test(ua) ? 'Firefox'
-    : /Chrome\//.test(ua) ? 'Chrome' : /Safari\//.test(ua) ? 'Safari' : 'Browser';
-  const os = /iPhone|iPad|iPod/.test(ua) ? 'iOS' : /Android/.test(ua) ? 'Android' : /Mac OS X/.test(ua) ? 'Mac'
-    : /Windows/.test(ua) ? 'Windows' : /Linux/.test(ua) ? 'Linux' : '';
-  return os ? `${browser} on ${os}` : browser;
-}
 const tail = (s) => String(s).slice(-12); // lets a device spot itself without the server sending whole tokens
 const isId = (s) => /^[0-9a-f]{24}$/.test(String(s || ''));
 
@@ -281,17 +273,10 @@ const keepRun = (id, run) => {
 };
 
 router.get('/test/status', ah(async (req, res) => {
-  const owner = req.user.email;
-  const [subs, devices] = await Promise.all([
-    PushSubscription.find({ owner }).sort({ updatedAt: -1 }).lean(),
-    PushDevice.find({ owner }).sort({ updatedAt: -1 }).lean(),
-  ]);
+  const devices = await PushDevice.find({ owner: req.user.email }).sort({ updatedAt: -1 }).lean();
   res.json({
     ...pushStatus(),
-    devices: [
-      ...devices.map((d) => ({ id: String(d._id), type: d.platform, label: d.platform === 'ios' ? 'iPhone / iPad app' : 'Android app', tail: tail(d.token), since: d.createdAt, seen: d.updatedAt })),
-      ...subs.map((s) => ({ id: String(s._id), type: 'web', label: browserLabel(s.device), tail: tail(s.endpoint), since: s.createdAt, seen: s.updatedAt })),
-    ],
+    devices: devices.map((d) => ({ id: String(d._id), type: d.platform, label: d.platform === 'ios' ? 'iPhone / iPad app' : 'Android app', tail: tail(d.token), since: d.createdAt, seen: d.updatedAt })),
   });
 }));
 
@@ -303,8 +288,7 @@ router.post('/test', ah(async (req, res) => {
   if (!t) return res.status(400).json({ error: `kind must be one of ${Object.keys(TEST_KINDS).join(', ')}` });
   if (deviceId && !isId(deviceId)) return res.status(400).json({ error: 'Invalid device' });
   const delay = Math.max(0, Math.min(300, Math.round(Number(req.body?.delay) || 0)));
-  const { web, app } = pushStatus();
-  if (!web && !app) return res.status(503).json({ error: 'Push is not set up on the server (VAPID keys or FIREBASE_SERVICE_ACCOUNT).' });
+  if (!pushStatus().app) return res.status(503).json({ error: 'Push is not set up on the server (FIREBASE_SERVICE_ACCOUNT).' });
 
   const now = Date.now();
   const n = {
@@ -347,13 +331,9 @@ router.get('/test/:id', ah(async (req, res) => {
   });
 }));
 
-// Drop a stale device or browser from this account.
+// Drop a stale app install from this account.
 router.delete('/test/devices/:id', ah(async (req, res) => {
-  if (!isId(req.params.id)) return res.status(204).end();
-  await Promise.all([
-    PushDevice.deleteOne({ _id: req.params.id, owner: req.user.email }),
-    PushSubscription.deleteOne({ _id: req.params.id, owner: req.user.email }),
-  ]);
+  if (isId(req.params.id)) await PushDevice.deleteOne({ _id: req.params.id, owner: req.user.email });
   res.status(204).end();
 }));
 

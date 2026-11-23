@@ -1,71 +1,42 @@
-import * as webpush from 'web-push';
-import { PlannerSettings, PushDevice, PushSubscription } from './plannerModels.js';
+import { PlannerSettings, PushDevice } from './plannerModels.js';
 import { fcmConfigured, sendFcm } from './fcm.js';
 import { buildToday } from './planner.js';
 import { reminderDue, reminderMessage } from './plannerCore.js';
 
 // Daily "plan your day" push reminder. Runs inside the API process every 15 minutes (the host keeps
-// Node running). Browsers get Web Push (VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT); the iOS/Android
-// app gets Firebase Cloud Messaging (FIREBASE_SERVICE_ACCOUNT). Either one turns reminders on.
+// Node running). Notifications go to the iOS/Android app only, by Firebase Cloud Messaging
+// (FIREBASE_SERVICE_ACCOUNT); browsers don't get push.
 
 const EVERY = 15 * 60 * 1000;
 
-export const vapidPublicKey = () => process.env.VAPID_PUBLIC_KEY || '';
-const webConfigured = () => !!(process.env.VAPID_PUBLIC_KEY && process.env.VAPID_PRIVATE_KEY);
-const configured = () => webConfigured() || fcmConfigured();
+const configured = fcmConfigured;
 export const pushConfigured = configured;
 
-function setup() {
-  if (!webConfigured()) return false;
-  webpush.setVapidDetails(process.env.VAPID_SUBJECT || 'mailto:admin@devobj.com', process.env.VAPID_PUBLIC_KEY, process.env.VAPID_PRIVATE_KEY);
-  return true;
-}
-
 // What is set up, for the push test screen.
-export const pushStatus = () => ({ web: webConfigured(), app: fcmConfigured() });
+export const pushStatus = () => ({ app: fcmConfigured() });
 
-// Sends to every device of one user (or just `only`: one PushSubscription / PushDevice id): browsers
-// by Web Push, app installs by FCM. Subscriptions and tokens the push services reject for good are removed.
-// Returns totals, the reasons sends failed, and one result per device ({ id, ok, error }).
+// Sends to every app install of one user (or just `only`: one PushDevice id) by FCM. Tokens Firebase
+// rejects for good are removed. Returns totals, the reasons sends failed, and one result per device ({ id, ok, error }).
 export async function sendToUser(owner, message, { only } = {}) {
-  if (!configured()) throw new Error('Push is not configured on the server (VAPID keys or FIREBASE_SERVICE_ACCOUNT).');
-  const scope = only ? { owner, _id: only } : { owner };
-  const [subs, devices] = await Promise.all([
-    webConfigured() ? PushSubscription.find(scope).lean() : [],
-    fcmConfigured() ? PushDevice.find(scope).lean() : [],
-  ]);
+  if (!configured()) throw new Error('Push is not configured on the server (FIREBASE_SERVICE_ACCOUNT).');
+  const devices = await PushDevice.find(only ? { owner, _id: only } : { owner }).lean();
   let sent = 0;
   const errors = []; // why sends failed, for the test button (the daily job only logs them)
   const results = [];
-  if (subs.length) setup();
-  for (const s of subs) {
-    try {
-      await webpush.sendNotification({ endpoint: s.endpoint, keys: s.keys }, JSON.stringify({ url: '/#/planner', title: message.title, body: message.body, ...(message.url ? { url: message.url } : {}) }), { TTL: 3 * 3600 });
-      sent += 1;
-      results.push({ id: String(s._id), ok: true });
-    } catch (e) {
-      const gone = e.statusCode === 404 || e.statusCode === 410;
-      const why = gone ? 'subscription expired (removed)' : e.statusCode || e.code || e.message || 'unknown error';
-      if (gone) await PushSubscription.deleteOne({ _id: s._id });
-      else console.warn(`Push to ${owner} failed: ${why}`);
-      errors.push(`browser: ${why}`);
-      results.push({ id: String(s._id), ok: false, error: String(why) });
-    }
-  }
   if (devices.length) {
     try {
       const r = await sendFcm(devices, { url: '/#/planner', ...message });
       sent += r.sent;
-      errors.push(...r.errors.map((x) => `app: ${x}`));
+      errors.push(...r.errors);
       r.results.forEach((x, i) => results.push({ id: String(devices[i]._id), ...x }));
       if (r.dead.length) await PushDevice.deleteMany({ token: { $in: r.dead } });
     } catch (e) {
-      errors.push(`app: ${e.message}`);
+      errors.push(e.message);
       devices.forEach((d) => results.push({ id: String(d._id), ok: false, error: e.message }));
       console.warn(`App push to ${owner} failed: ${e.message}`);
     }
   }
-  return { devices: subs.length + devices.length, sent, errors, results };
+  return { devices: devices.length, sent, errors, results };
 }
 
 export async function runReminders(now = new Date()) {
@@ -90,10 +61,9 @@ export async function runReminders(now = new Date()) {
 
 export function startReminders() {
   if (!configured()) {
-    console.log('Planner reminders are off: set VAPID keys (browsers) and/or FIREBASE_SERVICE_ACCOUNT (app) in .env.');
+    console.log('Planner reminders are off: set FIREBASE_SERVICE_ACCOUNT in .env.');
     return;
   }
-  if (webConfigured()) setup();
   const tick = () => runReminders().catch((e) => console.warn(`Reminder run failed: ${e.message}`));
   setTimeout(tick, 30 * 1000); // shortly after start
   setInterval(tick, EVERY);

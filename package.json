@@ -23,7 +23,6 @@
     "google-auth-library": "^11.3.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^8.9.5",
-    "pdfjs-dist": "^4.10.38",
-    "web-push": "^4.0.0"
+    "pdfjs-dist": "^4.10.38"
   }
 }

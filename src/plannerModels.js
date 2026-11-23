@@ -81,18 +81,6 @@ const daySchema = new Schema(
 daySchema.index({ owner: 1, date: 1 }, { unique: true });
 daySchema.set('toJSON', hideOwner);
 
-// One Web Push subscription per browser/device that turned reminders on.
-const pushSchema = new Schema(
-  {
-    owner,
-    endpoint: { type: String, required: true, unique: true, maxlength: 1000 },
-    keys: { p256dh: { type: String, required: true, maxlength: 200 }, auth: { type: String, required: true, maxlength: 100 } },
-    device: { type: String, default: '', maxlength: 200 },
-  },
-  { timestamps: true }
-);
-pushSchema.set('toJSON', hideOwner);
-
 // One native app install (iOS/Android) that turned reminders on: its Firebase Cloud Messaging token.
 const deviceSchema = new Schema(
   {
@@ -104,7 +92,6 @@ const deviceSchema = new Schema(
 );
 deviceSchema.set('toJSON', hideOwner);
 
-export const PushSubscription = model('PushSubscription', pushSchema);
 export const PushDevice = model('PushDevice', deviceSchema);
 export const PlannerSettings = model('PlannerSettings', settingsSchema);
 export const PlanItem = model('PlanItem', itemSchema);

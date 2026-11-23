@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { Certification, Phase, Profile } from './models.js';
 import { LearnCourse, LearnPref, LearnProgress, LearnSession } from './learnModels.js';
-import { PlanDay, PlanItem, PlanLog, PlannerSettings, PushDevice, PushSubscription } from './plannerModels.js';
+import { PlanDay, PlanItem, PlanLog, PlannerSettings, PushDevice } from './plannerModels.js';
 import {
   addDays, AREAS, careerCandidates, DATE_RE, DEFAULT_SETTINGS, itemCandidates, localDate, planDay, TIME_RE, toMin, validTz,
 } from './plannerCore.js';
@@ -192,30 +192,7 @@ router.put('/day/:date', ah(async (req, res) => {
 // Imported lazily: plannerReminders imports this file for buildToday.
 const reminders = () => import('./plannerReminders.js');
 
-router.get('/push/key', ah(async (_req, res) => {
-  const key = (await reminders()).vapidPublicKey();
-  return key ? res.json({ publicKey: key }) : res.status(503).json({ error: 'Reminders are not set up on the server yet.' });
-}));
-
-router.post('/push/subscribe', ah(async (req, res) => {
-  const sub = req.body?.subscription;
-  if (!/^https:\/\//.test(sub?.endpoint || '') || !sub?.keys?.p256dh || !sub?.keys?.auth) return bad(res, 'Invalid push subscription');
-  // A device belongs to whoever subscribed it last (e.g. after switching accounts).
-  await PushSubscription.findOneAndUpdate(
-    { endpoint: sub.endpoint },
-    { $set: { owner: req.user.email, keys: { p256dh: sub.keys.p256dh, auth: sub.keys.auth }, device: String(req.get('user-agent') || '').slice(0, 200) } },
-    { ...opts, upsert: true }
-  );
-  res.status(204).end();
-}));
-
-router.delete('/push/subscribe', ah(async (req, res) => {
-  const endpoint = req.body?.endpoint;
-  if (typeof endpoint === 'string') await PushSubscription.deleteOne({ owner: req.user.email, endpoint });
-  res.status(204).end();
-}));
-
-// The iOS/Android app registers its Firebase token here (instead of a Web Push subscription).
+// The iOS/Android app registers its Firebase token here. Push goes to the app only (no browser push).
 router.post('/push/device', ah(async (req, res) => {
   const { token, platform } = req.body || {};
   if (typeof token !== 'string' || token.length < 20 || token.length > 4096) return bad(res, 'Invalid device token');
